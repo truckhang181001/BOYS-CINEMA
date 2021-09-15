@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Hàm active tab nào đó
     function activeTab(obj) {
         // Xóa class active tất cả các tab
-        $('.info-page__tabcontent ol li').removeClass('active');
+        $('.info-page__tab-content div div').removeClass('active');
 
         // Thêm class active vòa tab đang click
         $(obj).addClass('active');
@@ -11,18 +11,18 @@ $(document).ready(function() {
         var id = $(obj).find('a').attr('href');
 
         // Ẩn hết nội dung các tab đang hiển thị
-        $('.tabcontent').hide();
+        $('.info-page__tab-content__tab--tabcontent').hide();
 
         // Hiển thị nội dung của tab hiện tại
         $(id).show();
     }
 
     // Sự kiện click đổi tab
-    $('.tab li').click(function() {
+    $('.info-page__tab-content__tab div').click(function() {
         activeTab(this);
         return false;
     });
 
     // Active tab đầu tiên khi trang web được chạy
-    activeTab($('.tab li:first-child'));
+    activeTab($('.info-page__tab-content__tab div:first-child'));
 });
