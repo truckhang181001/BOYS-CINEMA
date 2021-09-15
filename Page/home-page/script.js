@@ -3,8 +3,8 @@ $('.owl-carousel').owlCarousel({
     margin: 10,
     nav: true,
     navText: [
-        `<div class="nav-btn prev-slide"><img src="Prevbutton.png"></div>`,
-        `<div class="nav-btn next-slide"><img src="Nextbutton.png"></div>`
+        `<i class="fas fa-chevron-left prev-btn"></i>`,
+        `<i class="fas fa-chevron-right next-btn"></i>`
     ],
     dots: false,
     lazyLoad: true,
