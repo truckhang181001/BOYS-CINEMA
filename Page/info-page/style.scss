@@ -1,0 +1,420 @@
+.container-fluid {
+    background-color: #000C20;
+    height: 3000px;
+}
+.main-body {
+    margin-top:80px;
+}
+//TÌM KIẾM VÀ CHỌN THÀNH PHỐ, RẠP CHIẾU, NGÀY CHIẾU.
+.searchbox-and-select {
+    background-color: #688D89;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    border-radius: 3px;
+
+    @media (min-width:556px){
+        margin-top:20px;
+        border-radius: 5px;
+    }
+    @media (min-width:992px){
+        margin-top:50px;
+        border-radius: 8px;
+    }
+    @media (min-width:1200px){
+        margin-top:70px;
+        border-radius: 10px;
+    }
+    .searchbox {
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid #fff;
+        margin-top:20px;
+        color:#fff;      
+        width: 80%;
+        font-size: 10px;
+
+        @media (min-width:556px){
+            width: 80%;
+            font-size: 15px;
+        }
+        @media (min-width:992px){
+            width: 60%;
+            font-size: 21px;
+        }
+        @media (min-width:1200px){
+            width: 60%;
+            font-size: 24px;
+        }
+        &__input {
+            background-color: #688D89;
+            border:none;
+            outline: none;
+            width: 95%;
+            color:#fff;
+
+            &::placeholder {
+                color:#fff;
+            }
+        }
+        &__icon {
+            cursor: pointer;
+            .fa-search{
+                font-weight:500;
+            }
+        }
+    }
+    .select {
+       
+        @media (min-width:556px){
+            padding:10px 0;
+        }
+        @media (min-width:992px){
+            padding:20px 0;
+        }
+        @media (min-width:1200px){
+            padding:30px 0;
+        }
+
+        &__items {  
+            font-size: 10px !important;
+
+            @media (min-width:556px){
+                font-size: 15px !important;
+            }
+            @media (min-width:992px){
+                font-size: 21px !important;
+            }
+            @media (min-width:1200px){
+                font-size: 24px !important;
+            }
+            
+            &--text {
+                color:white;
+            }
+            &--wrapper {
+                background-color: #fff;
+                border-radius: 50%;
+                cursor:pointer;
+                height: 20px;
+                width: 20px;
+                margin-right:5px;
+
+            @media (min-width:556px){
+                height: 35px;
+                width: 35px;
+                }
+            @media (min-width:992px){
+                margin-left:10px;
+                height: 45px;
+                width: 45px;
+                }
+            @media (min-width:1200px){
+                height: 56px;
+                width: 56px;
+                }
+            }
+        }
+    }
+}
+
+// HÌNH THỨC VÀ THẺ LOẠI
+.effect-and-categogy {
+
+    .categogy {
+        margin-top:5px; 
+
+        @media (min-width:556px){
+            margin-top:10px; 
+        }
+        @media (min-width:992px){
+            margin-top:15px; 
+        }
+        @media (min-width:1200px){
+            margin-top:20px; 
+        }
+    }
+    .categogy , .effect {
+        background: #032253;
+        padding:5px;
+        border-radius: 5px;
+        border-bottom: 2px solid #fff;
+
+        @media (min-width:556px){ 
+            padding:10px; 
+        }
+        @media (min-width:992px){
+            padding:15px;
+            border-radius: 10px; 
+        }
+        @media (min-width:1200px){
+            padding:20px;
+        }
+        &__text {
+            font-size: 10px;
+            font-weight: 400;
+            color:white;
+            padding-bottom:5px;
+            border-bottom:1px solid #fff;
+            background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @media (min-width:556px){
+                font-size: 15px;
+                font-weight: 500;
+            }
+            @media (min-width:992px){
+                font-size: 21px;
+                font-weight: 600; 
+                padding-bottom: 10px;
+            }
+            @media (min-width:1200px){
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+        &__items {
+            display: flex;
+            align-items: center;
+            color:white;
+            padding:2px 0;
+
+            @media (min-width:556px){ 
+                padding:7px 0;
+            }
+            @media (min-width:992px){
+                padding:15px;
+                padding:10px 0;
+            }
+            &--checkbox {
+                    width: 10px;
+                    height: 10px;
+                    margin-right:5px; 
+
+                @media (min-width:556px){ 
+                    width: 10px;
+                    height: 10px;
+                    margin-right:5px; 
+                }
+                @media (min-width:992px){
+                    width:15px;
+                    height:15px;
+                    margin-right:10px;
+                }
+                @media (min-width:1200px){
+                    width: 20px;
+                    height: 20px;
+                    margin-right:15px;
+                }
+            }
+
+            label {
+                margin:0;
+                font-size: 10px; 
+                font-weight: 300;  
+
+                @media (min-width:556px){ 
+                    font-size: 12px;  
+                }
+                @media (min-width:992px){
+                    font-size: 15px; 
+                }
+                @media (min-width:1200px){
+                    font-size: 18px; 
+                }    
+            }                   
+        }
+    }
+    
+}
+
+//FILTER SẮP XẾP THEO
+.select {
+    float:right;
+    padding:10px;
+    justify-content: space-evenly;
+    
+    &__text {
+        margin:0;
+        font-size: 10px;
+        font-weight: 300;
+        color:#fff;
+        margin-right: 10px;
+        @media (min-width:556px){
+            font-size: 15px;
+        }
+        @media (min-width:992px){
+            font-size: 21px;
+            margin-right: 20px;
+        }
+        @media (min-width:1200px){
+            font-size: 24px;
+        }
+    }
+    &__form {
+        border-radius: 10px;
+        font-size: 10px;
+        font-weight: 300;
+        background-color: transparent;
+        outline: none;
+        color:#fff;
+        padding-left:10px;
+        padding-right: 5px;
+
+        @media (min-width:556px){
+            border-radius: 20px;
+            font-size: 15px;
+        }
+        @media (min-width:992px){
+            border-radius: 25px;
+            font-size: 21px;
+            padding-left:20px;
+            padding-right: 10px;
+            
+        }
+        @media (min-width:1200px){
+            border-radius: 30px;
+            font-size: 24px;
+        }
+        option {
+            color:#fff;
+            background-color: #000C20;
+        }
+    }
+}    
+
+// CARD
+.card {
+    width: 100%;
+    background-color: transparent;
+    color:white;
+    padding-top:15px;
+    border:none;
+    @media(min-width:556px){padding-top:20px;}
+    @media(min-width:992px){padding-top:25px;}
+    @media(min-width:1200px){padding-top:30px;}
+    #before-img {
+        padding:0;
+        @media(min-width:556px){padding:0 5px;}
+        @media(min-width:992px){padding:0 10px;}
+        @media(min-width:1200px){padding:0 15px;}
+    }
+    .card-body {
+        padding:0;
+        .card-title {
+            font-size:10px;
+            @media(min-width:556px){font-size:15px;}
+            @media(min-width:992px){font-size:21px;}
+            @media(min-width:1200px){font-size:26px;}
+        }
+        .card-text {
+            padding-bottom:3px;
+            font-size: 9px;
+            font-weight: 300;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-line-clamp: 3;
+            line-height: 0.7rem;
+            @media(min-width:556px){font-size:15px; line-height: 1rem;}
+            @media(min-width:992px){font-size:18px; line-height: 1.3rem;}
+            @media(min-width:1200px){font-size:21px; line-height: 1.6rem;}               
+        }
+        .card-category, .card-date small {
+            font-size: 9px;
+            color:white;
+            font-weight: 300;
+            margin:0;
+            @media(min-width:556px){font-size:15px; }
+            @media(min-width:992px){font-size:18px; }
+            @media(min-width:1200px){font-size:21px;} 
+        }
+        .card-date {
+            margin-bottom:2px;
+            @media(min-width:992px){margin-bottom: 5px; }
+        }
+        .card-footer {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding: 2px 0;
+            @media(min-width:556px){padding: 5px 0; }
+            @media(min-width:992px){padding: 8px 0; }
+            @media(min-width:1200px){padding: 12px 0;} 
+            
+            &__items {
+
+                h4{
+                    margin:0;
+                    font-weight: 300;
+                    font-size: 9px;
+                        @media(min-width:556px){font-size:15px; }
+                        @media(min-width:992px){font-size:21px; }
+                        @media(min-width:1200px){font-size:24px;}        
+                }
+                &--circle {
+                    background-color: #032253;
+                    height: 15px;
+                    width: 15px;
+                    border-radius:50%;
+                    margin-right:5px;
+                    cursor: pointer;
+
+                    @media (min-width:556px){height: 20px; width: 20px;}
+                    @media (min-width:992px){height: 30px; width: 30px; margin-right:10px;}
+                    @media (min-width:1200px){height: 40px; width: 40px;}
+
+                    i{
+                        font-size: 10px;
+                        @media(min-width:556px){font-size:14px; }
+                        @media(min-width:992px){font-size:18px; }
+                        @media(min-width:1200px){font-size:21px;} 
+                    }
+                   
+                }
+                &--button {
+                    border:none;
+                    color:white;
+                    background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
+                    border-radius: 15px;
+                    padding:0 5px;
+                    font-weight: 300;
+                    font-size: 9px;
+                    @media(min-width:556px){font-size:15px; border-radius: 30px; padding:3px 30px;}
+                    @media(min-width:992px){font-size:21px; border-radius: 40px; padding:5px 40px;}
+                    @media(min-width:1200px){font-size:24px;}   
+
+                    &:hover {
+                        filter: hue-rotate(45deg);
+                    }
+                }
+            }
+           
+        }
+    }
+}
+//CHUYỂN TRANG
+.page-item {
+
+    .page-link {
+        background-color: transparent;
+        border:1px solid #fff;
+        font-size: 10px;
+        padding:0.25rem 0.5rem;
+        &:hover {
+            filter: hue-rotate(90deg);
+        }
+        @media (min-width:556px){
+            font-size: 15px;
+        }
+        @media (min-width:992px){
+            font-size: 21px;
+            padding:0.5rem 1rem;
+        }
+        @media (min-width:1200px){
+            font-size: 24px;
+        }
+    }
+}
