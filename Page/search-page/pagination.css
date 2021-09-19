@@ -1,0 +1,33 @@
+.page-item .page-link {
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 10px;
+  padding: 0.2rem 0.4rem;
+}
+
+.page-item .page-link:hover {
+  -webkit-filter: hue-rotate(90deg);
+          filter: hue-rotate(90deg);
+}
+
+@media (min-width: 556px) {
+  .page-item .page-link {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-item .page-link {
+    font-size: 21px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-item .page-link {
+    font-size: 24px;
+  }
+}
+/*# sourceMappingURL=pagination.css.map */
