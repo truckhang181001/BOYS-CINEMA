@@ -1,0 +1,38 @@
+.searchbox-and-sub-searchbox {
+    background-color: #688D89;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+    border-radius: 3px;
+
+    @media (min-width:556px){
+        width: 80%;
+        margin-top:20px;
+        border-radius: 5px;
+    }
+    @media (min-width:992px){
+        width: 70%;
+        margin-top:50px;
+        border-radius: 8px;
+    }
+    @media (min-width:1200px){
+        width: 70%;
+        margin-top:70px;
+        border-radius: 10px;
+    }
+}
+
+.main-body {
+    margin-top:20px;
+
+    @media (min-width:556px){
+        margin-top:30px;
+    }
+    @media (min-width:992px){
+        margin-top:40px;
+    }
+    @media (min-width:1200px){
+        margin-top:60px;
+    }
+}
