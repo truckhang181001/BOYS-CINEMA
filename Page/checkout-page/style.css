@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.checkout-page {
+  width: 100%;
+  height: 2000px;
+  background-color: #000c20;
+}
+
+.checkout-page__header__nav {
+  display: flex;
+  height: 81px;
+  background-color: #032055;
+}
+
+.checkout-page__header__banner {
+  width: 100%;
+  height: 330px;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 42.71%,
+      rgba(0, 0, 0, 0.8) 58.33%
+    ),
+    url(../../Resource/img/checkout-page-banner.png) no-repeat;
+  background-size: cover;
+}
+
+.checkout-page__body {
+  width: 100%;
+  height: 1200px;
+}
+
+.checkout-page__body__form {
+  width: 100%;
+  height: 500px;
+  background-color: #032055;
+  margin-top: 160px;
+}
+
+.checkout-page__body__paybtn-btnshow {
+  width: 300px;
+  height: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(27, 203, 183, 1),
+    rgba(50, 171, 255, 1),
+    rgba(167, 114, 255, 1)
+  );
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  float: right;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 22px;
+  color: white;
+  margin-top: 30px;
+}
+
+.checkout-page__body__paybtn-btnshow:hover {
+  opacity: 0.5;
+}
+
+.checkout-page__footer__content {
+  width: 100%;
+  height: 420px;
+  background-color: #00102a;
+}
+.checkout-page__footer {
+  box-shadow: 4px 4px 4px 4px white;
+}
+
+.checkout-page__body__form__upper {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  height: 100px;
+  margin: 0px 45px 0px 45px;
+}
+
+.checkout-page__body__form__upper__text {
+  text-align: center;
+  background: linear-gradient(270deg, #1bcbb7 0%, #32abff 50%, #a772ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 37px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+}
+
+.checkout-page__body__form__mid {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  margin: 0px 45px 0px 45px;
+  height: 300px;
+}
+
+.checkout-page__body__form__lower {
+  height: 100px;
+  margin: 0px 45px 0px 45px;
+}
+
+.subtitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.booking-info span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.booking-info ul li {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.booking-detail {
+  display: flex;
+  padding-left: 32px;
+}
+
+.booking-detail div {
+  width: 100%;
+  justify-items: center;
+  height: 100px;
+}
+
+.booking-detail span {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 25px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  color: white;
+}
