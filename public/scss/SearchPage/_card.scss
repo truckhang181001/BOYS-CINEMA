@@ -1,0 +1,119 @@
+.card {
+    width: 100%;
+    background-color: transparent;
+    color:white;
+    padding-top:15px;
+    border:none;
+    @media(min-width:556px){padding-top:20px;}
+    @media(min-width:992px){padding-top:25px;}
+    @media(min-width:1200px){padding-top:30px;}
+    #before-img {
+        padding:0;
+        padding-right: 5px;
+        @media(min-width:556px){padding-right: 5px;}
+        @media(min-width:992px){padding:0 10px;}
+        @media(min-width:1200px){padding:0 15px;}
+    }
+    .card-body {
+        padding:0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .card-title {
+            font-size:10px;
+            @media(min-width:556px){font-size:15px;}
+            @media(min-width:992px){font-size:21px;}
+            @media(min-width:1200px){font-size:26px;}
+        }
+        .card-text {
+            padding-bottom:3px;
+            font-size: 9px;
+            font-weight: 300;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-line-clamp: 3;
+            line-height: 0.7rem;
+            @media(min-width:556px){font-size:15px; line-height: 1rem;}
+            @media(min-width:992px){font-size:18px; line-height: 1.3rem;}
+            @media(min-width:1200px){font-size:21px; line-height: 1.6rem;}               
+        }
+        .card-category, .card-date small {
+            font-size: 9px;
+            color:white;
+            font-weight: 300;
+            margin:0;
+            @media(min-width:556px){font-size:15px; }
+            @media(min-width:992px){font-size:18px; }
+            @media(min-width:1200px){font-size:21px;} 
+        }
+        .card-date {
+            margin-bottom:2px;
+            @media(min-width:992px){margin-bottom: 5px; }
+        }
+        .card-footer {
+            border-radius: 5px;
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            padding: 2px 0;
+            @media(min-width:556px){padding: 5px 0; }
+            @media(min-width:992px){padding: 8px 0; }
+            @media(min-width:1200px){padding: 12px 0;} 
+            
+            &__items {
+
+                h4{
+                    margin:0;
+                    font-weight: 300;
+                    font-size: 9px;
+                        @media(min-width:556px){font-size:15px; }
+                        @media(min-width:992px){font-size:21px; }
+                        @media(min-width:1200px){font-size:24px;}        
+                }
+                &--circle {
+                    background-color: #032253;
+                    height: 15px;
+                    width: 15px;
+                    border-radius:50%;
+                    margin-right:5px;
+                    cursor: pointer;
+
+                    @media (min-width:556px){height: 20px; width: 20px;}
+                    @media (min-width:992px){height: 30px; width: 30px; margin-right:10px;}
+                    @media (min-width:1200px){height: 40px; width: 40px;}
+
+                    i{
+                        font-size: 10px;
+                        @media(min-width:556px){font-size:14px; }
+                        @media(min-width:992px){font-size:18px; }
+                        @media(min-width:1200px){font-size:21px;} 
+                    }
+                    .colorred {
+                        color:rgb(230, 43, 136);
+                    }
+                   
+                }
+                &--button {
+                    border:none;
+                    color:white;
+                    background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
+                    border-radius: 15px;
+                    padding:0 5px;
+                    font-weight: 300;
+                    font-size: 9px;
+                    @media(min-width:556px){font-size:15px; border-radius: 30px; padding:3px 30px;}
+                    @media(min-width:992px){font-size:21px; border-radius: 40px; padding:5px 40px;}
+                    @media(min-width:1200px){font-size:24px;}   
+
+                    &:hover {
+                        filter: hue-rotate(45deg);
+                    }
+                }
+            }
+           
+        }
+    }
+}

@@ -1,0 +1,63 @@
+@import "../../common/variable.scss";
+.card-container{
+    padding: 0 10px;
+}
+.card{
+    background-color: $blue-dark;
+    padding-bottom: 10px;
+    &__img{
+        aspect-ratio: 0.666;
+        object-fit: cover;
+    }
+    &__content{
+        position: relative;
+        height: 140px;
+        padding: 20px 10px;
+        &__title{
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        &__sub-title{
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        &__btn-buy{
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            bottom: 0%;
+            left: 50%;
+            transform: translateX(-50%);
+            a{
+                padding: 3px 20px;
+            }
+        }
+    }
+
+}
+.prev-btn {
+    color: #1BCBB7 !important;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%,-150%);
+    @media (min-width: 400px) {
+        left: -2%;
+    }
+} 
+.next-btn {
+    color: #1BCBB7 !important;
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(50%,-150%);
+    @media (min-width: 400px) {
+        right: -2%;
+    }
+}
+
+  

@@ -1,0 +1,48 @@
+.searchbox {
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #fff;
+    margin-top:20px;
+    color:#fff;      
+    width: 80%;
+    font-size: 10px;
+
+    @media (min-width:556px){
+        width: 80%;
+        font-size: 15px;
+    }
+    @media (min-width:992px){
+        width: 60%;
+        font-size: 21px;
+    }
+    @media (min-width:1200px){
+        width: 60%;
+        font-size: 24px;
+    }
+    &__input {
+        background-color: #688D89;
+        border:none;
+        outline: none;
+        width: 95%;
+        color:#fff;
+        cursor: default;
+        &::placeholder {
+            color:#fff;
+        }
+    }
+    &__icon {
+        cursor: pointer;
+        .fa-search{
+            font-weight:500;
+        }
+        .fa-times {
+            font-weight: 300;
+            margin-right: 10px;
+            visibility: hidden;
+            cursor: pointer;
+        }
+    }
+    &__input:not(:placeholder-shown) ~ .searchbox__icon .fa-times {
+        visibility: visible;
+    }
+}

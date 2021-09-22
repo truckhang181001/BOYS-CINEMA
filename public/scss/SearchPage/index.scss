@@ -1,0 +1,41 @@
+@import './card.scss';
+@import './filter.scss';
+@import './pagination.scss';
+@import './searchbox.scss';
+@import './sub-filter.scss';
+@import './sub-searchbox.scss';
+
+.searchbox-and-sub-searchbox {
+    background-color: #688D89;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+
+    @media (min-width:556px){
+        width: 80%;
+        border-radius: 5px;
+    }
+    @media (min-width:992px){
+        width: 70%;
+        border-radius: 8px;
+    }
+    @media (min-width:1200px){
+        width: 70%;
+        border-radius: 10px;
+    }
+}
+
+.main-body {
+    margin-top:20px;
+
+    @media (min-width:556px){
+        margin-top:30px;
+    }
+    @media (min-width:992px){
+        margin-top:40px;
+    }
+    @media (min-width:1200px){
+        margin-top:60px;
+    }
+}
