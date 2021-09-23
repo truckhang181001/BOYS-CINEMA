@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/HomePage.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/HomePage.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <?php include_once "./App/Views/HomePage/carousel.php" ?>
         </div>
     </div>
-    <script src="/BOYSCINEMA/public/js/HomePage/script.js"></script>
+    <script src="<?php echo PRONAME ?>/public/js/HomePage/script.js"></script>
 </body>
 
 </html>

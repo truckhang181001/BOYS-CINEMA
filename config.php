@@ -1,3 +1,3 @@
 <?php
-    $proName = "/BOYSCINEMA";
+    !defined('PRONAME') && define('PRONAME', "/".basename(getcwd()));
 ?>

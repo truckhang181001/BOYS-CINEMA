@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/SearchPage.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/SearchPage.css">
     <title>Trang tìm kiếm</title>
 </head>
 <body>
