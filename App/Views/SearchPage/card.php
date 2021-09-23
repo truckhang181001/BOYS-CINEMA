@@ -1,7 +1,7 @@
 <div class="card mb-3">
     <div class="row g-0">
       <div class="col-3 col-md-3" id="before-img">
-        <img src="/BOYSCINEMA/public/img/BD-Ocard-reference-Copy-2722-1557282318.jpg" class="img-fluid rounded-start" alt="...">
+        <img src="<?php echo PRONAME ?>/public/img/BD-Ocard-reference-Copy-2722-1557282318.jpg" class="img-fluid rounded-start" alt="...">
       </div>
       <div class="col-9 col-md-9">
         <div class="card-body">

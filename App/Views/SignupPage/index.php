@@ -1,5 +1,5 @@
 <head>
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/LoginPage.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/LoginPage.css">
     <title>BOYSCINEMA | Đăng ký</title>
 </head>
 <body>
@@ -32,7 +32,7 @@
             <a class="login__btn btn" href="#">ĐĂNG KÝ</a>
             <div class="login__sign-up">
                 <div class="login__sign-up__text">Bạn đã có mật khẩu?</div>
-                <a href="/BOYSCINEMA/dang-nhap" class="login__sign-up__btn">Đăng nhập ngay</a>
+                <a href="<?php echo PRONAME ?>/dang-nhap" class="login__sign-up__btn">Đăng nhập ngay</a>
             </div>
         </div>
     </section>

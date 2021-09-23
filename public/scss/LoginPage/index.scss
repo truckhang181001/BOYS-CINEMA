@@ -1,47 +1,69 @@
 @import '../../common/variable.scss';
 
 .login-section{
-    height: 100vh;
+    height: calc(100vh - 60px);
     width: 100%;
     background: #000C20;
     color: $white;
 
     display: flex;
     justify-content: center;
+    align-items: center;
+
 }
 .login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
-    height: 80%;
-    width: 30%;
+    padding: 30px 0;
+    width: 80%;
     background: #000C20;
     box-shadow: 0px 0px 100px 5px #042156;
     text-align: center;
+    @media (min-width: 1200px) {
+        padding: 60px 0;
+        width: 30%;
+    }
+
     &__sub-title{
-        margin-top: 60px;
         color: $aqua;
         font-weight: 300;
-        font-size: 24px;
+        font-size: 18px;
         letter-spacing: 0.05em;
+        @media (min-width: 768px) {
+            font-size: 24px;
+        }
     }
     &__title{
         font-weight: bold;
-        font-size: 28px;
+        font-size: 20px;
         letter-spacing: 0.1em;
-        margin-bottom: 60px;
+        margin-bottom: 30px;
+        @media (min-width: 768px) {
+            margin-bottom: 60px;
+            font-size: 28px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 28px;
+            letter-spacing: 0.1em;
+        }
     }
 
     &__input{
         display: inline-block;
-        width: 70%;
+        width: 80%;
+        @media (min-width: 1200px) {
+            width: 70%;
+        }
         &__title{
             margin-bottom: 10px;
             text-align: left;
-            font-size: 18px;
+            font-size: 14px;
             span{
                 color: red;
+            }
+            @media (min-width: 768px) {
+                font-size: 18px;
             }
         }
         input{
@@ -50,10 +72,17 @@
             background-color: transparent;
             border: none;
             border-bottom: 1px solid $blue-light;
+            font-size: 14px;
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
         }
         input::placeholder{
             color: $blue-light;
-            font-size: 16px;
+            font-size: 14px;
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
         }
         input:focus{
             outline: none;
@@ -62,12 +91,21 @@
     }
     &__option{
         margin-bottom: 30px;
-        width: 70%;
+        width: 80%;
         display: flex;
         justify-content: space-between;
-
         color: $white;
-        font-size: 14px;
+        font-size: 12px;
+        @media (min-width: 768px) {
+            margin-bottom: 50px;
+            font-size: 14px;
+        }
+        @media (min-width: 1200px) {
+            margin-bottom: 30px;
+            width: 70%;
+            font-size: 14px;
+        }
+
         &__save{
             display: flex;
 
@@ -97,11 +135,24 @@
         }
     }
     &__btn{
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         padding: 8px 40px;
         text-decoration: none;
+        font-size: 16px;
         &:hover{
             color: white;
+        }
+        @media (min-width: 768px) {
+            margin-bottom: 20px;
+            padding: 8px 40px;
+            font-size: 21px;
+        }
+        
+    }
+    &__sign-up{
+        font-size: 14px;
+        @media (min-width: 768px) {
+            font-size: 18px;
         }
     }
 }

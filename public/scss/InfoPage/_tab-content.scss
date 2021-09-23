@@ -3,8 +3,16 @@
 .info-page__tab-content {
     width: 90%;
     height: 70vh;
-    margin: 5vh 5% !important;
+    margin: 2vh 5% !important;
     overflow: hidden;
+    @media screen and(max-width: 1023px) {
+        font-size: 10px;
+        height: 60vh;
+    }
+    @media screen and(max-width: 400px) {
+        font-size: 8px;
+        height: 50vh;
+    }
     &__tab {
         display: flex;
         max-height: 10vh;
@@ -33,13 +41,15 @@
             font-size: 1rem;
             color: #FFFFFF;
             height: 60vh;
+            margin: 0;
+            padding: 0;
             @media screen and(max-width: 1023px) {
                 font-size: 10px;
-                max-width: 150px;
+                height: 50vh;
             }
             @media screen and(max-width: 400px) {
                 font-size: 8px;
-                max-width: 100px;
+                height: 40vh;
             }
             &--tag {
                 max-height: 20vh;
@@ -50,14 +60,19 @@
             }
             &--btnmore {
                 font-weight: 600;
-                padding: 10px 42px;
+                padding: 0;
                 border: 1px solid #11326f;
                 color: #ffffff;
                 border-radius: 32px;
                 display: inline-block;
-                width: 100px;
+                width: 90px;
                 margin: 3vh 45% !important;
                 background-color: #001232;
+                margin: 0;
+                @media screen and(max-width: 500px) {
+                    width: 50px;
+                    margin: 3vh 35% !important;
+                }
             }
         }
     }
@@ -155,8 +170,6 @@
         justify-content: space-between;
         align-items: center;
         &--like {
-            border-right: 1.2px solid #FFFFFF;
-            padding-right: 10% !important;
             color: #3AD6AB;
             @media screen and(max-width: 1023px) {
                 font-size: 10px;
@@ -165,9 +178,10 @@
                 font-size: 6px;
             }
         }
+        &--like:active {
+            color: #3AD6AB;
+        }
         &--dislike {
-            border-right: 1.2px solid #FFFFFF;
-            padding-right: 10% !important;
             color: #B22830;
             @media screen and(max-width: 1023px) {
                 font-size: 10px;
@@ -176,9 +190,10 @@
                 font-size: 6px;
             }
         }
+        &--dislike:active {
+            color: #B22830;
+        }
         &--report {
-            border-right: 1.2px solid #FFFFFF;
-            padding-right: 10% !important;
             @media screen and(max-width: 1023px) {
                 font-size: 10px;
             }

@@ -10,7 +10,7 @@ $url = UrlProcess();
 $active = [
     "Home" => "",
     "Search" => "",
-    "Planing" => "",
+    "Ticket" => "",
     "Promo" => "",
     "Contact" => ""
 ];
@@ -24,8 +24,8 @@ if (isset($url[0])) {
                 $active["Search"] = "nav-item__active";
                 break;
             }
-        case 'lich-chieu': {
-                $active["Planing"] = "nav-item__active";
+        case 'dat-ve': {
+                $active["Ticket"] = "nav-item__active";
                 break;
             }
         case 'khuyen-mai': {
@@ -44,26 +44,26 @@ if (isset($url[0])) {
 echo "<div class='nav-container'>
     <div class='nav' id='nav-main'>    
         <div class='nav-item'>
-            <a class='nav__home nav-item__text' href='/BOYSCINEMA'>Trang chủ</a>
+            <a class='nav__home nav-item__text' href='".PRONAME."'>Trang chủ</a>
             <div class='" . $active["Home"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__film nav-item__text' href='/BOYSCINEMA/tim-kiem/PhimDangChieu'>Phim</a>
+            <a class='nav__film nav-item__text' href='".PRONAME."/tim-kiem/PhimDangChieu'>Phim</a>
             <div class='" . $active["Search"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__ticket-plan nav-item__text' href='/BOYSCINEMA'>Lịch chiếu</a>
-            <div class='" . $active["Planing"] . "'></div>
+            <a class='nav__ticket-plan nav-item__text' href='".PRONAME."/dat-ve'>Đặt vé</a>
+            <div class='" . $active["Ticket"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__promo nav-item__text' href='/BOYSCINEMA'>Khuyến mãi</a>
+            <a class='nav__promo nav-item__text' href='".PRONAME."'>Khuyến mãi</a>
             <div class='" . $active["Promo"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__contact nav-item__text' href='/BOYSCINEMA'>Liên hệ</a>
+            <a class='nav__contact nav-item__text' href='".PRONAME."/lien-he'>Liên hệ</a>
             <div class='" . $active["Contact"] . "'></div>
         </div>
-        <a class='nav__sign-in' href='/BOYSCINEMA/dang-nhap'>Đăng nhập</a>
+        <a class='nav__sign-in' href='".PRONAME."/dang-nhap'>Đăng nhập</a>
     </div>
     <i class='fas fa-bars nav-icon' id='nav-click'></i>
 </div>";
