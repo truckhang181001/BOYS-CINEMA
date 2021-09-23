@@ -10,7 +10,7 @@ $url = UrlProcess();
 $active = [
     "Home" => "",
     "Search" => "",
-    "Planing" => "",
+    "Ticket" => "",
     "Promo" => "",
     "Contact" => ""
 ];
@@ -24,8 +24,8 @@ if (isset($url[0])) {
                 $active["Search"] = "nav-item__active";
                 break;
             }
-        case 'lich-chieu': {
-                $active["Planing"] = "nav-item__active";
+        case 'dat-ve': {
+                $active["Ticket"] = "nav-item__active";
                 break;
             }
         case 'khuyen-mai': {
@@ -52,15 +52,15 @@ echo "<div class='nav-container'>
             <div class='" . $active["Search"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__ticket-plan nav-item__text' href='".PRONAME."'>Lịch chiếu</a>
-            <div class='" . $active["Planing"] . "'></div>
+            <a class='nav__ticket-plan nav-item__text' href='".PRONAME."/dat-ve'>Đặt vé</a>
+            <div class='" . $active["Ticket"] . "'></div>
         </div>
         <div class='nav-item'>
             <a class='nav__promo nav-item__text' href='".PRONAME."'>Khuyến mãi</a>
             <div class='" . $active["Promo"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__contact nav-item__text' href='".PRONAME."'>Liên hệ</a>
+            <a class='nav__contact nav-item__text' href='".PRONAME."/lien-he'>Liên hệ</a>
             <div class='" . $active["Contact"] . "'></div>
         </div>
         <a class='nav__sign-in' href='".PRONAME."/dang-nhap'>Đăng nhập</a>
