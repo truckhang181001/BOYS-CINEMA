@@ -36,13 +36,13 @@
             <div class="user-comment col-9">
                 <input class="col-12" type="text " placeholder="Bạn đang nghĩ gì? " value="Huy nè">
                 <div class="user-comment__evaluate info-page--effect ">
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
                 </div>
-                <div class="user-comment__vote ">
+                <div class="user-comment__vote col-xl-8 col-md-10 col-12">
                     <div class="user-comment__vote--like info-page--effect ">
                         <i class="far fa-thumbs-up "></i> (1000)
                     </div>
@@ -66,13 +66,13 @@
             <div class="user-comment col-9 ">
                 <input class="col-12 " type="text " placeholder="Bạn đang nghĩ gì? " value="Lê Trung Huy">
                 <div class="user-comment__evaluate info-page--effect ">
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
-                    <i class="fas fa-star col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
+                    <i class="fas fa-star fa-star--style col-1 "></i>
                 </div>
-                <div class="user-comment__vote col-12">
+                <div class="user-comment__vote col-xl-8 col-md-10 col-12">
                     <div class="user-comment__vote--like info-page--effect ">
                         <i class="far fa-thumbs-up "></i> (1000)
                     </div>
@@ -80,7 +80,7 @@
                         <i class="far fa-thumbs-down "></i> (0)
                     </div>
                     <div class="user-comment__vote--report info-page--effect ">Báo cáo</div>
-                    <input type="text " placeholder="Nhập bình luận " class="info-page--effect ">
+                    <input type="text " placeholder="Nhập bình luận">
                 </div>
             </div>
         </div>

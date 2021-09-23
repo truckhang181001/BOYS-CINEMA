@@ -20,13 +20,13 @@
         opacity: 0.5;
         transform: translateY(-5px);
     } 
-    .fa-star {
+    .fa-star--style {
         color: #f1481f;
         transition: all 0.4s;
         cursor: pointer;
     }
         
-    .fa-star:active {
+    .fa-star--style:active {
         opacity: 1;
         color: #f1481f;
     }
