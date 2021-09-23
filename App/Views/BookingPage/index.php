@@ -5,65 +5,84 @@
 <body>
     <section class="booking-page">
         <div class="booking-page__banner">
-            <img src="../../Resource/img/marvel-760x367.jpg" alt="">
+            <img src="<?php echo PRONAME?>/public/img/BuyTicket.jpg" alt="">
         </div>
         <div class="booking-page__filter">
-            <div class="city-sort filter-item">
-                <div class="filter-item__icon">
-                    <i class="fas fa-map-marker-alt"></i>
+            <div class="booking-page__filter__row --start">
+                <div class="city-sort filter-item">
+                    <div class="filter-item__icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <select class="filter-item__text form-select">
+                        <option selected>Thành phố</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div class="filter-item__arr-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="filter-item__text">
-                    Thành phố
-                </div>
-                <div class="filter-item__arr-icon">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-            <div class="theater-sort filter-item">
-                <div class="filter-item__icon">
-                    <i class="fas fa-film"></i>
-                </div>
-                <div class="filter-item__text">
-                    Rạp
-                </div>
-                <div class="filter-item__arr-icon">
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-            </div>
-            <div class="date-sort filter-item">
-                <div class="filter-item__icon">
-                    <i class="fas fa-film"></i>
-                </div>
-                <div class="filter-item__text">
-                    Ngày
-                </div>
-                <div class="filter-item__arr-icon">
-                    <i class="fas fa-chevron-down"></i>
+                <div class="theater-sort filter-item">
+                    <div class="filter-item__icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="filter-item__text">
+                        Rạp
+                    </div>
+                    <div class="filter-item__arr-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
             </div>
-            <div class="method-sort filter-item">
-                <div class="filter-item__icon">
-                    <i class="fas fa-vr-cardboard"></i>
+            <div class="booking-page__filter__row --mid">
+                <div class="theater-sort filter-item">
+                    <div class="filter-item__icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="filter-item__text">
+                        Phim
+                    </div>
+                    <div class="filter-item__arr-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="filter-item__text">
-                    Hình thức
-                </div>
-                <div class="filter-item__arr-icon">
-                    <i class="fas fa-chevron-down"></i>
+                <div class="method-sort filter-item">
+                    <div class="filter-item__icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <div class="filter-item__text">
+                        Hình thức
+                    </div>
+                    <div class="filter-item__arr-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
             </div>
-            <div class="time-sort filter-item">
-                <div class="filter-item__icon">
-                    <i class="far fa-clock"></i>
+            <div class="booking-page__filter__row --end">
+                <div class="date-sort filter-item">
+                    <div class="filter-item__icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <div class="filter-item__text">
+                        Ngày
+                    </div>
+                    <div class="filter-item__arr-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="filter-item__text">
-                    Suất chiếu
+                <div class="time-sort filter-item">
+                    <div class="filter-item__icon">
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div class="filter-item__text">
+                        Suất chiếu
+                    </div>
+                    <div class="filter-item__arr-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
                 </div>
-                <div class="filter-item__arr-icon">
-                    <!-- <i class="fas fa-chevron-down"></i> -->
-                    <i class="fas fa-search"></i>
-                </div>
-            </div>
+            </div>    
         </div>
         <div class="booking-page__seat">
             <?php
@@ -76,6 +95,9 @@
                     echo "</div>";
                 }
             ?>
+        </div>
+        <div class="booking-page__checkout">
+            <a class="btn" href="<?php echo PRONAME?>/thanh-toan">THANH TOÁN</a>
         </div>
     </section>
 </body>

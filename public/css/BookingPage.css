@@ -1,5 +1,5 @@
 .booking-page__seat {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center; }
@@ -47,21 +47,50 @@
     border-color: grey; }
 
 .booking-page__filter {
-  width: 100%;
-  height: 10vh;
-  background-color: #032253;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center; }
+  width: 100%;
+  padding: 30px 30px;
+  background-color: #032253; }
+  .booking-page__filter__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 30px;
+    transform: translate(-30px, -15px); }
+
+.filter-item + .filter-item {
+  margin-left: 30px; }
 
 .filter-item {
-  flex-basis: 15%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
   .filter-item div:not(:last-child) {
     margin-right: 10px; }
+  .filter-item__icon {
+    background-color: #1BCBB7;
+    font-size: 12px;
+    border-radius: 100%;
+    height: 30px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media (min-width: 992px) {
+      .filter-item__icon {
+        height: 40px;
+        font-size: 22px; } }
+  .filter-item__text {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color: white;
+    background: none;
+    margin-right: 15px; }
 
 .booking-page__banner {
   height: 30vh;
@@ -70,8 +99,19 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top; }
+    object-position: 50% 25%; }
 
 .booking-page {
   background-color: #000C20;
   color: white; }
+
+.booking-page__checkout {
+  text-align: center;
+  margin-top: 30px; }
+  .booking-page__checkout a {
+    padding: 5px 20px;
+    font-size: 14px; }
+    @media (min-width: 576px) {
+      .booking-page__checkout a {
+        padding: 10px 30px;
+        font-size: 18px; } }
