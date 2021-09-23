@@ -1,11 +1,13 @@
 .info-page__img-group {
     height: 35vh;
     width: 90%;
-    margin: 5vh 5% !important;
+    padding: 0;
+    margin-top: 6vh;
+    margin-left: 5%;
     &__text p {
         font-family: Roboto;
         font-style: normal;
-        font-weight: bold;
+        font-weight: bolder;
         font-size: 32px;
         line-height: 37px;
         background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 48.96%, #569AFF 64.58%, #A772FF 100%);
@@ -34,14 +36,14 @@
         }
     }
     &__group {
-        height: 21vh;
-        overflow: hidden;
+        height: 25vh;
         display: flex;
-        justify-content: space-around;
+        overflow: hidden;
+        flex-wrap: wrap;
         justify-content: space-between;
         &--item {
+            margin: 2vh 0;
             object-fit: cover;
-            flex-basis: 23% !important;
         }
     }
 }
