@@ -2,7 +2,7 @@
     width: 100%;
     background-color: transparent;
     color:white;
-    padding-top:15px;
+    padding:15px 10px 0 10px;
     border:none;
     @media(min-width:556px){padding-top:20px;}
     @media(min-width:992px){padding-top:25px;}
@@ -41,7 +41,7 @@
             @media(min-width:992px){font-size:18px; line-height: 1.3rem;}
             @media(min-width:1200px){font-size:21px; line-height: 1.6rem;}               
         }
-        .card-category, .card-date small {
+        .card-category, .card-date small, .card-time small {
             font-size: 9px;
             color:white;
             font-weight: 300;
@@ -50,14 +50,13 @@
             @media(min-width:992px){font-size:18px; }
             @media(min-width:1200px){font-size:21px;} 
         }
-        .card-date {
+        .card-date, .card-time{
             margin-bottom:2px;
             @media(min-width:992px){margin-bottom: 5px; }
         }
         .card-footer {
-            border-radius: 5px;
-            border-top: 1px solid;
-            border-bottom: 1px solid;
+            border-top: 1px solid #ffffff30;
+            border-bottom: 1px solid #ffffff30;
             padding: 2px 0;
             @media(min-width:556px){padding: 5px 0; }
             @media(min-width:992px){padding: 8px 0; }
@@ -104,7 +103,7 @@
                     padding:0 5px;
                     font-weight: 300;
                     font-size: 9px;
-                    @media(min-width:556px){font-size:15px; border-radius: 30px; padding:3px 30px;}
+                    @media(min-width:556px){font-size:15px; border-radius: 30px; padding:2px 8px;}
                     @media(min-width:992px){font-size:21px; border-radius: 40px; padding:5px 40px;}
                     @media(min-width:1200px){font-size:24px;}   
 

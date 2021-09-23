@@ -1,6 +1,6 @@
 .select {
-    justify-content: space-between;
-    padding:5px 0;   
+    justify-content: space-around;
+    padding:10px 0;   
     @media (min-width:556px){
         padding:10px 0;
     }
@@ -24,30 +24,48 @@
             font-size: 24px !important;
         }
         
-        &--text {
-            color:white;
-        }
         &--wrapper {
-            background-color: #fff;
+            background-color: #1BCBB7;
             border-radius: 50%;
             cursor:pointer;
             height: 20px;
             width: 20px;
-            margin-right:5px;
+            margin:0 5px;
+            i {
+                color:white;
+            }
 
-        @media (min-width:556px){
-            height: 35px;
-            width: 35px;
-            }
-        @media (min-width:992px){
-            margin-left:10px;
-            height: 45px;
-            width: 45px;
-            }
-        @media (min-width:1200px){
-            height: 56px;
-            width: 56px;
-            }
+            @media (min-width:556px){
+                height: 35px;
+                width: 35px;
+                }
+            @media (min-width:992px){
+                margin:0 10px;
+                height: 45px;
+                width: 45px;
+                }
+            @media (min-width:1200px){
+                height: 56px;
+                width: 56px;
+                }
+        }
+    }
+    &__dropdown {
+        width: auto;
+        border:none;
+        padding-left:5px;
+        outline: none;
+        color:white;
+        background-color: transparent;
+        font-size: 10px;
+
+        @media (min-width:576px){font-size: 15px;}
+        @media (min-width:992px){font-size: 21px;}
+        @media (min-width:1200px){font-size: 24px;}
+
+        option {
+            color:#031a42;
+            background-color: #fff;
         }
     }
 }

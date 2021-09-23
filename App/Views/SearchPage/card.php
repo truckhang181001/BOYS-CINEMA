@@ -10,7 +10,8 @@
            <!-- <p class="card-text">Chuyện phim là tuổi thơ nghèo khó của hai anh em Thiều và Tường ở một làng quê Việt thân thuộc và nên thơ. Là nơi đã chứng kiến những rung động đầu đời của cả hai, tình cảm gia đình, tình anh em yêu thương chân thành, cũng như những đố kỵ, ghen tuông và những nỗi đau trong veo trong quá trình trưởng thành.</p> -->
            <div>
                 <p class="card-category">Thể loại: Tâm lý</p>
-                <p class="card-date"><small class="text-muted">Ngày công chiếu: 29/12/2021</small></p>
+                <p class="card-date"><small>Ngày công chiếu: 29/12/2021</small></p>
+                <p class="card-time"><small>Thời lượng: 90 phút</small></p>
            </div>
            
            <div class="card-footer d-flex justify-content-between align-items-center">
