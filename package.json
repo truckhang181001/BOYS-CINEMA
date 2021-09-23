@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sassConvert": "node-sass ./public/scss/LoginPage/index.scss ./public/css/LoginPage.css -w",
+    "sassConvert": "node-sass ./public/scss/CheckoutPage/index.scss ./public/css/CheckoutPage.css -w",
     "sass": "node-sass ./public/common/navBar.scss ./public/css/NavBar.css -w"
   },
   "repository": {

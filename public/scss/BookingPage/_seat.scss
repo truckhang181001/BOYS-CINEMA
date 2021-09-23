@@ -1,0 +1,58 @@
+@import "../../common/variable.scss";
+
+//-------------SEAT-LAYOUT-------------//
+.booking-page__seat{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__row{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+}
+//-------------SEAT-BASE-------------//
+.seat + .seat{
+    margin-left: 5px;
+}
+.seat{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    border: 2px solid $blue-light;
+    font-size: 8px;
+    @media (min-width: 576px) {
+        height: 40px;
+        width: 40px;
+        border: 3px solid $blue-light;
+        font-size: 14px;
+    }
+    &__name{
+        height: 100%;
+        width: 100%;
+        border: none !important;
+        text-align: center;
+        padding: 25% 0;
+    }
+}
+.seat-select{
+    background-color: $blue-light !important;
+    div{
+        background-color: $blue-light !important;
+    }
+}
+.seat-invalid{
+    border-color: grey;
+    background-color: grey !important;
+    div{
+        background-color: grey !important;
+        border-color: grey;
+    }
+}

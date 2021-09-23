@@ -6,6 +6,7 @@
     <div class="container-fluid" style="background-color:#000C20; padding: 100px 0;">
         <div class="row searchbox-and-sub-searchbox">
             <div class="col-12"> 
+                <i class="fas fa-search"></i>
                 <?php include_once "./App/Views/SearchPage/searchbox.php" ?>
             </div>
             <div class="col-12">
