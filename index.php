@@ -1,3 +1,4 @@
+<?php require_once "./config.php";?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,14 +17,13 @@
 
     <!-- Boostrap | Owl Carousel | Jquery -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
     <!-- Base CSS -->
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/Index.css">
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/NavBar.css">
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/Footer.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/Index.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/NavBar.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/Footer.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- PHP CODE -->
     <?php
-    include_once "./Share/NavBar.php";
+        include_once "./Share/NavBar.php";
     ?>
     <?php
         session_start();
