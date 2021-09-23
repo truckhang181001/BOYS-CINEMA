@@ -1,5 +1,5 @@
 <!--TAB-CONTENT -->
-    <div class="row info-page__tab-content__tab ">
+<div class=" info-page__tab-content__tab ">
         <div class="col-xl-2 col-4">
             <a class="info-page__tab-content__tab__tablinks active info-page--effect" href="#info-page__tab-content--main">NỘI DUNG</a>
         </div>
@@ -7,7 +7,7 @@
             <a class="info-page__tab-content__tab__tablinks info-page--effect" href="#info-page__tab-content--comment">BÌNH LUẬN</a>
         </div>
     </div>
-    <div id="info-page__tab-content--main" class="info-page__tab-content__tab--tabcontent row">
+    <div id="info-page__tab-content--main" class="info-page__tab-content__tab--tabcontent">
         Wonder Woman: Nữ thần chiến binh (tên gốc tiếng Anh: Wonder Woman) là một bộ phim siêu anh hùng của Mỹ dựa trên nhân vật cùng tên của DC Comics. Phim được phân phối bởi hãng Warner Bros. Pictures và là phim điện ảnh thứ tư trong vũ trụ DC mở rộng. Phim
         do Patty Jenkins đạo diễn, với phần kịch bản được Allan Heinberg và Geoff Johns thực hiện dựa trên cốt truyện gốc của Heinberg, Zack Snyder và Jason Fuchs. Gal Gadot đảm nhiệm vai chính trong phim, cùng với Chris Pine, Robin Wright, Danny
         Huston, David Thewlis, Connie Nielsen và Elena Anaya vào các vai phụ. Wonder Woman: Nữ thần chiến binh là phim điện ảnh người đóng thứ hai có sự xuất hiện của nhân vật Wonder Woman, sau sự góp mặt của cô trong Batman đại chiến Superman:
@@ -23,7 +23,7 @@
         cao khả năng diễn xuất của Gadot và Pine. Wonder Woman: Nữ thần chiến binh xác lập kỷ lục cho phim điện ảnh có doanh thu ra mắt nội địa cao nhất thực hiện bởi một nữ đạo diễn (103,3 triệu USD) và phim chuyển thể từ truyện tranh có nhân
         vật nữ chính đạt doanh thu mở màn cao nhất.
     </div>
-    <div id="info-page__tab-content--comment" class="info-page__tab-content__tab--tabcontent ">
+    <div id="info-page__tab-content--comment" class="info-page__tab-content__tab--tabcontent">
         <div class="info-page__tab-content__tab--tabcontent--tag ">
             <div class="user-avt col-1">
                 <i class="fas fa-user-circle "></i>
