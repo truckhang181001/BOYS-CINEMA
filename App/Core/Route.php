@@ -8,7 +8,8 @@
             "thanh-toan"=>"Checkout",
             "dang-nhap"=>"Login",
             "dang-ky"=>"Signup",
-            "ERROR-404"=>"Error404"
+            "ERROR-404"=>"Error404",
+            "lien-he" =>"Contact"
         ];
         // protected $routeAct = [
         //     "timkiem"=>[
