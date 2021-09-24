@@ -29,7 +29,7 @@
 
 .main-body {
     margin-top:20px;
-
+    width: 100%;
     @media (min-width:576px){
         margin-top:30px;
     }
@@ -42,5 +42,8 @@
     #hide-filter {
         display: none;
         @media (min-width:576px) {display: block;}
+    }
+    #sub-filter-card {
+        padding-right:0;
     }
 }

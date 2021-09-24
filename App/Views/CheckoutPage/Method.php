@@ -20,28 +20,27 @@
             </div>
         </div>
         <h3 class="sub-title">Nhập thông tin của bạn</h3>
-        <div class="mb-3 my-form">
-            <label for="FormControlInput1" class="form-label">Card detail</label>
-            <input type="text" class="form-control" id="FormControlInput1">
-        </div>
-        <div class="mb-3 my-form">
-            <label for="FormControlInput2" class="form-label">Name on the Card</label>
-            <input type="text" class="form-control" id="FormControlInput2">
-        </div>
-        <div class="row">
-            <div class="col-12 col-lg-6 my-form">
-                <label for="FormControlInput3" class="form-label">Expiration</label>
-                <input type="text" class="form-control" id="FormControlInput3" placeholder="MM/YY">
+        <form class="row">
+            <div class="col-12 mb-3 my-form">
+                <label for="validationDefault01" class="form-label">Card detail</label>
+                <input type="text" class="form-control" id="validationDefault01" value="" required>
             </div>
-            <div class="col-12 col-lg-6 my-form">
-                <label for="FormControlInput4" class="form-label">CVV</label>
-                <input type="text" class="form-control" id="FormControlInput4" placeholder="CVV">
+            <div class="col-12 mb-3 my-form">
+                <label for="validationDefault01" class="form-label">Card detail</label>
+                <input type="text" class="form-control" id="validationDefault01" value="" required>
             </div>
-        </div>
-        <div class="row">
+
+            <div class="col-12 col-lg-6 my-form">
+                    <label for="validationDefault01" class="form-label">Expiration</label>
+                    <input type="text" class="form-control" id="validationDefault01" value="" required>
+                </div>
+            <div class="col-12 col-lg-6 my-form">
+                    <label for="validationDefault01" class="form-label">CVV</label>
+                    <input type="text" class="form-control" id="validationDefault01" value="" required>
+            </div>  
+
             <div class="confirm-payment">
-                <button class="confirm-payment__btn">Thanh toán</button>
-            </div>
-        </div>
-        
+                    <button class="confirm-payment__btn" type="">Thanh toán</button>
+            </div>    
+        </form> 
 </div>
