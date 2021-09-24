@@ -1,11 +1,11 @@
 <div class="card mb-3">
     <div class="row g-0">
-      <div class="col-3 col-md-3" id="before-img">
-        <img src="<?php echo PRONAME ?>/public/img/BD-Ocard-reference-Copy-2722-1557282318.jpg" class="img-fluid rounded-start" alt="...">
-      </div>
+      <a class="col-3 col-md-3" id="before-img">
+        <img src="<?php echo PRONAME ?>/public/img/HaiPhuong.jpg" class="img-fluid rounded-start" alt="...">
+      </a>
       <div class="col-9 col-md-9">
         <div class="card-body">
-          <div><h5 class="card-title">TÔI THẤY HOA VÀNG TRÊN CỎ XANH</h5></div>
+          <div><a class="card-title">TÔI THẤY HOA VÀNG TRÊN CỎ XANH</a></div>
            
            <!-- <p class="card-text">Chuyện phim là tuổi thơ nghèo khó của hai anh em Thiều và Tường ở một làng quê Việt thân thuộc và nên thơ. Là nơi đã chứng kiến những rung động đầu đời của cả hai, tình cảm gia đình, tình anh em yêu thương chân thành, cũng như những đố kỵ, ghen tuông và những nỗi đau trong veo trong quá trình trưởng thành.</p> -->
            <div>
