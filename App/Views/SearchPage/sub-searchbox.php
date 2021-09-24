@@ -5,21 +5,39 @@
         <div class="select__items--wrapper d-flex justify-content-center align-items-center">
             <i class="fas fa-map-marker-alt"></i>
         </div>
-        <div class="d-flex align-items-center select__items--text">Thành phố</div>
+        <!-- <div class="d-flex align-items-center select__items--text">Thành phố</div> -->
+        <select class="select__dropdown">
+            <option selected>Thành phố</option>
+            <option value="1">Hồ Chí Minh</option>
+            <option value="2">Cần Thơ</option>
+            <option value="3">Cao Lãnh</option>
+        </select>
     </div>
 
     <div class="select__items d-flex">
             <div class="select__items--wrapper d-flex justify-content-center align-items-center">
                 <i class="fas fa-home"></i>
             </div>
-        <div class="d-flex align-items-center select__items--text">Rạp chiếu</div>
+        <!-- <div class="d-flex align-items-center select__items--text">Rạp chiếu</div> -->
+            <select class="select__dropdown">
+                <option selected>Rạp chiếu</option>
+                <option value="1">Boys Cần Thơ</option>
+                <option value="2">Boys Gò Vấp</option>
+                <option value="3">Boys Cao Lãnh</option>
+            </select>
     </div>
 
     <div class="select__items d-flex">
         <div class="select__items--wrapper d-flex justify-content-center align-items-center">
             <i class="far fa-calendar-alt"></i>
         </div>
-        <div class="d-flex align-items-center select__items--text">Ngày chiếu</div>
+        <!-- <div class="d-flex align-items-center select__items--text">Ngày chiếu</div> -->
+        <select class="select__dropdown">
+            <option selected>Ngày chiếu</option>
+            <option value="1">23/9</option>
+            <option value="2">24/9</option>
+            <option value="3">25/9</option>
+        </select>
     </div>   
               
 </div>

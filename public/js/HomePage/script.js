@@ -7,20 +7,19 @@ $(document).ready(function(){
             `<i class="fas fa-chevron-left prev-btn"></i>`,
             `<i class="fas fa-chevron-right next-btn"></i>`
         ],
-        dots: false,
+        dots: false,    
         responsive: {
             0:{
                 items:2,
-                nav:true
+                slideBy: 2
             },
             600:{
                 items:4,
-                nav:false
+                slideBy: 4
             },
             1000:{
                 items:6,
-                nav:true,
-                loop:false
+                slideBy: 6
             }
         },
     })

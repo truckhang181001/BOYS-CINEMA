@@ -6,6 +6,7 @@
     <div class="container-fluid" style="background-color:#000C20; padding: 100px 0;">
         <div class="row searchbox-and-sub-searchbox">
             <div class="col-12"> 
+                <i class="fas fa-search"></i>
                 <?php include_once "./App/Views/SearchPage/searchbox.php" ?>
             </div>
             <div class="col-12">
@@ -14,11 +15,11 @@
         </div>
 
         <div class="row main-body">
-            <div class="col-md-1"></div>
-            <div class="col-3 col-md-2">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2" id="hide-filter">
                 <?php include_once "./App/Views/SearchPage/filter.php" ?>
             </div>
-            <div class="col-9 col-md-8" style="padding-left:0px">
+            <div class="col-12 col-sm-8">
                 <?php include_once "./App/Views/SearchPage/sub-filter.php" ?>
                 <br/>
                 <?php include_once "./App/Views/SearchPage/card.php" ?>

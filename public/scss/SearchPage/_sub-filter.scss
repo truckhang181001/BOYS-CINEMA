@@ -1,4 +1,5 @@
 .sub-filter {
+    padding-right: 10px;
     float:right;
     justify-content: space-evenly;
     
@@ -26,12 +27,12 @@
         background-color: transparent;
         outline: none;
         color:#fff;
-        padding-left:10px;
-        padding-right: 5px;
+        padding:3px 10px 3px 5px;
 
         @media (min-width:556px){
             border-radius: 20px;
             font-size: 15px;
+            padding-right: 8px;
         }
         @media (min-width:992px){
             border-radius: 25px;
@@ -45,8 +46,8 @@
             font-size: 24px;
         }
         option {
-            color:#fff;
-            background-color: #000C20;
+            color:#031a42;
+            background-color: #fff;
         }
     }
 } 

@@ -1,0 +1,58 @@
+.container-fluid {
+    background-color: #000C20;
+}
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .form-control {
+        background-color:transparent !important;
+        outline:none;
+        color:#fff !important;
+        font-weight: 400;
+        padding:6px 5px;
+        font-size: 15px;
+
+        @media (min-width:576px){
+            padding:6px 5px;
+            font-size: 15px;
+        }
+        @media (min-width:768px){
+            font-size: 18px;
+            padding:10px 10px;
+        }
+        @media (min-width:992px){
+            padding:10px 10px;
+            font-size: 21px;
+        }
+    }
+
+    .button-send{
+
+        .button-send--text {
+            float:right;
+            font-size: 15px;
+            padding:3px 30px;
+            border-radius: 20px;
+            border:none;
+            background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
+            color:white;
+            &:hover {
+                filter: hue-rotate(45deg);
+            }
+            @media (min-width:576px){
+                padding:3px 30px;
+                font-size: 15px;
+            }
+            @media (min-width:768px){
+                padding:4px 40px;
+                font-size: 18px;
+            }
+            @media (min-width:992px){
+                padding:5px 50px;
+                font-size: 21px;
+            }
+        }
+    }
+}

@@ -17,6 +17,7 @@
         <div class="categogy__items" >
             <input class="categogy__items--checkbox" type="checkbox" id="chinhkich">
             <label for="chinhkich">Chính kịch</label>
+            
         </div>
         <div class="categogy__items">
             <input class="categogy__items--checkbox" type="checkbox" id="giatuong">

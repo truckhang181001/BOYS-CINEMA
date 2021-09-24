@@ -1,0 +1,77 @@
+.payment-method {
+    background-color: #16305D;
+    padding:10px;
+    @media (min-width:576px){padding:20px; }
+    @media (min-width:992px){padding:40px; }
+    @media (min-width:1200px){padding:50px;}
+
+    .title {
+        border-bottom:1px solid #ffffff30;
+        .title--text {
+        
+            font-weight: 500;
+            background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 18px;
+            @media (min-width:576px){font-size: 21px; }
+            @media (min-width:992px){font-size: 24px; }
+            @media (min-width:1200px){font-size: 28px;}
+        }
+    }
+
+    .method {
+        display:flex;
+
+        &__item {
+            
+            padding:10px 0;
+            img {
+                border-radius: 15px;
+                margin-right:10px;
+                width: 50px;
+                @media (min-width:576px){margin-right:10px; width: 70px; }
+                @media (min-width:992px){margin-right:15px; width: 100px; }
+                @media (min-width:1200px){margin-right:20px; width: 130px;}
+            }
+            @media (min-width:992px) {padding:20px 0;}
+        }
+
+    }
+    .sub-title {
+        margin:10px 0;
+        color:#fff;
+        font-size: 15px;
+        @media (min-width:576px){margin:10px 0; font-size: 18px; }
+        @media (min-width:992px){margin:20px 0; font-size: 21px; }
+        @media (min-width:1200px){margin:20px 0; font-size: 24px;}
+    }
+    .my-form {
+        input {
+            background-color: #16305D;
+            color:#fff;
+            border:1px solid #ffffff30;
+        }
+        label {
+            color:#fff;
+        }
+    }
+    .confirm-payment {
+        margin-top:15px;
+        @media (min-width:992px){margin-top:30px; }
+
+        &__btn {
+            font-weight: 500;
+            color: #fff;
+            border:none;
+            padding:2px 15px;
+            float:right;
+            border-radius: 20px;
+            background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
+
+            @media (min-width:576px){ padding:3px 20px; }
+            @media (min-width:992px){ padding:4px 25px;}
+            @media (min-width:1200px){ padding:5px 30px;}
+        }
+    }
+}

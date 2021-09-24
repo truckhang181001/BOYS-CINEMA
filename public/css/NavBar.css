@@ -82,7 +82,7 @@
         font-size: 18px !important;
         padding: 10px 20px !important; } }
   .nav__sign-in:hover {
-    filter: brightness(90%); }
+    filter: hue-rotate(45deg); }
   .nav__sign-in:active {
     transform: translateY(3px); }
 

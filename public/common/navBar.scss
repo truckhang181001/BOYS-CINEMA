@@ -91,7 +91,7 @@
         }
     }
     &__sign-in:hover{
-        filter: brightness(90%);
+        filter: hue-rotate(45deg);
     }
     &__sign-in:active{
         transform: translateY(3px);

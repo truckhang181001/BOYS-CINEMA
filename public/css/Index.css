@@ -6,7 +6,7 @@
     font-style: normal;
 }
 body{
-    background-color: #000C20;
+    background-color: #000C20 !important;
 }
 .btn {
     padding: 10px 20px;
@@ -20,13 +20,12 @@ body{
     transition: all 0.2s;
 }
 a{
-    transition: all 0.2s;
-}
-a:hover{
-    filter: brightness(90%);
+    text-decoration: none;
 }
 .btn:hover {
-    filter: brightness(90%);
+    filter: hue-rotate(45deg);
+    transform: scale(1.05,1);
+    color: white;
 }
 .btn:active {
     transform: translateY(3px);
