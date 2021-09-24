@@ -26,17 +26,17 @@ $(document).ready(function() {
     // Active tab đầu tiên khi trang web được chạy
     activeTab($('.info-page__tab-content__tab div:first-child'));
     $('.info-page--fas-style').on('click', function() {
-        $(this).find('.fas')
+        $(this).find('.info-page--fas-style__poster-icon')
             .toggleClass('fa-play')
             .toggleClass('fa-pause');
 
     });
     showInfoPoster = function() {
-        $('.info-page__header__btn-group__poster').find('.fas')
+        $('.info-page__header__btn-group__poster').find('.info-page--fas-style__poster-icon')
             .toggleClass('fa-play')
             .toggleClass('fa-pause');
     };
-    $('.info-page__header__btn-group__poster img').on('click', showInfoPoster)
-    $('.info-page__header__btn-group__poster__info--name').on('click', showInfoPoster)
+    $('.info-page__header__btn-group__poster img').on('click', showInfoPoster);
+    $('.info-page__header__btn-group__poster__info--name').on('click', showInfoPoster);
 
 });
