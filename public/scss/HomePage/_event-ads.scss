@@ -1,0 +1,15 @@
+@import "../../common/variable.scss";
+.event-slide {
+    margin-top: 30px;
+}
+
+.event-item {
+    width: 100%;
+    height: 250px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
