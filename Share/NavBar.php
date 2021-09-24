@@ -42,7 +42,7 @@ if (isset($url[0])) {
 }
 
 echo "<div class='nav-container'>
-    <div class='nav' id='nav-main'>    
+    <div class='nav' id='nav-main'> 
         <div class='nav-item'>
             <a class='nav__home nav-item__text' href='".PRONAME."'>Trang chủ</a>
             <div class='" . $active["Home"] . "'></div>
