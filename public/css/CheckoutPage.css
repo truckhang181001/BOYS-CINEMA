@@ -1,6 +1,7 @@
 .confirmCode {
   margin-bottom: 20px;
   background-color: #16305D;
+  border-radius: 5px;
   padding: 10px; }
   @media (min-width: 576px) {
     .confirmCode {
@@ -8,13 +9,10 @@
   @media (min-width: 992px) {
     .confirmCode {
       padding: 40px; } }
-  @media (min-width: 1200px) {
-    .confirmCode {
-      padding: 50px; } }
   .confirmCode .title {
     border-bottom: 1px solid #ffffff30; }
     .confirmCode .title .title--text {
-      font-weight: 500;
+      font-weight: bold;
       background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -63,20 +61,18 @@
           padding: 5px 30px; } }
 
 .information-detail {
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
   background-color: #16305D;
   margin: 20px 0; }
   @media (min-width: 576px) {
     .information-detail {
-      padding: 20px; } }
-  @media (min-width: 992px) {
-    .information-detail {
-      padding: 40px; } }
+      padding: 20px 30px 10px 30px; } }
   @media (min-width: 1200px) {
     .information-detail {
-      padding: 50px; } }
+      padding: 30px 40px 20px 40px; } }
   .information-detail .title .title--text {
-    font-weight: 500;
+    font-weight: bold;
     background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -126,6 +122,7 @@
 
 .payment-method {
   background-color: #16305D;
+  border-radius: 5px;
   padding: 10px; }
   @media (min-width: 576px) {
     .payment-method {
@@ -139,7 +136,7 @@
   .payment-method .title {
     border-bottom: 1px solid #ffffff30; }
     .payment-method .title .title--text {
-      font-weight: 500;
+      font-weight: bold;
       background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;

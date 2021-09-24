@@ -1,16 +1,16 @@
 .confirmCode {
     margin-bottom:20px;
     background-color: #16305D;
+    border-radius: 5px;
     padding:10px;
     @media (min-width:576px){padding:20px; }
     @media (min-width:992px){padding:40px; }
-    @media (min-width:1200px){padding:50px;}
 
     .title {
         border-bottom:1px solid #ffffff30;
         .title--text {
         
-            font-weight: 500;
+            font-weight: bold;
             background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
