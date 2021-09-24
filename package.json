@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sassConvert": "node-sass ./public/scss/BookingPage/index.scss ./public/css/BookingPage.css -w",
-    "sass": "node-sass ./public/common/navBar.scss ./public/css/NavBar.css -w"
+    "sassConvert": "node-sass ./public/scss/ContactPage/index.scss ./public/css/ContactPage.css -w",
+    "sass": "node-sass ./public/common/footer.scss ./public/css/Footer.css -w"
   },
   "repository": {
     "type": "git",

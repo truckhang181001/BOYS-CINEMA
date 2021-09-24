@@ -46,24 +46,50 @@
     background-color: grey !important;
     border-color: grey; }
 
-.booking-page__filter {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.booking-page__form {
   width: 100%;
-  padding: 30px 30px;
-  background-color: #032253; }
-  .booking-page__filter__row {
+  background-color: #032253;
+  padding-bottom: 20px; }
+  .booking-page__form__filter {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 30px;
-    transform: translate(-30px, -15px); }
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px 30px; }
+    @media (min-width: 375px) {
+      .booking-page__form__filter {
+        justify-content: flex-start; } }
+    @media (min-width: 576px) {
+      .booking-page__form__filter {
+        justify-content: center; } }
+    .booking-page__form__filter__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 30px;
+      margin-left: 30px;
+      transform: translate(-30px, -15px);
+      flex-direction: column; }
+      @media (min-width: 375px) {
+        .booking-page__form__filter__row {
+          flex-direction: row; } }
+  .booking-page__form__btn {
+    text-align: center; }
+    .booking-page__form__btn input {
+      padding: 5px 30px;
+      font-size: 14px; }
+      @media (min-width: 576px) {
+        .booking-page__form__btn input {
+          padding: 8px 40px;
+          font-size: 16px; } }
 
 .filter-item + .filter-item {
-  margin-left: 30px; }
+  margin-top: 20px; }
+  @media (min-width: 375px) {
+    .filter-item + .filter-item {
+      margin-top: 0px;
+      margin-left: 30px; } }
 
 .filter-item {
   display: flex;
@@ -91,6 +117,22 @@
     color: white;
     background: none;
     margin-right: 15px; }
+  .filter-item__form {
+    border: none;
+    font-size: 10px;
+    font-weight: 300;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    padding: 3px 10px 3px 5px;
+    width: 110px; }
+    @media (min-width: 576px) {
+      .filter-item__form {
+        width: 150px;
+        font-size: 16px; } }
+    .filter-item__form option {
+      color: #031a42;
+      background-color: #fff; }
 
 .booking-page__banner {
   height: 30vh;

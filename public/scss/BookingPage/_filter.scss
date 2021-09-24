@@ -1,23 +1,53 @@
 @import "../../common/variable";
-.booking-page__filter{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+.booking-page__form{
     width: 100%;
-    padding: 30px 30px;
     background-color: #032253;
-    &__row{
+    padding-bottom: 20px;
+    &__filter{
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-top: 30px;
-        margin-left: 30px;
-        transform: translate(-30px,-15px);
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 30px 30px;
+        @media (min-width: 375px) {
+            justify-content: flex-start;
+        }
+        @media (min-width: 576px) {
+            justify-content: center;
+        }
+        &__row{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+            margin-left: 30px;
+            transform: translate(-30px,-15px);
+            flex-direction: column;
+            @media (min-width: 375px) {
+                flex-direction: row;
+            }
+        }
+    }
+    &__btn{
+        text-align: center;
+        input{
+            padding: 5px 30px;
+            font-size: 14px;
+            @media (min-width: 576px) {
+                padding: 8px 40px;
+                font-size: 16px;
+            }
+        }
     }
 }
+
 .filter-item + .filter-item{
-    margin-left: 30px;
+    margin-top: 20px;
+    @media (min-width: 375px) {
+        margin-top: 0px;
+        margin-left: 30px;
+    }
 }
 .filter-item{
     display: flex;
@@ -47,5 +77,23 @@
         color: white;
         background: none;
         margin-right: 15px;
+    }
+    &__form{
+        border: none;
+        font-size: 10px;
+        font-weight: 300;
+        background-color: transparent;
+        outline: none;
+        color:#fff;
+        padding:3px 10px 3px 5px;
+        width: 110px;
+        @media (min-width: 576px) {
+            width: 150px;
+            font-size: 16px;
+        }
+        option {
+            color:#031a42;
+            background-color: #fff;
+        }
     }
 }
