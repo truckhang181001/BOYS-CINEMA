@@ -1,53 +1,56 @@
-<div class="card mb-3">
-    <div class="row g-0">
-      <a class="col-3 col-md-3" id="before-img">
-        <img src="<?php echo PRONAME ?>/public/img/HaiPhuong.jpg" class="img-fluid rounded-start" alt="...">
+<?php
+for($i=0; $i <=10; $i++ ){
+echo "<div class='card mb-3'>
+    <div class='row g-0'>
+      <a class='col-3 col-md-3 before-img' href='".PRONAME."/thong-tin'>
+        <img src='".PRONAME."/public/img/HaiPhuong.jpg' class='img-fluid rounded-start' alt='...'>
       </a>
-      <div class="col-9 col-md-9">
-        <div class="card-body">
-          <div><a class="card-title">TÔI THẤY HOA VÀNG TRÊN CỎ XANH</a></div>
-           
-           <!-- <p class="card-text">Chuyện phim là tuổi thơ nghèo khó của hai anh em Thiều và Tường ở một làng quê Việt thân thuộc và nên thơ. Là nơi đã chứng kiến những rung động đầu đời của cả hai, tình cảm gia đình, tình anh em yêu thương chân thành, cũng như những đố kỵ, ghen tuông và những nỗi đau trong veo trong quá trình trưởng thành.</p> -->
+      <div class='col-9 col-md-9'>
+        <div class='card-body'>
+          <div>
+            <a class='card-title' href='".PRONAME."/thong-tin'>TÔI THẤY HOA VÀNG TRÊN CỎ XANH</a>
+            <div class='card-time'>1 giờ 30 phút</div>
+          </div>           
            <div>
-                <p class="card-category">Thể loại: Tâm lý</p>
-                <p class="card-date"><small>Ngày công chiếu: 29/12/2021</small></p>
-                <p class="card-time"><small>Thời lượng: 90 phút</small></p>
+                <p class='card-category'>Tâm lý | Gia đình | Tình cảm</p>
+                <p class='card-date'><small>Ngày công chiếu: 29/12/2021</small></p>      
            </div>
            
-           <div class="card-footer d-flex justify-content-between align-items-center">
-                <div class="card-footer__items d-flex align-items-center">
-                    <div onclick="ClickHeart()" class="card-footer__items--circle d-flex justify-content-center align-items-center">
-                        <i class="far fa-heart"></i>
+           <div class='card-footer d-flex justify-content-between align-items-center'>
+                <div class='card-footer__items d-flex align-items-center'>
+                    <div onclick='ClickHeart()' class='card-footer__items--circle d-flex justify-content-center align-items-center'>
+                        <i class='far fa-heart'></i>
                     </div>
                     <div><h4>Yêu thích</h4></div>
                 </div>
-               <div class="card-footer__items d-flex align-items-center">
-                   <div class="card-footer__items--circle d-flex justify-content-center align-items-center">
-                       <i class="fas fa-play"></i>
+               <div class='card-footer__items d-flex align-items-center'>
+                   <div class='card-footer__items--circle d-flex justify-content-center align-items-center'>
+                       <i class='fas fa-play'></i>
                     </div>
                     <div><h4>Xem trailer</h4></div>
                </div>
-               <div class="card-footer__items d-flex align-items-center">
-                    <button class="card-footer__items--button">MUA VÉ</button>
+               <div class='card-footer__items d-flex align-items-center'>
+                    <button class='card-footer__items--button'>MUA VÉ</button>
                 </div>
            </div>
         </div>
       </div>
     </div>
-</div>
-
+</div>";
+}
+?>
 <script>
     function ClickHeart(){
     
-        var element =document.querySelector(".fa-heart");
-        if (element.classList.contains("far"))
+        var element =document.querySelector('.fa-heart');
+        if (element.classList.contains('far'))
         {
-          element.classList.remove("far");
-          element.classList.add("fas", "colorred");
+          element.classList.remove('far');
+          element.classList.add('fas', 'colorred');
         }
         else {
-          element.classList.remove("fas", "colorred");
-          element.classList.add("far");
+          element.classList.remove('fas', 'colorred');
+          element.classList.add('far');
         }
     }   
 </script>   

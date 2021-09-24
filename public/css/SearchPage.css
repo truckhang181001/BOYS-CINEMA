@@ -13,22 +13,30 @@
   @media (min-width: 1200px) {
     .card {
       padding-top: 30px; } }
-  .card #before-img {
+  .card .before-img {
     cursor: pointer;
     padding: 0;
-    padding-right: 5px;
-    transition: transform 0.3s; }
+    padding-right: 5px; }
+    .card .before-img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover; }
     @media (min-width: 556px) {
-      .card #before-img {
+      .card .before-img {
         padding-right: 5px; } }
     @media (min-width: 992px) {
-      .card #before-img {
+      .card .before-img {
         padding: 0 10px; } }
     @media (min-width: 1200px) {
-      .card #before-img {
+      .card .before-img {
         padding: 0 15px; } }
-    .card #before-img:hover {
-      transform: scale(1.02); }
+  .card .card-time {
+    font-size: 10px;
+    color: #1BCBB7; }
+    @media (min-width: 556px) {
+      .card .card-time {
+        margin-top: 10px;
+        font-size: 18px; } }
   .card .card-body {
     padding: 0;
     height: 100%;
@@ -38,7 +46,9 @@
     .card .card-body .card-title {
       color: white;
       cursor: pointer;
-      font-size: 10px; }
+      font-weight: bold;
+      font-size: 12px;
+      transition: all 0.2s; }
       @media (min-width: 556px) {
         .card .card-body .card-title {
           font-size: 15px; } }
@@ -49,9 +59,7 @@
         .card .card-body .card-title {
           font-size: 26px; } }
       .card .card-body .card-title:hover {
-        background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 51.56%, #A772FF 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; }
+        color: #1BCBB7; }
     .card .card-body .card-text {
       padding-bottom: 3px;
       font-size: 9px;
@@ -79,22 +87,24 @@
       font-size: 9px;
       color: white;
       font-weight: 300;
-      margin: 0; }
+      margin: 0px; }
       @media (min-width: 556px) {
         .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
-          font-size: 15px; } }
+          font-size: 15px;
+          margin-bottom: 10px; } }
       @media (min-width: 992px) {
         .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
           font-size: 18px; } }
       @media (min-width: 1200px) {
         .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
           font-size: 21px; } }
-    .card .card-body .card-date, .card .card-body .card-time {
+    .card .card-body .card-date {
       margin-bottom: 2px; }
       @media (min-width: 992px) {
-        .card .card-body .card-date, .card .card-body .card-time {
+        .card .card-body .card-date {
           margin-bottom: 5px; } }
     .card .card-body .card-footer {
+      border-radius: 0;
       border-top: 1px solid #ffffff30;
       border-bottom: 1px solid #ffffff30;
       padding: 2px 0; }
@@ -158,14 +168,15 @@
         color: white;
         background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
         border-radius: 15px;
-        padding: 0 5px;
-        font-weight: 300;
-        font-size: 9px; }
+        padding: 2px 20px;
+        font-weight: bold;
+        font-size: 9px;
+        transition: all 0.2s; }
         @media (min-width: 556px) {
           .card .card-body .card-footer__items--button {
             font-size: 15px;
             border-radius: 30px;
-            padding: 2px 8px; } }
+            padding: 2px 20px; } }
         @media (min-width: 992px) {
           .card .card-body .card-footer__items--button {
             font-size: 21px;
@@ -192,8 +203,7 @@
 .effect-and-categogy .categogy, .effect-and-categogy .effect {
   background: #032253;
   padding: 5px;
-  border-radius: 5px;
-  border-bottom: 2px solid #ffffff30; }
+  border-radius: 5px; }
   @media (min-width: 556px) {
     .effect-and-categogy .categogy, .effect-and-categogy .effect {
       padding: 10px; } }
@@ -480,7 +490,7 @@
       margin-top: 60px; } }
   .main-body #hide-filter {
     display: none; }
-    @media (min-width: 576px) {
+    @media (min-width: 768px) {
       .main-body #hide-filter {
         display: block; } }
   .main-body #sub-filter-card {

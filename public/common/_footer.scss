@@ -1,13 +1,18 @@
 .footer{
-    padding: 40px 0;
+    padding: 40px 20px;
     background-color: #032055;
 
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 300;
-    letter-spacing: 1.25px;
+    letter-spacing: 1px;
     color: white;
     text-decoration: none;
+    margin-top: 30px;
+    @media (min-width: 576px) {
+        font-size: 16px;
+        letter-spacing: 1.25px;
+    }
 
     .footer__title{
         display: inline-block;
