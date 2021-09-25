@@ -1,7 +1,7 @@
 <head>
     <title>BOY CINEMA | Thông tin</title>
-    <link rel="stylesheet" href="/BOYSCINEMA/public/css/InfoPage.css">
-    <script type="text/javascript" src="/BOYSCINEMA/public/js/InfoPage/script.js"></script>
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/InfoPage.css">
+    <script type="text/javascript" src="<?php echo PRONAME ?>/public/js/InfoPage/script.js"></script>
     <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/HomePage.css">
 </head>
 <body>
@@ -28,6 +28,6 @@
     </div>
 
     <script src="<?php echo PRONAME ?>/public/js/HomePage/script.js"></script>
-    <script type="text/javascript" src="/BOYSCINEMA/public/js/InfoPage/script.js"></script>
+    <script type="text/javascript" src="<?php echo PRONAME ?>/public/js/InfoPage/script.js"></script>
 </body>
 </html>

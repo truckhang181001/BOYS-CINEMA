@@ -36,7 +36,7 @@
     @media (min-width: 576px) {
       .card .card-time {
         margin-top: 10px;
-        font-size: 18px; } }
+        font-size: 16px; } }
   .card .card-body {
     padding: 0;
     height: 100%;
@@ -47,17 +47,17 @@
       color: white;
       cursor: pointer;
       font-weight: bold;
-      font-size: 13px;
+      font-size: 12px;
       transition: all 0.2s; }
       @media (min-width: 576px) {
         .card .card-body .card-title {
-          font-size: 15px; } }
+          font-size: 14px; } }
       @media (min-width: 992px) {
         .card .card-body .card-title {
           font-size: 21px; } }
       @media (min-width: 1200px) {
         .card .card-body .card-title {
-          font-size: 26px; } }
+          font-size: 24px; } }
       .card .card-body .card-title:hover {
         color: #1BCBB7; }
     .card .card-body .card-text {
@@ -73,15 +73,15 @@
       line-height: 0.7rem; }
       @media (min-width: 576px) {
         .card .card-body .card-text {
-          font-size: 15px;
+          font-size: 14px;
           line-height: 1rem; } }
       @media (min-width: 992px) {
         .card .card-body .card-text {
-          font-size: 18px;
+          font-size: 16px;
           line-height: 1.3rem; } }
       @media (min-width: 1200px) {
         .card .card-body .card-text {
-          font-size: 21px;
+          font-size: 18px;
           line-height: 1.6rem; } }
     .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
       font-size: 12px;
@@ -90,14 +90,14 @@
       margin: 0px; }
       @media (min-width: 576px) {
         .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
-          font-size: 15px;
+          font-size: 14px;
           margin-bottom: 10px; } }
       @media (min-width: 992px) {
         .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
-          font-size: 18px; } }
+          font-size: 16px; } }
       @media (min-width: 1200px) {
         .card .card-body .card-category, .card .card-body .card-date small, .card .card-body .card-time small {
-          font-size: 21px; } }
+          font-size: 18px; } }
     .card .card-body .card-date {
       margin-bottom: 2px; }
       @media (min-width: 992px) {
@@ -123,13 +123,13 @@
         font-size: 10px; }
         @media (min-width: 576px) {
           .card .card-body .card-footer__items h4 {
-            font-size: 15px; } }
+            font-size: 14px; } }
         @media (min-width: 992px) {
           .card .card-body .card-footer__items h4 {
-            font-size: 18px; } }
+            font-size: 16px; } }
         @media (min-width: 1200px) {
           .card .card-body .card-footer__items h4 {
-            font-size: 21px; } }
+            font-size: 18px; } }
       .card .card-body .card-footer__items--circle {
         background-color: #032253;
         height: 15px;
@@ -174,17 +174,17 @@
         transition: all 0.2s; }
         @media (min-width: 576px) {
           .card .card-body .card-footer__items--button {
-            font-size: 15px;
+            font-size: 14px;
             border-radius: 30px;
             padding: 2px 20px; } }
         @media (min-width: 992px) {
           .card .card-body .card-footer__items--button {
-            font-size: 21px;
+            font-size: 16px;
             border-radius: 40px;
             padding: 5px 40px; } }
         @media (min-width: 1200px) {
           .card .card-body .card-footer__items--button {
-            font-size: 24px; } }
+            font-size: 18px; } }
         .card .card-body .card-footer__items--button:hover {
           filter: hue-rotate(45deg); }
 

@@ -1,6 +1,6 @@
 <!-- HEADER -->
 <div class="info-page__header__banner">
-    <img src="/BOYSCINEMA/public/img/info-page-banner.png" alt="Banner">
+    <img src="<?php echo PRONAME ?>/public/img/info-page-banner.png" alt="Banner">
     <div class="info-page__header__poster-info">
         <p class="info-page__header__poster-info--name info-page--effect">YOU CAN'T SAVE THE WORLD ALONE</p>
         <button type="button" class="info-page__header__poster-info--brand col-6">
@@ -14,12 +14,14 @@
 </div>
 
 <div class="info-page__header__btn-group">
-    <img class="info-page--effect info-page__header__btn-group--img" src="/BOYSCINEMA/public/img/info-page-poster.png">
-    <div class="info-page--fas-style">
-        <i class="fas fa-pause info-page--fas-style__poster-icon"></i>
-    </div>
-    <div class="info-page--fas-style">
+    <div class="info-page__header__btn-group--img">
+        <img class="info-page--effect" src="<?php echo PRONAME ?>/public/img/info-page-poster.png">
+        <div class="info-page--fas-style">
+            <i class="fas fa-pause info-page--fas-style__poster-icon"></i>
+        </div>
+        <div class="info-page--fas-style">
         <i class="fas fa-play info-page--fas-style__poster-icon"></i>
+        </div>
     </div>                                     
     <div class="col-xl-8 col-12 info-page__header__btn-group__statistic">
         <div class="info-page__header__btn-group__statistic__ticket-number">

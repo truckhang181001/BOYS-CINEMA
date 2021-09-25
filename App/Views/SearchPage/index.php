@@ -4,7 +4,7 @@
     <title>Trang tìm kiếm</title>
 </head>
 <body>
-    <div class="container-fluid" style="background-color:#000C20; padding: 100px 0;">
+    <div class="container" style="background-color:#000C20; padding: 100px 0;">
         <div class="row searchbox-and-sub-searchbox">
             <div class="col-12"> 
                 <?php include_once "./App/Views/SearchPage/searchbox.php" ?>

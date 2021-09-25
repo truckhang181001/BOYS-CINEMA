@@ -5,12 +5,12 @@
 </div>
 <div class="owl-carousel event-ads owl-theme owl-event">
     <div class="event-item">
-        <img src="/BOYSCINEMA/public/img/home-page-event1.jpg" alt="Thumb" class="banner__img">
+        <img src="<?php echo PRONAME?>/public/img/home-page-event1.jpg" alt="Thumb" class="banner__img">
     </div>
     <div class="event-item">
-        <img src="/BOYSCINEMA/public/img/home-page-event2.jpg" alt="Thumb" class="banner__img">
+        <img src="<?php echo PRONAME?>/public/img/home-page-event2.jpg" alt="Thumb" class="banner__img">
     </div>
     <div class="event-item">
-        <img src="/BOYSCINEMA/public/img/home-page-event3.jpg" alt="Thumb" class="banner__img">
+        <img src="<?php echo PRONAME?>/public/img/home-page-event3.jpg" alt="Thumb" class="banner__img">
     </div>
 </div>

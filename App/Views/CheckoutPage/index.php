@@ -4,7 +4,7 @@
     
 </head>
 <body>
-    <div class="container-fluid" style="background-color:#000C20">
+    <div class="container" style="background-color:#000C20">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-12 col-md-10">

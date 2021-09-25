@@ -3,7 +3,7 @@
     <title>BOYSCINEMA | Liên hệ</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <form class="row" style="padding-top:100px" method="post">
             <div class="col-md-1 col-lg-1"></div>
             <div class="col-12 col-md-6 col-lg-5 form-wrapper">
