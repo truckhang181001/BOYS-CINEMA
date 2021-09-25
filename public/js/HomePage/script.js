@@ -24,7 +24,6 @@ $(document).ready(function(){
             }
         },
     })
-});
 
     $('.banner-ads').owlCarousel({
         loop: true,
@@ -78,3 +77,4 @@ $(document).ready(function(){
             }
         },
     });
+});
