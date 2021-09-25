@@ -201,6 +201,7 @@
       .payment-method .confirm-payment {
         margin-top: 30px; } }
     .payment-method .confirm-payment__btn {
+      margin-bottom: -2px;
       font-weight: 500;
       color: #fff;
       border: none;

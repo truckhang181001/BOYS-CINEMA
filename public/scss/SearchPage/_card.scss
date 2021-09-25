@@ -5,7 +5,7 @@
     color:white;
     padding:15px 0 0 10px;
     border:none;
-    @media(min-width:556px){padding-top:20px;}
+    @media(min-width:576px){padding-top:20px;}
     @media(min-width:992px){padding-top:25px;}
     @media(min-width:1200px){padding-top:30px;}
     .before-img {
@@ -17,7 +17,7 @@
             width: 100%;
             object-fit: cover;
         }
-        @media(min-width:556px){padding-right: 5px;}
+        @media(min-width:576px){padding-right: 5px;}
         @media(min-width:992px){padding:0 10px;}
         @media(min-width:1200px){padding:0 15px;}
         // transition: transform 0.3s;
@@ -28,7 +28,7 @@
     .card-time{
         font-size: 10px;
         color: $aqua;
-        @media(min-width:556px){
+        @media(min-width:576px){
             margin-top: 10px;
             font-size: 18px;
         }
@@ -44,9 +44,9 @@
             color:white;
             cursor: pointer;
             font-weight: bold;
-            font-size:12px;
+            font-size:13px;
             transition: all 0.2s;
-            @media(min-width:556px){font-size:15px;}
+            @media(min-width:576px){font-size:15px;}
             @media(min-width:992px){font-size:21px;}
             @media(min-width:1200px){font-size:26px;}
             &:hover {
@@ -55,7 +55,7 @@
         }
         .card-text {
             padding-bottom:3px;
-            font-size: 9px;
+            font-size: 12px;
             font-weight: 300;
             display: -webkit-box;
             -webkit-box-orient: vertical;
@@ -64,16 +64,16 @@
             white-space: normal;
             -webkit-line-clamp: 3;
             line-height: 0.7rem;
-            @media(min-width:556px){font-size:15px; line-height: 1rem;}
+            @media(min-width:576px){font-size:15px; line-height: 1rem;}
             @media(min-width:992px){font-size:18px; line-height: 1.3rem;}
             @media(min-width:1200px){font-size:21px; line-height: 1.6rem;}               
         }
         .card-category, .card-date small, .card-time small {
-            font-size: 9px;
+            font-size: 12px;
             color:white;
             font-weight: 300;
             margin:0px;
-            @media(min-width:556px){font-size:15px; margin-bottom: 10px;}
+            @media(min-width:576px){font-size:15px; margin-bottom: 10px;}
             @media(min-width:992px){font-size:18px; }
             @media(min-width:1200px){font-size:21px;} 
         }
@@ -86,7 +86,7 @@
             border-top: 1px solid #ffffff30;
             border-bottom: 1px solid #ffffff30;
             padding: 2px 0;
-            @media(min-width:556px){padding: 5px 0; }
+            @media(min-width:576px){padding: 5px 0; }
             @media(min-width:992px){padding: 8px 0; }
             @media(min-width:1200px){padding: 12px 0;} 
             
@@ -95,10 +95,10 @@
                 h4{
                     margin:0;
                     font-weight: 300;
-                    font-size: 9px;
-                        @media(min-width:556px){font-size:15px; }
-                        @media(min-width:992px){font-size:21px; }
-                        @media(min-width:1200px){font-size:24px;}        
+                    font-size: 10px;
+                        @media(min-width:576px){font-size:15px; }
+                        @media(min-width:992px){font-size:18px; }
+                        @media(min-width:1200px){font-size:21px;}        
                 }
                 &--circle {
                     background-color: #032253;
@@ -108,13 +108,13 @@
                     margin-right:5px;
                     cursor: pointer;
 
-                    @media (min-width:556px){height: 20px; width: 20px;}
+                    @media (min-width:576px){height: 20px; width: 20px;}
                     @media (min-width:992px){height: 30px; width: 30px; margin-right:10px;}
                     @media (min-width:1200px){height: 40px; width: 40px;}
 
                     i{
                         font-size: 10px;
-                        @media(min-width:556px){font-size:14px; }
+                        @media(min-width:576px){font-size:14px; }
                         @media(min-width:992px){font-size:18px; }
                         @media(min-width:1200px){font-size:21px;} 
                     }
@@ -130,9 +130,9 @@
                     border-radius: 15px;
                     padding: 2px 20px;
                     font-weight: bold;
-                    font-size: 9px;
+                    font-size: 10px;
                     transition: all 0.2s;
-                    @media(min-width:556px){font-size:15px; border-radius: 30px; padding:2px 20px;}
+                    @media(min-width:576px){font-size:15px; border-radius: 30px; padding:2px 20px;}
                     @media(min-width:992px){font-size:21px; border-radius: 40px; padding:5px 40px;}
                     @media(min-width:1200px){font-size:24px;}   
 
