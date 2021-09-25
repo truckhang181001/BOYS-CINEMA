@@ -32,11 +32,11 @@ $(document).ready(function() {
 
     });
     showInfoPoster = function() {
-        $('.info-page__header__btn-group__poster').find('.info-page--fas-style__poster-icon')
+        $('.info-page__header__btn-group').find('.info-page--fas-style__poster-icon')
             .toggleClass('fa-play')
             .toggleClass('fa-pause');
     };
-    $('.info-page__header__btn-group__poster img').on('click', showInfoPoster);
-    $('.info-page__header__btn-group__poster__info--name').on('click', showInfoPoster);
+    $('.info-page__header__btn-group--img').on('click', showInfoPoster);
+    $('.info-page__header__poster-info--name').on('click', showInfoPoster);
 
 });
