@@ -18,7 +18,7 @@ echo "<div class='card mb-3'>
            
            <div class='card-footer d-flex justify-content-between align-items-center'>
                 <div class='card-footer__items d-flex align-items-center'>
-                    <div onclick='ClickHeart()' class='card-footer__items--circle d-flex justify-content-center align-items-center'>
+                    <div onclick='ClickHeart(".$i.")' class='card-footer__items--circle d-flex justify-content-center align-items-center'>
                         <i class='far fa-heart'></i>
                     </div>
                     <div><h4>Yêu thích</h4></div>
@@ -40,9 +40,9 @@ echo "<div class='card mb-3'>
 }
 ?>
 <script>
-    function ClickHeart(){
+    function ClickHeart($i){
     
-        var element =document.querySelector('.fa-heart');
+        var element =document.querySelectorAll('.fa-heart')[$i];
         if (element.classList.contains('far'))
         {
           element.classList.remove('far');
