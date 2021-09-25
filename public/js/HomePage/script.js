@@ -11,7 +11,8 @@ $(document).ready(function(){
         responsive: {
             0:{
                 items:2,
-                slideBy: 2
+                slideBy: 2,
+                nav:false
             },
             600:{
                 items:4,
@@ -34,7 +35,7 @@ $(document).ready(function(){
         touchDrag: false,
         mouseDrag: false,
         pullDrag: false, 
-        autoplayTimeout:6000,
+        autoplayTimeout:3000,
         responsive: {
             0:{
                 items:1,
@@ -65,7 +66,7 @@ $(document).ready(function(){
         responsive: {
             0:{
                 items:1,
-                nav:true
+                nav:false
             },
             600:{
                 items:1,

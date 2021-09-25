@@ -58,16 +58,13 @@
 .container-fluid {
   padding: 0px 0px; }
 
-.owl-banner {
-  height: 400px;
-  padding: 0px 0px; }
-
 .banner-item {
   padding-bottom: 10px;
   filter: drop-shadow(6px 4px 0px rgba(0, 0, 0, 0.25)); }
   .banner-item img {
-    height: 62vh;
-    object-fit: cover; }
+    max-height: 500px;
+    object-fit: cover;
+    object-position: 50% 40%; }
 
 .event-slide {
   margin-top: 30px; }
@@ -87,7 +84,7 @@ body {
 /* Custom search bar */
 .inner-addon {
   position: relative;
-  margin-top: 15vh; }
+  margin-top: 30px; }
 
 .custom-icon-search {
   right: 0px;
@@ -116,17 +113,10 @@ body {
 
 /* Custom film slide */
 .home-page__title {
-  font-family: Roboto;
-  font-style: normal;
   font-weight: bold;
   font-size: 29px;
   line-height: 42px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  width: 310px;
-  height: 42px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-top: 30px;
   background: -webkit-linear-gradient(to top left, #1BCBB7 0%, #32ABFF 47%, #A772FF 100%);
   background: -moz-linear-gradient(to top left, #1BCBB7 0%, #32ABFF 47%, #A772FF 100%);
   background: linear-gradient(to top left, #1BCBB7 0%, #32ABFF 47%, #A772FF 100%);
@@ -134,10 +124,6 @@ body {
   -webkit-text-fill-color: transparent; }
 
 .home-page__sub-title {
-  width: 459px;
-  height: 21px;
-  font-family: Roboto;
-  font-style: normal;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -146,6 +132,4 @@ body {
 .home-page__hr {
   width: 100%;
   height: 1px;
-  left: 3.5%;
-  top: 150%;
-  border: 2px solid #16305D; }
+  color: #16305D; }

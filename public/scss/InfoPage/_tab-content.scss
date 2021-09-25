@@ -2,16 +2,13 @@
 
 .info-page__tab-content {
     width: 90%;
-    height: 70vh;
     margin: 2vh 5% !important;
     overflow: hidden;
     @media screen and(max-width: 1023px) {
         font-size: 10px;
-        height: 60vh;
     }
     @media screen and(max-width: 400px) {
         font-size: 8px;
-        height: 50vh;
     }
     &__tab {
         display: flex;
@@ -40,16 +37,13 @@
             font-style: normal;
             font-size: 1rem;
             color: #FFFFFF;
-            height: 60vh;
-            margin: 0;
+            margin-top: 20px;
             padding: 0;
             @media screen and(max-width: 1023px) {
                 font-size: 10px;
-                height: 50vh;
             }
             @media screen and(max-width: 400px) {
                 font-size: 8px;
-                height: 40vh;
             }
             &--tag {
                 max-height: 20vh;
