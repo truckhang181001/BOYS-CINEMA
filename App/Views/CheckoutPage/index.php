@@ -8,19 +8,19 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-12 col-md-10">
-                <?php include_once "./App/Views/CheckoutPage/Info.php" ?>
+                <?php include_once __DIR__."/Info.php" ?>
             </div>
         </div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-12 col-md-10">
-                <?php include_once "./App/Views/CheckoutPage/Discount.php" ?>
+                <?php include_once __DIR__."/Discount.php" ?>
             </div>
         </div>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-12 col-md-10">
-                <?php include_once "./App/Views/CheckoutPage/Method.php" ?>
+                <?php include_once __DIR__."/Method.php" ?>
             </div>
         </div>
     </div>

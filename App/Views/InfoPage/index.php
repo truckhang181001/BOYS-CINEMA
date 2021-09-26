@@ -8,21 +8,21 @@
     <div class="info-page">
         <div class="info-page__header">
         <?php
-            include_once("./App/Views/InfoPage/header.php"); 
+            include_once __DIR__."/header.php"; 
         ?>
         </div>
       <div class="info-page__img-group">
         <?php
-            include_once("./App/Views/InfoPage/img-group.php"); 
+            include_once __DIR__."/img-group.php"; 
         ?>
       </div>
         <div class="info-page__tab-content"> 
             <?php
-            include_once("./App/Views/InfoPage/tab-content.php"); 
+            include_once __DIR__."/tab-content.php"; 
         ?></div>
         <div class="container info-carousel">
             <?php
-                include_once("./App/Views/HomePage/carousel.php"); 
+                include_once __DIR__."/carousel.php"; 
             ?>
         </div>
     </div>

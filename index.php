@@ -33,12 +33,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- PHP CODE -->
     <?php
-        include_once "./Share/NavBar.php";
+        include_once __DIR__."/Share/NavBar.php";
     ?>
     <?php
         session_start();
-        require_once "./App/bridge.php";
+        require_once __DIR__."/App/bridge.php";
     ?>
-    <?php include_once "./Share/Footer.php"; ?>
+    <?php include_once __DIR__."/Share/Footer.php"; ?>
 </body>
 </html>
