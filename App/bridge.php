@@ -1,5 +1,5 @@
 <?php
-    require_once "./App/Core/Route.php";
-    require_once "./App/Core/Controller.php";
+    require_once __DIR__."/Core/Route.php";
+    require_once __DIR__."/Core/Controller.php";
     $indexUrl = new route();
 ?>

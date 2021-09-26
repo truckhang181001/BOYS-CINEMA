@@ -22,7 +22,7 @@
         ?></div>
         <div class="container info-carousel">
             <?php
-                include_once __DIR__."/carousel.php"; 
+                include_once __DIR__."/../HomePage/carousel.php"; 
             ?>
         </div>
     </div>
