@@ -3,7 +3,7 @@
 
     <div class="select__items d-flex">
         <div class="select__items--wrapper d-flex justify-content-center align-items-center">
-            <i class="fas fa-map-marker-alt"></i>
+            <img src="http://pixner.net/boleto/demo/assets/images/ticket/city.png" alt="ticket">
         </div>
         <!-- <div class="d-flex align-items-center select__items--text">Thành phố</div> -->
         <select class="select__dropdown">
@@ -16,7 +16,7 @@
 
     <div class="select__items d-flex">
             <div class="select__items--wrapper d-flex justify-content-center align-items-center">
-                <i class="fas fa-home"></i>
+                <img src="http://pixner.net/boleto/demo/assets/images/ticket/cinema.png" alt="ticket">
             </div>
         <!-- <div class="d-flex align-items-center select__items--text">Rạp chiếu</div> -->
             <select class="select__dropdown">
@@ -29,7 +29,7 @@
 
     <div class="select__items d-flex">
         <div class="select__items--wrapper d-flex justify-content-center align-items-center">
-            <i class="far fa-calendar-alt"></i>
+            <img src="http://pixner.net/boleto/demo/assets/images/ticket/date.png" alt="icon">
         </div>
         <!-- <div class="d-flex align-items-center select__items--text">Ngày chiếu</div> -->
         <select class="select__dropdown">

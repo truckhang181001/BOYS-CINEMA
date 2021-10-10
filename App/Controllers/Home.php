@@ -2,7 +2,8 @@
 class Home extends controller{
     function __construct()
     {
-        $this->getView("HomePage",[]);
+        $data = $this->getModel("tbl_film");
+        $this->getView("HomePage",$data->GetFilm());
     }
 }
 ?>

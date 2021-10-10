@@ -420,14 +420,13 @@
       .select__items {
         font-size: 24px !important; } }
     .select__items--wrapper {
-      background-color: #1BCBB7;
       border-radius: 50%;
       cursor: pointer;
       height: 20px;
       width: 20px;
       margin: 0 5px; }
-      .select__items--wrapper i {
-        color: white; }
+      .select__items--wrapper img {
+        height: 100%; }
       @media (min-width: 556px) {
         .select__items--wrapper {
           height: 35px;

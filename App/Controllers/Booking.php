@@ -2,7 +2,8 @@
     class Booking extends Controller{
         function __construct()
         {
-            $this->getView("BookingPage",[]);
+            $data = $this->getModel("tbl_schedule");
+            $this->getView("BookingPage",$data->GetCity());
         }
     }
 ?>

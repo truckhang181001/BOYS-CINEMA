@@ -1,35 +1,49 @@
+<?php
+    $db = new tbl_schedule;
+    $city = $db->GetCity();
+    $cityid='';
+?>
+
 <head>
-    <link rel="stylesheet" href="<?php echo PRONAME?>/public/css/BookingPage.css">
+    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/BookingPage.css">
     <title>BOYSCINEMA | Đặt vé</title>
 </head>
+
 <body>
     <section class="booking-page">
         <div class="booking-page__banner">
-            <img src="<?php echo PRONAME?>/public/img/BuyTicket.jpg" alt="">
+            <img src="<?php echo PRONAME ?>/public/img/BuyTicket.jpg" alt="">
         </div>
-        <form method="get" class="booking-page__form">
+        <form method="get" class="booking-page__form" action="">
             <div class="booking-page__form__filter">
                 <div class="booking-page__form__filter__row --start">
                     <div class="city-sort filter-item">
                         <div class="filter-item__icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <img src="http://pixner.net/boleto/demo/assets/images/ticket/city.png" alt="ticket">
                         </div>
-                        <select class="filter-item__form" name="city">
-                            <option selected>Chọn thành phố</option>
-                            <option value="1">TP.HCM</option>
-                            <option value="2">Hà Nội</option>
-                            <option value="3">Kiên Giang</option>
-                            <option value="2">Nha Trang</option>
+                        <select class="filter-item__form" name="city" onchange="this.form.submit()">
+                            <option selected disabled>Chọn thành phố</option>
+                            <?php
+                                while ($item = mysqli_fetch_assoc($city)) {
+                                    $select='';
+                                    if (isset($_GET['city'])){
+                                        if ($_GET['city'] == $item['name']){
+                                            $select = 'selected';
+                                            $cityid = $item['id'];
+                                        }
+                                    }
+                                    echo "<option " .$select. ">" . $item['name'] . "</option>";
+                                }
+                            ?>
                         </select>
                     </div>
                     <div class="theater-sort filter-item">
                         <div class="filter-item__icon">
-                            <i class="fas fa-film"></i>
+                            <img src="http://pixner.net/boleto/demo/assets/images/ticket/cinema.png" alt="ticket">
                         </div>
                         <select class="filter-item__form" name="theater">
-                            <option selected>Chọn rạp</option>
-                            <option value="1">06 Sư Vạn Hạnh, Q10</option>
-                            <option value="2">256 Pasteur</option>
+                            <option selected disabled>Chọn rạp</option>
+                            <option><?php echo $cityid?></option>
                         </select>
                     </div>
                 </div>
@@ -39,31 +53,25 @@
                             <i class="fas fa-film"></i>
                         </div>
                         <select class="filter-item__form" name="film">
-                            <option selected>Chọn phim</option>
-                            <option value="1">Shang-chi cuộc chiến không hồi kết</option>
-                            <option value="2">Hai Phượng</option>
+                            <option selected disabled>Chọn phim</option>
                         </select>
                     </div>
                     <div class="method-sort filter-item">
                         <div class="filter-item__icon">
-                            <i class="fas fa-vr-cardboard"></i>
+                            <img src="http://pixner.net/boleto/demo/assets/images/ticket/exp.png" alt="icon">
                         </div>
                         <select class="filter-item__form" name="experience">
-                            <option selected>Hình thức</option>
-                            <option value="1">2D</option>
-                            <option value="2">3D</option>
+                            <option selected disabled>Hình thức</option>
                         </select>
                     </div>
                 </div>
                 <div class="booking-page__form__filter__row --end">
                     <div class="date-sort filter-item">
                         <div class="filter-item__icon">
-                            <i class="fas fa-film"></i>
+                            <img src="http://pixner.net/boleto/demo/assets/images/ticket/date.png" alt="icon">
                         </div>
                         <select class="filter-item__form" name="date">
-                            <option selected>Chọn ngày</option>
-                            <option value="1">21/10/2021</option>
-                            <option value="2">22/10/2021</option>
+                            <option selected disabled>Chọn ngày</option>
                         </select>
                     </div>
                     <div class="time-sort filter-item">
@@ -71,32 +79,31 @@
                             <i class="far fa-clock"></i>
                         </div>
                         <select class="filter-item__form" name="time">
-                            <option selected>Chọn suất chiếu</option>
-                            <option value="1">7:00</option>
-                            <option value="2">7:30</option>
+                            <option selected disabled>Chọn suất chiếu</option>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="booking-page__form__btn">
                 <input type="submit" class="btn" value="Tìm ghế">
-            </div>   
+            </div>
         </form>
         <div class="booking-page__seat">
             <?php
-                $alphabet = range("A","Z");
-                for($i=0; $i <10; $i++){
-                    echo "<div class='booking-page__seat__row'>";
-                    for($j=1; $j <=10; $j++){
-                        echo "<div class='seat'>".$alphabet[$i],$j."</div>";
-                    }
-                    echo "</div>";
+            $alphabet = range("A", "Z");
+            for ($i = 0; $i < 10; $i++) {
+                echo "<div class='booking-page__seat__row'>";
+                for ($j = 1; $j <= 10; $j++) {
+                    echo "<div class='seat'>" . $alphabet[$i], $j . "</div>";
                 }
+                echo "</div>";
+            }
             ?>
         </div>
         <div class="booking-page__checkout">
-            <a class="btn" href="<?php echo PRONAME?>/thanh-toan">THANH TOÁN</a>
+            <a class="btn" href="<?php echo PRONAME ?>/thanh-toan">THANH TOÁN</a>
         </div>
     </section>
 </body>
+
 </html>
