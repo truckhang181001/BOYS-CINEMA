@@ -1,12 +1,33 @@
 <?php
     require_once __DIR__."/db_module.php";
+    class schedule{
+        public $id;
+        public $id_film;
+        public $id_theater;
+        public $id_room;
+        public $date;
+
+        function __construct($id,$id_film,$id_theater,$id_room,$date)
+        {
+            $this->id=$id;
+            $this->id_film=$id_film;
+            $this->id_theater=$id_theater;
+            $this->id_room=$id_room;
+            $this->date=$date;
+        }
+    }
     class tbl_schedule{
-        function GetCity(){
+        function getSchedule($cond=1){
+            $scheClass=[];
             $sql = null;
-            $query = "SELECT tbl_location.name, tbl_location.id FROM tbl_schedule INNER JOIN tbl_theater ON tbl_schedule.id_theater = tbl_theater.id INNER JOIN tbl_location ON tbl_theater.id_location = tbl_location.id";
+            $query = "SELECT * FROM tbl_schedule WHERE ".$cond."";
             createConnection($sql);
-            return executeQuery($sql,$query);
-            mysqli_close($sql);
+            $result = executeQuery($sql,$query);
+            while($sche = mysqli_fetch_assoc($result)){
+                $scheClass[] = new schedule($sche['id'],$sche['id_film'],$sche['id_theater'],$sche['id_room'],$sche['date']);
+            }
+            releaseMemory($sql,$result);
+            return $scheClass;
         }
     }
 ?>

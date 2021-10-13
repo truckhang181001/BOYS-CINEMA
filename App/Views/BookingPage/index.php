@@ -1,9 +1,3 @@
-<?php
-    $db = new tbl_schedule;
-    $city = $db->GetCity();
-    $cityid='';
-?>
-
 <head>
     <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/BookingPage.css">
     <title>BOYSCINEMA | Đặt vé</title>
@@ -23,18 +17,6 @@
                         </div>
                         <select class="filter-item__form" name="city" onchange="this.form.submit()">
                             <option selected disabled>Chọn thành phố</option>
-                            <?php
-                                while ($item = mysqli_fetch_assoc($city)) {
-                                    $select='';
-                                    if (isset($_GET['city'])){
-                                        if ($_GET['city'] == $item['name']){
-                                            $select = 'selected';
-                                            $cityid = $item['id'];
-                                        }
-                                    }
-                                    echo "<option " .$select. ">" . $item['name'] . "</option>";
-                                }
-                            ?>
                         </select>
                     </div>
                     <div class="theater-sort filter-item">
@@ -43,7 +25,6 @@
                         </div>
                         <select class="filter-item__form" name="theater">
                             <option selected disabled>Chọn rạp</option>
-                            <option><?php echo $cityid?></option>
                         </select>
                     </div>
                 </div>
