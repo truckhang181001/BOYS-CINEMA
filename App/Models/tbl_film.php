@@ -21,16 +21,28 @@
         }
     }
     class tbl_film{
-        function GetFilm($field='*',$cond='1'){
+        function GetFilm($cond='1'){
             $sql = null;
-            $query = "SELECT ".$field." FROM tbl_film WHERE ".$cond;
+            $query = "SELECT * FROM tbl_film WHERE ".$cond;
             createConnection($sql);
             $result = executeQuery($sql,$query);
             while($item = mysqli_fetch_assoc($result)){
-                $filmClass[] = new film($item['id'],$item['id_category'],$item['name'],$item['desc'],$item['release'],$item["time"],$item["type"]);
+                $class[] = new film($item['id'],$item['id_category'],$item['name'],$item['desc'],$item['release'],$item["time"],$item["type"]);
             }
             releaseMemory($sql,$result);
-            return $filmClass;
+            return $class;
+        }
+        function IssetFilm($id_film){
+            $sql = null;
+            $query = "SELECT id FROM tbl_film WHERE id=".$id_film;
+            createConnection($sql);
+            $result = executeQuery($sql,$query);
+            $i=0;
+            while($item = mysqli_fetch_assoc($result)){
+                $i+=1;
+            }
+            releaseMemory($sql,$result);
+            return $i==1?true:false;
         }
     }
 ?>

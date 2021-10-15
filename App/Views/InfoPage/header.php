@@ -2,13 +2,37 @@
 <div class="info-page__header__banner">
     <img src="<?php echo PRONAME ?>/public/img/info-page-banner.png" alt="Banner">
     <div class="info-page__header__poster-info">
-        <p class="info-page__header__poster-info--name info-page--effect">YOU CAN'T SAVE THE WORLD ALONE</p>
+        <p class="info-page__header__poster-info--name info-page--effect">
+            <!------------ BINDING FILM NAME  ------------>
+            <?php echo $data["film"][0]->name;?>
+            <!------------------------------------------>
+        </p>
         <button type="button" class="info-page__header__poster-info--brand col-6">
-            Hành động
+            <!------------ BINDING FILM  CATEGORY  ------------>
+            <?php 
+                echo $data["category"][0]->name;
+            ?>
+            <!------------------------------------------>
         </button>
         <div class="info-page__header__poster-info--time">
-            <div><i class="far fa-calendar-alt"></i> 10 May, 2021</div>
-            <div><i class="far fa-clock "></i> 2 hrs 50 mins</div>
+            <div class="mr-3">
+                <i class="far fa-calendar-alt"></i>
+                <!------------ BINDING FILM DATE  ------------>
+                <?php 
+                    $date = date_create($data["film"][0]->release);
+                    echo date_format($date,"d/m/Y");
+                ?>
+                <!------------------------------------------>
+            </div>
+            <div>
+                <i class="far fa-clock "></i>
+                <!------------ BINDING FILM TIME  ------------>
+                <?php 
+                    $time = $data["film"][0]->time;
+                    echo FLOOR($time/60)." giờ ".($time%60)." phút" 
+                ?>
+                <!------------------------------------------>
+            </div>
         </div>                       
     </div>
 </div>
