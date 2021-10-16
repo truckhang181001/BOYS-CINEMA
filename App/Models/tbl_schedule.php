@@ -15,9 +15,14 @@
             $this->id_room=$id_room;
             $this->date=$date;
         }
+        function GetFilm(){
+            require_once __DIR__."/tbl_film.php";
+            $dataFilm = new tbl_film();
+            return $dataFilm->GetFilm('id='.$this->id_film)[0];
+        }
     }
     class tbl_schedule{
-        function getSchedule($cond=1){
+        function GetSchedule($cond=1){
             $scheClass=[];
             $sql = null;
             $query = "SELECT * FROM tbl_schedule WHERE ".$cond."";

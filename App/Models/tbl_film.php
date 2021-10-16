@@ -19,6 +19,11 @@
             $this->time=$time;
             $this->type=$type;
         }
+        public function GetCate(){
+            require_once __DIR__."/tbl_category.php";
+            $cate = new tbl_category();
+            return $cate->GetCategory('id='.$this->id)[0]->name;
+        }
     }
     class tbl_film{
         function GetFilm($cond='1'){
@@ -26,17 +31,6 @@
             $query = "SELECT * FROM tbl_film WHERE ".$cond;
             createConnection($sql);
             $result = executeQuery($sql,$query);
-            while($item = mysqli_fetch_assoc($result)){
-                $class[] = new film($item['id'],$item['id_category'],$item['name'],$item['desc'],$item['release'],$item["time"],$item["type"]);
-            }
-            releaseMemory($sql,$result);
-            return $class;
-        }
-        function FilmShowing(){
-            $sql = null;
-            $query= "SELECT tbl_category.* FROM tbl_category INNER JOIN tbl_film ON tbl_film.id_category= tbl_category.id";
-            createConnection($sql);
-            $result = executeQuery($sql,$this->InnerCate);
             while($item = mysqli_fetch_assoc($result)){
                 $class[] = new film($item['id'],$item['id_category'],$item['name'],$item['desc'],$item['release'],$item["time"],$item["type"]);
             }

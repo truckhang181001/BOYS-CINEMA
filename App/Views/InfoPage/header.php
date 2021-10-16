@@ -10,7 +10,7 @@
         <button type="button" class="info-page__header__poster-info--brand col-6">
             <!------------ BINDING FILM  CATEGORY  ------------>
             <?php 
-                echo $data["category"][0]->name;
+                echo $data['film'][0]->GetCate();
             ?>
             <!------------------------------------------>
         </button>
