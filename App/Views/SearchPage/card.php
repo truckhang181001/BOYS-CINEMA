@@ -1,6 +1,11 @@
 <?php
-for($i=0; $i <=10; $i++ ){
-echo "<div class='card mb-3'>
+$i=0;
+foreach($data['film'] as $key=>$item){
+  $i+=1;
+  $date = date_create($item->release);
+  $time = FLOOR($item->time/60)." giờ ".($item->time%60)." phút";
+
+  echo "<div class='card mb-3'>
     <div class='row g-0'>
       <a class='col-3 col-md-3 before-img' href='".PRONAME."/thong-tin'>
         <img src='".PRONAME."/public/img/HaiPhuong.jpg' class='img-fluid rounded-start' alt='...'>
@@ -8,12 +13,12 @@ echo "<div class='card mb-3'>
       <div class='col-9 col-md-9'>
         <div class='card-body'>
           <div>
-            <a class='card-title' href='".PRONAME."/thong-tin'>TÔI THẤY HOA VÀNG TRÊN CỎ XANH</a>
-            <div class='card-time'>1 giờ 30 phút</div>
+            <a class='card-title' href='".PRONAME."/thong-tin'>".$item->name."</a>
+            <div class='card-time'>".$time."</div>
           </div>           
            <div>
-                <p class='card-category'>Tâm lý | Gia đình | Tình cảm</p>
-                <p class='card-date'><small>Ngày công chiếu: 29/12/2021</small></p>      
+                <p class='card-category'>".$data['category'][$key]->name."</p>
+                <p class='card-date'><small>Ngày công chiếu: ".date_format($date,"d/m/Y")."</small></p>      
            </div>
            
            <div class='card-footer d-flex justify-content-between align-items-center'>

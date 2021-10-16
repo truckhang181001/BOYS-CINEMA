@@ -3,7 +3,7 @@
         foreach($data as $item) {
             echo "<div class='card-container'>
             <div class='card item'>
-                <a href='".PRONAME."/thong-tin' class='card__img'>
+                <a href='".PRONAME."/thong-tin?film=".$item->id."' class='card__img'>
                     <img src='".PRONAME."/public/img/HaiPhuong.jpg' type='button' alt='Thumb'>
                 </a>
                 <div class='card__content'>

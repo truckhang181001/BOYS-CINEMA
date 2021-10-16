@@ -32,6 +32,17 @@
             releaseMemory($sql,$result);
             return $class;
         }
+        function FilmShowing(){
+            $sql = null;
+            $query= "SELECT tbl_category.* FROM tbl_category INNER JOIN tbl_film ON tbl_film.id_category= tbl_category.id";
+            createConnection($sql);
+            $result = executeQuery($sql,$this->InnerCate);
+            while($item = mysqli_fetch_assoc($result)){
+                $class[] = new film($item['id'],$item['id_category'],$item['name'],$item['desc'],$item['release'],$item["time"],$item["type"]);
+            }
+            releaseMemory($sql,$result);
+            return $class;
+        }
         function IssetFilm($id_film){
             $sql = null;
             $query = "SELECT id FROM tbl_film WHERE id=".$id_film;
@@ -45,4 +56,3 @@
             return $i==1?true:false;
         }
     }
-?>
