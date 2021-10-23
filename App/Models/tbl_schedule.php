@@ -25,6 +25,11 @@
             $dataFilm = new tbl_showtime();
             return $dataFilm->GetShowTime('id_schedule='.$this->id);
         }
+        function GetTheater(){
+            require_once "./tbl_theater.php";
+            $dataTheater = new tbl_theater();
+            return $dataTheater->GetTheater();
+        }
     }
     class tbl_schedule{
         function GetSchedule($cond=1){

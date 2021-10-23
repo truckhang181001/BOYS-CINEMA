@@ -3,6 +3,7 @@
     class theater{
         public $id;
         public $id_location;
+        //public $name_location;
         public $address;
         public $phone;
         public $room;
@@ -11,9 +12,16 @@
         {
             $this->id=$id;
             $this->id_location=$id_location;
+            //$this->name_location = $this->GetLocation();
             $this->address=$address;
             $this->phone=$phone;
             $this->room=$room;
+        }
+
+        private function GetLocation(){
+            require_once "./tbl_location.php";
+            $data = new tbl_location();
+            return $data->GetLocation('id='.$this->id_location)[0]->name;
         }
     }
     class tbl_theater{

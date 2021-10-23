@@ -4,6 +4,12 @@
     </div>
     <select class="filter-item__form" name="city" onchange="this.form.submit()">
         <option selected disabled>Chọn thành phố</option>
+        <?php 
+            foreach($data as $item){
+                echo "<option>hihi</option>";
+                var_dump($item->GetTheater());
+            }
+        ?>
     </select>
 </div>
 <div class="theater-sort filter-item">
