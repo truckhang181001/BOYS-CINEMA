@@ -1,0 +1,19 @@
+@import "./card";
+@import "./filter";
+
+.ticket-plan{
+    &__header{
+        height: 30vh;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 50% 25%;
+        }
+    }
+    &__body{
+        text-align: center;
+        margin: 40px auto;
+    }
+}

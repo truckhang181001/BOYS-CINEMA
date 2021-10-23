@@ -20,6 +20,11 @@
             $dataFilm = new tbl_film();
             return $dataFilm->GetFilm('id='.$this->id_film)[0];
         }
+        function GetShowTime(){
+            require_once __DIR__."/tbl_showtime.php";
+            $dataFilm = new tbl_showtime();
+            return $dataFilm->GetShowTime('id_schedule='.$this->id);
+        }
     }
     class tbl_schedule{
         function GetSchedule($cond=1){

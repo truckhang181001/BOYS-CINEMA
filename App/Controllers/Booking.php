@@ -1,12 +1,19 @@
 <?php
     class Booking extends Controller{
-        function phim($id_film){
-            $data = $this->getModel("tbl_schedule");
-            $this->getView("BookingPage",$data->getSchedule("id_film = ".$id_film));
+        function phim(){
+            $this->getView("TicketPlanPage");
         }
         function tatca(){
-            $data = $this->getModel("tbl_schedule");
-            $this->getView("BookingPage",$data->getSchedule());
+            $Schedule = $this->getModel("tbl_schedule");
+            if(isset($_GET['date'])){
+                $time = DateTime::createFromFormat('d/m/Y',$_GET['date'])->format('Y-m-d');
+                $dataSche = $Schedule->GetSchedule("date='".$time."'");
+            }
+            else{
+                $nowDate = date("Y/m/d");
+                $dataSche = $Schedule->GetSchedule("date='".$nowDate."'");
+            }
+            $this->getView("BookingPage",$dataSche);
         }
     }
 ?>

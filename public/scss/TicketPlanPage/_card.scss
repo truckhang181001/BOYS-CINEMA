@@ -1,0 +1,62 @@
+@import "../../common/variable";
+
+.film-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    &__name{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-basis: 30%;
+
+        padding: 20px;
+        border: 1px solid $blue-light;
+
+        font-size: 16px;
+        font-weight: bold;
+        color: $white;
+        @media (min-width: 576px) {
+            font-size: 21px;
+        }
+        @media (min-width: 1200px) {
+            font-size: 24px;
+        }
+    }
+    &__showtime{
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 70%;
+
+        padding: 20px;
+        border: 1px solid $blue-light;
+    }
+}
+.showtime-item{
+    position: relative;
+    margin: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: $white;
+    background-color: $blue-light;
+    @media (min-width: 1200px) {
+        font-size: 18px;
+    }
+    &__time{
+        font-weight: normal;
+        text-align: center;
+    }
+    &__seat{
+        font-weight: 200;
+    }
+    &__type{
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%,-50%);
+        
+        font-size: 12px;
+        padding: 2px 4px;
+        background-color: $aqua;
+    }
+}

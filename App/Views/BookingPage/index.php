@@ -11,6 +11,22 @@
         <form method="get" class="booking-page__form" action="">
             <div class="booking-page__form__filter">
                 <div class="booking-page__form__filter__row --start">
+                    <?php require_once __DIR__ . "/filter_date.php" ?>
+                    <div class="theater-sort filter-item">
+                        <div class="filter-item__icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <select class="filter-item__form" name="film">
+                            <option selected disabled>Chọn phim</option>
+                            <?php
+                                foreach($data as $item){
+                                    echo "<option>".$item->GetFilm()->name."</option>";
+                                }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+                <div class="booking-page__form__filter__row --mid">
                     <div class="city-sort filter-item">
                         <div class="filter-item__icon">
                             <img src="http://pixner.net/boleto/demo/assets/images/ticket/city.png" alt="ticket">
@@ -27,32 +43,16 @@
                             <option selected disabled>Chọn rạp</option>
                         </select>
                     </div>
+
+
                 </div>
-                <div class="booking-page__form__filter__row --mid">
-                    <div class="theater-sort filter-item">
-                        <div class="filter-item__icon">
-                            <i class="fas fa-film"></i>
-                        </div>
-                        <select class="filter-item__form" name="film">
-                            <option selected disabled>Chọn phim</option>
-                        </select>
-                    </div>
+                <div class="booking-page__form__filter__row --end">
                     <div class="method-sort filter-item">
                         <div class="filter-item__icon">
                             <img src="http://pixner.net/boleto/demo/assets/images/ticket/exp.png" alt="icon">
                         </div>
                         <select class="filter-item__form" name="experience">
                             <option selected disabled>Hình thức</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="booking-page__form__filter__row --end">
-                    <div class="date-sort filter-item">
-                        <div class="filter-item__icon">
-                            <img src="http://pixner.net/boleto/demo/assets/images/ticket/date.png" alt="icon">
-                        </div>
-                        <select class="filter-item__form" name="date">
-                            <option selected disabled>Chọn ngày</option>
                         </select>
                     </div>
                     <div class="time-sort filter-item">

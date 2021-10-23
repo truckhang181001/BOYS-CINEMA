@@ -4,20 +4,15 @@
             "trang-chu"=>"Home",
             "thong-tin"=>"Info",
             "tim-kiem"=>"Search",
+            "lich-chieu"=>"TicketPlan",
             "dat-ve"=>"Booking",
             "thanh-toan"=>"Checkout",
             "dang-nhap"=>"Login",
             "dang-ky"=>"Signup",
             "ERROR-404"=>"Error404",
-            "lien-he" =>"Contact"
+            "lien-he" =>"Contact",
+            "admin"=>"admin"
         ];
-        // protected $routeAct = [
-        //     "timkiem"=>[
-        //         "tatca"=>"",
-        //         "dangchieu"=>"",
-        //         "sapchieu"=>""
-        //     ]
-        // ];
         protected $controller = "Home";
         protected $action = "";
         protected $param = [];
