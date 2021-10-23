@@ -28,6 +28,7 @@
     class tbl_film{
         function GetFilm($cond='1'){
             $sql = null;
+            $class = null;
             $query = "SELECT * FROM tbl_film WHERE ".$cond;
             createConnection($sql);
             $result = executeQuery($sql,$query);

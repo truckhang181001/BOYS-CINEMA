@@ -21,6 +21,7 @@ class showtime
 class tbl_showtime{
     function GetShowTime($cond='1'){
         $sql = null;
+        $class=null;
         $query = "SELECT * FROM tbl_showtime WHERE ".$cond;
         createConnection($sql);
         $result = executeQuery($sql,$query);

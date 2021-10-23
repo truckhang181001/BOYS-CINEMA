@@ -17,6 +17,7 @@
     class tbl_comment{
         function GetComment($cond='1'){
             $sql = null;
+            $class = null;
             $query = "SELECT * FROM tbl_comment WHERE ".$cond;
             createConnection($sql);
             $result = executeQuery($sql,$query);

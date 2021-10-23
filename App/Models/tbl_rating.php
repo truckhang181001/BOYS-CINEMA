@@ -16,6 +16,7 @@
     }
     class tbl_rating{
         function GetRating($cond='1'){
+            $class = null;
             $sql = null;
             $query = "SELECT * FROM tbl_rating WHERE ".$cond;
             createConnection($sql);

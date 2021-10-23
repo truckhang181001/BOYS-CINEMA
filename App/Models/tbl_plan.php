@@ -14,6 +14,7 @@
     }
     class tbl_plan{
         function GetPlan($cond='1'){
+            $class = null;
             $sql = null;
             $query = "SELECT * FROM tbl_plan WHERE ".$cond;
             createConnection($sql);

@@ -22,6 +22,7 @@
     }
     class tbl_user{
         function GetUser($cond='1'){
+            $class = null;
             $sql = null;
             $query = "SELECT * FROM tbl_user WHERE ".$cond;
             createConnection($sql);

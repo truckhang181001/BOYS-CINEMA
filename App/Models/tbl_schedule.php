@@ -20,15 +20,15 @@
             $dataFilm = new tbl_film();
             return $dataFilm->GetFilm('id='.$this->id_film)[0];
         }
-        function GetShowTime(){
+        function GetShowTime($cond=""){
             require_once __DIR__."/tbl_showtime.php";
             $dataFilm = new tbl_showtime();
-            return $dataFilm->GetShowTime('id_schedule='.$this->id);
+            return $dataFilm->GetShowTime('id_schedule='.$this->id.' '.$cond);
         }
         function GetTheater(){
-            require_once "./tbl_theater.php";
+            require_once __DIR__."/tbl_theater.php";
             $dataTheater = new tbl_theater();
-            return $dataTheater->GetTheater();
+            return $dataTheater->GetTheater('id='.$this->id_theater)[0];
         }
     }
     class tbl_schedule{

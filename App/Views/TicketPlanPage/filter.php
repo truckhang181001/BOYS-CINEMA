@@ -1,14 +1,45 @@
+<div class="date-sort filter-item">
+    <div class="filter-item__icon">
+        <img src="http://pixner.net/boleto/demo/assets/images/ticket/date.png" alt="icon">
+    </div>
+    <select class="filter-item__form" name="date" onchange="this.form.submit()">
+        <?php
+        // Hàm in ngày (Tính từ ngày hiện tại)
+        $date_day = date("d");
+        for ($i = 0; $i < 5; $i++) {
+            $dateShow = $date_day . "/" . date("m/Y");
+            $dateValue = date("Y/m") . "/" . $date_day;
+            echo "<option value='" . $dateValue . "' " . selectDate($date_day) . ">" . $dateShow . "</option>";
+            $date_day += 1;
+        }
+        // Hàm kiểm tra item Selected
+        function selectDate($date_day)
+        {
+            if (isset($_GET['date']))
+                if ($_GET['date'] == date("Y/m")."/".$date_day) return "selected";
+                else return " ";
+        }
+        ?>
+    </select>
+</div>
 <div class="city-sort filter-item">
     <div class="filter-item__icon">
         <img src="http://pixner.net/boleto/demo/assets/images/ticket/city.png" alt="ticket">
     </div>
-    <select class="filter-item__form" name="city" onchange="this.form.submit()">
+    <select class="filter-item__form" name="location" onchange="this.form.submit()">
         <option selected disabled>Chọn thành phố</option>
-        <?php 
-            foreach($data as $item){
-                echo "<option>hihi</option>";
-                var_dump($item->GetTheater());
+        <?php
+        if (isset($data["location"])) {
+            foreach ($data["location"] as $item) {
+                echo "<option value='" . $item->id . "' " . selectLocation($item->id) . ">" . $item->name . "</option>";
             }
+        }
+        function selectLocation($id)
+        {
+            if (isset($_GET['location']))
+                if ($_GET['location'] == $id) return "selected";
+                else return " ";
+        }
         ?>
     </select>
 </div>
@@ -16,28 +47,22 @@
     <div class="filter-item__icon">
         <img src="http://pixner.net/boleto/demo/assets/images/ticket/cinema.png" alt="ticket">
     </div>
-    <select class="filter-item__form" name="theater">
+    <select class="filter-item__form" name="theater" onchange="this.form.submit()">
         <option selected disabled>Chọn rạp</option>
-    </select>
-</div>
-<div class="date-sort filter-item">
-    <div class="filter-item__icon">
-        <img src="http://pixner.net/boleto/demo/assets/images/ticket/date.png" alt="icon">
-    </div>
-    <select class="filter-item__form" name="date" onchange="this.form.submit()">
-        <option><?php echo date("d/m/Y") ?></option>
         <?php
-        // Hàm in ngày (Tính từ ngày hiện tại)
-        $date_day = date("d");
-        for ($i = 0; $i < 5; $i++) {
-            $date_day += 1;
-            echo "<option ".selectItem($date_day).">" . $date_day . "/" . date("m/Y") . "</option>";
+        $check = false;
+        if (isset($data["theater"])) {
+            foreach ($data["theater"] as $item) {
+                echo "<option value='" . $item->id . "' " . selectTheater($item->id, $check) . ">" . $item->address . "</option>";
+            }
         }
-        // Hàm kiểm tra item Selected
-        function selectItem($date_day){
-            if(isset($_GET['date']))
-            if($_GET['date'] == $date_day . "/" . date("m/Y")) return "selected";
-            else return " ";
+        function selectTheater($id, &$bool)
+        {
+            if (isset($_GET['theater']))
+                if ($_GET['theater'] == $id) {
+                    $bool = true;
+                    return "selected";
+                } else return " ";
         }
         ?>
     </select>

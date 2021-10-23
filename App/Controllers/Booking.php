@@ -1,19 +1,24 @@
 <?php
-    class Booking extends Controller{
-        function phim(){
-            $this->getView("TicketPlanPage");
-        }
-        function tatca(){
-            $Schedule = $this->getModel("tbl_schedule");
-            if(isset($_GET['date'])){
-                $time = DateTime::createFromFormat('d/m/Y',$_GET['date'])->format('Y-m-d');
-                $dataSche = $Schedule->GetSchedule("date='".$time."'");
+class Booking extends Controller
+{
+    function __construct()
+    {
+        if (isset($_GET['schedule']) && isset($_GET['showtime'])) {
+            $dataSchedule = $this->getModel("tbl_schedule")->GetSchedule("id=".$_GET['schedule'])[0];
+            if($dataSchedule != null){
+                if($dataSchedule->GetShowTime('AND id='.$_GET['showtime']) != null){
+                    $this->getView("BookingPage", []);
+                }
+                else{
+                    $this->getView("Error404");
+                }
             }
             else{
-                $nowDate = date("Y/m/d");
-                $dataSche = $Schedule->GetSchedule("date='".$nowDate."'");
+                $this->getView("Error404");
             }
-            $this->getView("BookingPage",$dataSche);
+        }
+        else{
+            $this->getView("Error404");
         }
     }
-?>
+}

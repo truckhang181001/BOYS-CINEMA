@@ -1,8 +1,8 @@
 <?php
     require_once __DIR__."/db_module.php";
     class location{
-        protected $id;
-        protected $name;
+        public $id;
+        public $name;
 
         function __construct($id,$name)
         {
@@ -20,8 +20,7 @@
             while($loc = mysqli_fetch_assoc($result)){
                 $locationClass[] = new location($loc['id'],$loc['name']);
             }
-            mysqli_close($sql);
-            releaseMemory($result);
+            releaseMemory($sql,$result);
             return $locationClass;
         }
     }

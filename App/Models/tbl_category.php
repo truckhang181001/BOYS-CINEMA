@@ -14,6 +14,7 @@
         private $InnerCate = "SELECT tbl_category.* FROM tbl_category INNER JOIN tbl_film ON tbl_film.id_category= tbl_category.id";
         function GetCategory($cond='1'){
             $sql = null;
+            $class = null;
             $query = "SELECT * FROM tbl_category WHERE ".$cond;
             createConnection($sql);
             $result = executeQuery($sql,$query);
