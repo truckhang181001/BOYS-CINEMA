@@ -5,9 +5,7 @@
 
 <body>
     <section class="booking-page">
-        <div class="booking-page__banner">
-            <img src="<?php echo PRONAME ?>/public/img/banner04.jpg" alt="">
-        </div>
+        <?php require_once __DIR__."/banner.php"?>
         <?php require_once __DIR__."/filter.php"?>
         <div class="booking-page__seat">
             <?php require_once __DIR__."/seat.php"?>

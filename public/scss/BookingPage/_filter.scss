@@ -1,99 +1,40 @@
-@import "../../common/variable";
-.booking-page__form{
-    width: 100%;
-    background-color: #032253;
-    padding-bottom: 20px;
-    &__filter{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 100%;
-        padding: 30px 30px;
-        @media (min-width: 375px) {
-            justify-content: flex-start;
-        }
-        @media (min-width: 576px) {
-            justify-content: center;
-        }
-        &__row{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-items: center;
-            margin-top: 30px;
-            margin-left: 30px;
-            transform: translate(-30px,-15px);
-            flex-direction: column;
-            @media (min-width: 375px) {
-                flex-direction: row;
-            }
-        }
-    }
-    &__btn{
-        text-align: center;
-        input{
-            padding: 5px 30px;
-            font-size: 14px;
-            @media (min-width: 576px) {
-                padding: 8px 40px;
-                font-size: 16px;
-            }
-        }
-    }
-}
+@import "../../common/variable.scss";
 
-.filter-item + .filter-item{
-    margin-top: 20px;
-    @media (min-width: 375px) {
-        margin-top: 0px;
-        margin-left: 30px;
-    }
-}
-.filter-item{
+.booking-page__form{
     display: flex;
     justify-content: center;
     align-items: center;
-    div:not(:last-child){
-        margin-right: 10px;
-    }
-    &__icon{
-        background-color: $aqua;
-        font-size: 12px;
-        border-radius: 100%;
-        height: 30px;
-        aspect-ratio: 1;
+    padding: 40px 15px;
+    background-color: $blue-mid;
+    .showtime{
         display: flex;
         justify-content: center;
         align-items: center;
-        @media (min-width: 992px) {
-            height: 40px;
-            font-size: 22px;
-        }
-    }
-    &__text{
-        border: none;
-        padding: 0;
-        background-color: transparent;
-        color: white;
-        background: none;
-        margin-right: 15px;
-    }
-    &__form{
-        border: none;
-        font-size: 10px;
+        flex-wrap: wrap;
         font-weight: 300;
-        background-color: transparent;
-        outline: none;
-        color:#fff;
-        padding:3px 10px 3px 5px;
-        width: 110px;
-        @media (min-width: 576px) {
-            width: 150px;
+        &__date{
+            margin: 10px;
             font-size: 16px;
+            text-transform: uppercase;
+            @media (min-width: 576px) {
+                font-size: 21px;
+            }
         }
-        option {
-            color:#031a42;
-            background-color: #fff;
+        &__box{
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: 500;
+
+            border-radius: 8px;
+            border: none;
+            color: white;
+            box-shadow: 0px 10px 15px 0px rgba(59,55,188,0.5);
+            background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
+            
+            @media (min-width: 576px) {
+                font-size: 24px;
+            }
         }
     }
 }

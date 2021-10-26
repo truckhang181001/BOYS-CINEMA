@@ -24,7 +24,7 @@ if (isset($url[0])) {
                 $active["Search"] = "nav-item__active";
                 break;
             }
-        case 'dat-ve': {
+        case 'lich-chieu': {
                 $active["Ticket"] = "nav-item__active";
                 break;
             }
@@ -52,7 +52,7 @@ echo "<div class='nav-container'>
             <div class='" . $active["Search"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__ticket-plan nav-item__text' href='".PRONAME."/dat-ve'>Đặt vé</a>
+            <a class='nav__ticket-plan nav-item__text' href='".PRONAME."/lich-chieu'>Đặt vé</a>
             <div class='" . $active["Ticket"] . "'></div>
         </div>
         <div class='nav-item'>

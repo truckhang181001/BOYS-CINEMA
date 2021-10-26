@@ -73,9 +73,9 @@
             </div>
             <p>Chọn đánh giá</p>
         </div>
-        <button type="button" class=" info-page__header__btn-group__statistic--btnbook info-page--effect">
+        <a href='<?php echo PRONAME."/lich-chieu"?>' class="info-page__header__btn-group__statistic--btnbook info-page--effect d-flex justify-content-center align-content-center">
             MUA VÉ
-        </button>
+        </a>
      </div>
 </div>            
 <!-- HEADER -->
