@@ -1,41 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<section class="dashboard">
+    <div class="revenue row">
+        
+    </div>
+    <div id="revenueChart" style="width:100%;max-width:700px"></div>    
+</section>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script>
-    <title>Document</title>
-</head>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+var xArray = [50,60,70,80,90,100,110,120,130,140,150];
+var yArray = [7,8,8,9,9,9,10,11,14,14,15];
 
-<body>
-    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-    <script>
-        var xValues = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
-        var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+// Define Data
+var data = [{
+  x: xArray,
+  y: yArray,
+  mode:"lines"
+}];
 
-        new Chart("myChart", {
-            type: "line",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    fill: false,
-                    lineTension: 0,
-                    backgroundColor: "rgba(0,0,255,1.0)",
-                    borderColor: "rgba(0,0,255,0.1)",
-                    data: yValues
-                }]
-            },
-            options: {
-                legend: { display: false },
-                scales: {
-                    yAxes: [{ ticks: { min: 6, max: 16 } }],
-                }
-            }
-        });
-    </script>
-</body>
+// Define Layout
+var layout = {
+  xaxis: {range: [40, 160], title: "Square Meters"},
+  yaxis: {range: [5, 16], title: "Price in Millions"},  
+  title: "House Prices vs. Size"
+};
 
-</html>
+// Display using Plotly
+Plotly.newPlot("revenueChart", data, layout);
+</script>

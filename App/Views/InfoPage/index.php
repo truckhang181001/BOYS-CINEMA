@@ -1,6 +1,4 @@
 <head>
-    <title>BOY CINEMA | Thông tin</title>
-    <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/InfoPage.css">
     <script type="text/javascript" src="<?php echo PRONAME ?>/public/js/InfoPage/script.js"></script>
     <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/HomePage.css">
 </head>

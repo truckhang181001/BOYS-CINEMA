@@ -1,4 +1,9 @@
-<?php require_once "./config.php";?>
+<?php 
+    require_once "./config.php";
+    require_once "./App/Core/Route.php";
+    $RouteUrl = new route();
+    $url = $RouteUrl->UrlProcess();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +29,17 @@
     <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/Index.css">
     <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/NavBar.css">
     <link rel="stylesheet" href="<?php echo PRONAME ?>/public/css/Footer.css">
+    <?php
+        // Xử lý  css và title của trang
+        $ctrl=[];
+        if(isset($url[0])){
+            $ctrl = $RouteUrl->route[$url[0]];
+        }
+        else $ctrl = $RouteUrl->route["trang-chu"];
+        echo "<link rel='stylesheet' href='".PRONAME."/public/css/".$ctrl[0]."Page.css'>";
+        echo "<title>BOYCINEMA | ".$ctrl[1]."</title>"
+    ?>
+    
 </head>
 
 <body>
@@ -33,12 +49,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- PHP CODE -->
     <?php
-        include_once __DIR__."/Share/NavBar.php";
-    ?>
-    <?php
         session_start();
+        // Hiện thị Nav
+        if($ctrl[0] != "admin"){
+            require_once __DIR__."/Share/NavBar.php";
+        }
+        //Hiện thị Views
         require_once __DIR__."/App/bridge.php";
     ?>
-    <?php include_once __DIR__."/Share/Footer.php"; ?>
+    <?php
+        if($ctrl[0] != "admin"){
+            require_once __DIR__."/Share/Footer.php";
+        }
+    ?>
 </body>
 </html>
