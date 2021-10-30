@@ -1,4 +1,4 @@
-<div class="container chart d-flex justify-content-center">
+<div class="chart col-10 d-flex justify-content-center">
     <div id="theaterChart" style="width:100%"></div>
 </div>
 <script>

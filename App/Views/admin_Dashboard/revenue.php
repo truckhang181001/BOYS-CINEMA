@@ -1,4 +1,4 @@
-<div class="container chart d-flex justify-content-center">
+<div class="chart d-flex justify-content-center">
     <div id="myPlot" style="width:100%"></div>
 </div>
 <script>
