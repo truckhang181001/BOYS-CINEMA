@@ -1,5 +1,5 @@
-<div class="chart-container d-flex justify-content-center">
-    <div id="filmChart" style="width:100%;max-width:700px"></div>
+<div class="container chart d-flex justify-content-center">
+    <div id="filmChart" style="width:100%"></div>
 </div>
 <script>
     var xArray = ["Hai phượng", "Squid Game", "Spain", "USA", "Argentina"];

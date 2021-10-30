@@ -1,5 +1,5 @@
-<div class="chart-container d-flex justify-content-center">
-    <div id="theaterChart" style="width:100%;max-width:700px"></div>
+<div class="container chart d-flex justify-content-center">
+    <div id="theaterChart" style="width:100%"></div>
 </div>
 <script>
     var xArray = ["Italy", "France", "Spain", "USA", "Argentina"];

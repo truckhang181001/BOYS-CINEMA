@@ -1,5 +1,5 @@
-<div class="chart-container d-flex justify-content-center">
-    <div id="myPlot" style="width:100%;max-width:700px"></div>
+<div class="container chart d-flex justify-content-center">
+    <div id="myPlot" style="width:100%"></div>
 </div>
 <script>
     var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];

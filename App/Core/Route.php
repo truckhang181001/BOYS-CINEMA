@@ -11,7 +11,7 @@
             "dang-ky"=>["Signup","Đăng ký"],
             "ERROR-404"=>["Error404","Lỗi"],
             "lien-he" =>["Contact","Liên hệ"],
-            "admin"=>["admin","Quản lý"]
+            "admin"=>["admin_dashboard","Quản lý"]
         ];
         protected $controller = "Home";
         protected $action = "";
