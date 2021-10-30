@@ -6,5 +6,11 @@
         function upload(){
             $this->getView("admin_Upload",[]);
         }
+        function __construct()
+        {
+            $this->getView("admin_Film",[]);
+            // $this->getView("admin_Category",[]);
+            // $this->getView("admin_Customer",[]);
+        }
     }
 ?>
