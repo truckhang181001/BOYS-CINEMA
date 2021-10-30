@@ -1,0 +1,11 @@
+.nav-ad{
+    position: fixed;
+    height: 100vh;
+    background-color: #002947;
+}
+.nav-ad__item{
+    margin: 15px 0px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}

@@ -1,28 +1,29 @@
 <?php
     class Route{
-        protected $route = [
-            "trang-chu"=>"Home",
-            "thong-tin"=>"Info",
-            "tim-kiem"=>"Search",
-            "lich-chieu"=>"TicketPlan",
-            "dat-ve"=>"Booking",
-            "thanh-toan"=>"Checkout",
-            "dang-nhap"=>"Login",
-            "dang-ky"=>"Signup",
-            "ERROR-404"=>"Error404",
-            "lien-he" =>"Contact",
-            "admin"=>"admin"
+        public $route = [
+            "trang-chu"=>["Home","Trang chủ"],
+            "thong-tin"=>["Info","Thông tin"],
+            "tim-kiem"=>["Search","Tìm kiếm"],
+            "lich-chieu"=>["TicketPlan","Lịch chiếu"],
+            "dat-ve"=>["Booking","Đặt vé"],
+            "thanh-toan"=>["Checkout","Thanh toán"],
+            "dang-nhap"=>["Login","Đăng nhập"],
+            "dang-ky"=>["Signup","Đăng ký"],
+            "ERROR-404"=>["Error404","Lỗi"],
+            "lien-he" =>["Contact","Liên hệ"],
+            "quan-ly"=>["admin_dashboard","Quản lý"],
+            "quan-ly-phim"=>["admin_film","Quản lý phim"]
         ];
         protected $controller = "Home";
         protected $action = "";
         protected $param = [];
 
-        function __construct()
+        function routeDir()
         {
             //Controller
             $url = $this->UrlProcess();
-            if(isset($url[0]) && file_exists("./App/Controllers/".$this->route[$url[0]].".php")){
-                $this->controller = $this->route[$url[0]];
+            if(isset($url[0]) && file_exists("./App/Controllers/".$this->route[$url[0]][0].".php")){
+                $this->controller = $this->route[$url[0]][0];
                 unset($url[0]);
             }
             require_once "./App/Controllers/".$this->controller.".php";
