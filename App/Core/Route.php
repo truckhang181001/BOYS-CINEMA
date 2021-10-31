@@ -12,7 +12,11 @@
             "ERROR-404"=>["Error404","Lỗi"],
             "lien-he" =>["Contact","Liên hệ"],
             "quan-ly"=>["admin_dashboard","Quản lý"],
-            "quan-ly-phim"=>["admin_film","Quản lý phim"]
+            "quan-ly-phim"=>["admin_film","Quản lý phim"],
+            "quan-ly-khach-hang"=>["admin_customer","Quản lý khách hàng"],
+            "quan-ly-the-loai"=>["admin_category","Quản lý thể loại"],
+            "quan-ly-rap"=>["admin_theater","Quản lý rạp"],
+            "quan-ly-ke-hoach"=>["admin_plan","Quản lý kế hoạch"]
         ];
         protected $controller = "Home";
         protected $action = "";

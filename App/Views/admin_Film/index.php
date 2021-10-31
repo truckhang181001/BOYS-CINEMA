@@ -67,7 +67,7 @@
               </table>
             </div>
 
-            <nav aria-label="Page navigation example" style="margin-top:40px">
+            <nav aria-label="Page navigation example" style="margin:40px 0">
               <ul class="pagination justify-content-center">
                 <li class="page-item disabled">
                   <a class="page-link">Trước</a>

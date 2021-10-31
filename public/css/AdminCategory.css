@@ -1,32 +1,31 @@
 .container-fluid {
   background-color: white; }
 
-.container-right .main-title {
-  padding: 40px 0; }
-
-.container-right .search-and-button-gr .button-gr {
-  display: flex;
-  justify-content: space-evenly;
+.container-right {
   padding-bottom: 30px; }
-  .container-right .search-and-button-gr .button-gr button {
-    font-weight: 500;
-    font-size: 12px;
-    padding: 6px 25px; }
-    @media (min-width: 768px) {
-      .container-right .search-and-button-gr .button-gr button {
-        font-size: 14px; } }
+  .container-right .main-title {
+    padding: 40px 0; }
+  .container-right .search-and-button-gr .button-gr {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px; }
+    .container-right .search-and-button-gr .button-gr button {
+      font-weight: 500;
+      font-size: 12px;
+      padding: 6px 20px; }
+      @media (min-width: 768px) {
+        .container-right .search-and-button-gr .button-gr button {
+          font-size: 14px; } }
+      @media (min-width: 992px) {
+        .container-right .search-and-button-gr .button-gr button {
+          font-size: 16px;
+          padding: 6px 30px; } }
+  .container-right .search-and-button-gr .input-group {
+    margin-bottom: 20px; }
+    .container-right .search-and-button-gr .input-group .input-group-text i {
+      cursor: pointer; }
+  .container-right .table-cover .table thead th, .container-right .table-cover .table tbody td {
+    font-size: 14px; }
     @media (min-width: 992px) {
-      .container-right .search-and-button-gr .button-gr button {
-        font-size: 16px;
-        padding: 6px 30px; } }
-
-.container-right .search-and-button-gr .input-group {
-  margin-bottom: 20px; }
-  .container-right .search-and-button-gr .input-group .input-group-text i {
-    cursor: pointer; }
-
-.container-right .table-cover .table thead th, .container-right .table-cover .table tbody td {
-  font-size: 14px; }
-  @media (min-width: 992px) {
-    .container-right .table-cover .table thead th, .container-right .table-cover .table tbody td {
-      font-size: 16px; } }
+      .container-right .table-cover .table thead th, .container-right .table-cover .table tbody td {
+        font-size: 16px; } }

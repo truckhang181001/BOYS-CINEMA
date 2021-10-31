@@ -1,7 +1,9 @@
 .container-fluid {
     background-color: white;
+    
 }
 .container-right {
+    padding-bottom: 30px;
     .main-title {
         padding: 40px 0;
     }
@@ -15,7 +17,7 @@
             button {
                 font-weight: 500;
                 font-size: 12px;
-                padding:6px 25px;
+                padding:6px 20px;
                 
                 @media (min-width:768px) {
                     font-size: 14px;

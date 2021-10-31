@@ -1,6 +1,7 @@
 <?php
     class admin_dashboard extends Controller{
-        function dashboard(){
+        function __construct()
+        {
             $this->getView("admin_dashboard",[]);
         }
     }

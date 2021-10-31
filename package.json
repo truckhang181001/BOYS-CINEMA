@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sassConvert": "node-sass ./public/scss/AdminCategory/index.scss ./public/css/AdminCategory.css -w",
+    "sassConvert": "node-sass ./public/scss/AdminPlan/index.scss ./public/css/AdminPlan.css -w",
     "sass": "node-sass ./public/common/navBar.scss ./public/css/NavBar.css -w"
   },
   "repository": {
