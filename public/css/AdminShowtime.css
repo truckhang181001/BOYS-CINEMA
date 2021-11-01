@@ -1,0 +1,22 @@
+.showtime-management {
+  padding: 15px 0; }
+  .showtime-management__func {
+    padding-top: 120px;
+    margin: 0 auto; }
+    .showtime-management__func--search {
+      cursor: pointer;
+      transition: all 0.4s ease; }
+    .showtime-management__func--search:hover {
+      opacity: 0.8; }
+    .showtime-management__func__btn--style {
+      width: 80px;
+      height: 38px; }
+  .showtime-management__table {
+    margin: 0 auto;
+    padding: 60px 0;
+    overflow: scroll;
+    position: relative; }
+    .showtime-management__table thead tr th:nth-child(3),
+    .showtime-management__table tbody tr td:nth-child(3) {
+      position: sticky;
+      left: 0; }

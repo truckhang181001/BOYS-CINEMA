@@ -12,7 +12,8 @@
             "ERROR-404"=>["Error404","Lỗi"],
             "lien-he" =>["Contact","Liên hệ"],
             "quan-ly"=>["admin_dashboard","Quản lý"],
-            "quan-ly-phim"=>["admin_film","Quản lý phim"]
+            "quan-ly-phim"=>["admin_film","Quản lý phim"],
+            "quan-li-lich-chieu"=>["admin_showtime","Quản lí lịch chiếu"]
         ];
         protected $controller = "Home";
         protected $action = "";

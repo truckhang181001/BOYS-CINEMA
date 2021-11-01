@@ -1,23 +1,23 @@
 {
-  "name": "frameworkphp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "sassConvert": "node-sass ./public/scss/BookingPage/index.scss ./public/css/BookingPage.css -w",
-    "sass": "node-sass ./public/common/navBar.scss ./public/css/NavBar.css -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/truckhang181001/frameworkPHP.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/truckhang181001/frameworkPHP/issues"
-  },
-  "homepage": "https://github.com/truckhang181001/frameworkPHP#readme",
-  "dependencies": {
-    "node-sass": "^6.0.1"
-  }
+    "name": "frameworkphp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sassConvert": "node-sass ./public/scss/AdminShowtime/index.scss ./public/css/AdminShowtime.css -w",
+        "sass": "node-sass ./public/common/navBar.scss ./public/css/NavBar.css -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/truckhang181001/frameworkPHP.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/truckhang181001/frameworkPHP/issues"
+    },
+    "homepage": "https://github.com/truckhang181001/frameworkPHP#readme",
+    "dependencies": {
+        "node-sass": "^6.0.1"
+    }
 }

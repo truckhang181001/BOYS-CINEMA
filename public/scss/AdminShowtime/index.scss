@@ -1,0 +1,31 @@
+.showtime-management {
+    padding: 15px 0;
+    &__func {
+        padding-top: 120px;
+        margin: 0 auto;
+        &--search {
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        &--search:hover {
+            opacity: 0.8;
+        }
+        &__btn {
+            &--style {
+                width: 80px;
+                height: 38px;
+            }
+        }
+    }
+    &__table {
+        margin: 0 auto;
+        padding: 60px 0;
+        overflow: scroll;
+        position: relative;
+        thead tr th:nth-child(3),
+        tbody tr td:nth-child(3) {
+            position: sticky;
+            left: 0;
+        }
+    }
+}
