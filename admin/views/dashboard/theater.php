@@ -1,6 +1,4 @@
-<div class="chart col-10 d-flex justify-content-center">
-    <div id="theaterChart" style="width:100%"></div>
-</div>
+<div id="theaterChart" style="width:100%"></div>
 <script>
     var xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
     var yArray = [55, 49, 44, 24, 15];

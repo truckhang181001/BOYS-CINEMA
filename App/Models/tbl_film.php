@@ -1,53 +1,64 @@
 <?php
-    require_once __DIR__."/db_module.php";
-    class film{
-        public $id;
-        public $id_category;
-        public $name;
-        public $release;
-        public $time;
-        public $desc;
-        public $type;
+require_once __DIR__ . "/db_module.php";
+class film
+{
+    public $id;
+    public $name;
+    public $desc;
+    public $id_category;
+    public $release;
+    public $time;
+    public $actor;
+    public $director;
+    public $studio;
+    public $type;
 
-        function __construct($id, $id_category, $name, $desc, $release, $time, $type)
-        {
-            $this->id=$id;
-            $this->id_category=$id_category;
-            $this->name=$name;
-            $this->desc=$desc;
-            $this->release=$release;
-            $this->time=$time;
-            $this->type=$type;
-        }
-        public function GetCate(){
-            require_once __DIR__."/tbl_category.php";
-            $cate = new tbl_category();
-            return $cate->GetCategory('id='.$this->id)[0]->name;
-        }
+    function __construct($id, $name, $desc, $id_category, $release, $time, $actor, $director, $studio, $type)
+    {
+        $this->id = $id;
+        $this->id_category = $id_category;
+        $this->name = $name;
+        $this->desc = $desc;
+        $this->release = $release;
+        $this->time = $time;
+        $this->actor = $actor;
+        $this->director = $director;
+        $this->studio = $studio;
+        $this->type = $type;
     }
-    class tbl_film{
-        function GetFilm($cond='1'){
-            $sql = null;
-            $class = null;
-            $query = "SELECT * FROM tbl_film WHERE ".$cond;
-            createConnection($sql);
-            $result = executeQuery($sql,$query);
-            while($item = mysqli_fetch_assoc($result)){
-                $class[] = new film($item['id'],$item['id_category'],$item['name'],$item['desc'],$item['release'],$item["time"],$item["type"]);
-            }
-            releaseMemory($sql,$result);
-            return $class;
-        }
-        function IssetFilm($id_film){
-            $sql = null;
-            $query = "SELECT id FROM tbl_film WHERE id=".$id_film;
-            createConnection($sql);
-            $result = executeQuery($sql,$query);
-            $i=0;
-            while($item = mysqli_fetch_assoc($result)){
-                $i+=1;
-            }
-            releaseMemory($sql,$result);
-            return $i==1?true:false;
-        }
+    public function GetCate()
+    {
+        require_once __DIR__ . "/tbl_category.php";
+        $cate = new tbl_category();
+        return $cate->GetCategory('id=' . $this->id_category)[0]->name;
     }
+}
+class tbl_film
+{
+    function GetFilm($cond = '1')
+    {
+        $sql = null;
+        $class = null;
+        $query = "SELECT * FROM tbl_film WHERE " . $cond;
+        createConnection($sql);
+        $result = executeQuery($sql, $query);
+        while ($item = mysqli_fetch_assoc($result)) {
+            $class[] = new film($item['id'], $item['name'], $item['desc'], $item['id_category'], $item['release'], $item["time"], $item['actor'],$item['director'],$item['studio'], $item["type"]);
+        }
+        releaseMemory($sql, $result);
+        return $class;
+    }
+    function insertFilm($name, $desc, $id_category, $release, $time, $actor, $director, $studio, $type)
+    {
+        $sql = null;
+        $query = "INSERT INTO tbl_film VALUES(NULL,'$name','$desc',$id_category,'$release',$time,'$actor','$director','$studio','$type')";
+        createConnection($sql);
+        $result = executeQuery($sql, $query);
+        if ($result) {
+            $last_id = mysqli_insert_id($sql);
+            echo "New record created successfully. Last inserted ID is: " . $last_id;
+        }
+        releaseMemory($sql);
+        return $last_id;
+    }
+}

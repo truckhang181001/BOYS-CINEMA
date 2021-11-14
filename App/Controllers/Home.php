@@ -1,5 +1,5 @@
 <?php
-class Home extends controller{
+class home extends controller{
     function __construct()
     {
         $tblSche = $this->GetModel("tbl_schedule");
@@ -8,7 +8,7 @@ class Home extends controller{
         foreach($dataSche as $item){
             $dataFilm[]=$item->GetFilm();
         }
-        $this->getView("HomePage",$dataFilm);
+        $this->getView("home_page",$dataFilm);
     }
 }
 ?>

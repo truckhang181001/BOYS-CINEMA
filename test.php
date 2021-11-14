@@ -33,7 +33,6 @@ $url = $RouteUrl->UrlProcess();
     //CSS Admin
     if($url[0] == "admin"){
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/index.css'>";
-        echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/nav_bar_admin.css'>";
         if(isset($url[1])){
             echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/" . $url[1] . ".css'>";
         }

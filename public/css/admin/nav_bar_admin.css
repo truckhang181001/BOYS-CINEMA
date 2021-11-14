@@ -1,5 +1,5 @@
 .nav-ad{
-    position: fixed;
+    position: sticky;
     height: 100vh;
     background-color: #002947;
 }

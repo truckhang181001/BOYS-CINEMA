@@ -1,8 +1,8 @@
 <?php
-    class Login extends Controller{
+    class login extends Controller{
         function __construct()
         {
-            $this->getView("LoginPage");
+            $this->getView("login_page");
         }
     }
 ?>

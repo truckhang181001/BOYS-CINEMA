@@ -8,7 +8,7 @@
 body{
     background-color: #000C20 !important;
 }
-.btn {
+.btnf {
     padding: 10px 20px;
     border-radius: 40px;
     background: linear-gradient(270deg, #1BCBB7 0%, #32ABFF 50%, #A772FF 100%);
@@ -22,11 +22,11 @@ body{
 a{
     text-decoration: none;
 }
-.btn:hover {
+.btnf:hover {
     filter: hue-rotate(45deg);
     transform: scale(1.05,1);
     color: white;
 }
-.btn:active {
+.btnf:active {
     transform: translateY(3px);
 }

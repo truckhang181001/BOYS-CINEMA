@@ -11,7 +11,7 @@
         }
     }
     class tbl_category{
-        function GetCategory($cond='1'){
+        function getCategory($cond='1'){
             $sql = null;
             $class = null;
             $query = "SELECT * FROM tbl_category WHERE ".$cond;

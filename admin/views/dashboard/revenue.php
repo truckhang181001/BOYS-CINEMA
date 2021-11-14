@@ -1,9 +1,7 @@
-<div class="chart d-flex justify-content-center">
-    <div id="myPlot" style="width:100%"></div>
-</div>
+<div id="myPlot" style="width:100%"></div>
 <script>
-    var xArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
-    var yArray = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+    var yArray = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160];
+    var xArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12];
 
     // Define Data
     var data = [{

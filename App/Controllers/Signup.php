@@ -1,8 +1,8 @@
 <?php
-    class Signup extends Controller{
+    class signup extends Controller{
         function __construct()
         {
-            $this->getView("SignupPage");
+            $this->getView("signup_page");
         }
     }
 ?>

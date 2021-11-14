@@ -1,9 +1,9 @@
 <?php
 
-    class Checkout extends Controller{
+    class checkout extends Controller{
         function __construct()
         {
-            $this->getView("CheckoutPage",[]);
+            $this->getView("checkout_page",[]);
         }
     }
 

@@ -1,18 +1,17 @@
 <?php
     class Route{
         public $route = [
-            "trang-chu"=>["Home","Trang chủ"],
-            "thong-tin"=>["Info","Thông tin"],
-            "tim-kiem"=>["Search","Tìm kiếm"],
-            "lich-chieu"=>["TicketPlan","Lịch chiếu"],
-            "dat-ve"=>["Booking","Đặt vé"],
-            "thanh-toan"=>["Checkout","Thanh toán"],
-            "dang-nhap"=>["Login","Đăng nhập"],
-            "dang-ky"=>["Signup","Đăng ký"],
-            "ERROR-404"=>["Error404","Lỗi"],
-            "lien-he" =>["Contact","Liên hệ"],
-            "quan-ly"=>["admin_dashboard","Quản lý"],
-            "quan-ly-phim"=>["admin_film","Quản lý phim"]
+            "trang-chu"=>["home","Trang chủ"],
+            "thong-tin"=>["info","Thông tin"],
+            "tim-kiem"=>["search","Tìm kiếm"],
+            "lich-chieu"=>["ticket_plan","Lịch chiếu"],
+            "dat-ve"=>["booking","Đặt vé"],
+            "thanh-toan"=>["checkout","Thanh toán"],
+            "dang-nhap"=>["login","Đăng nhập"],
+            "dang-ky"=>["signup","Đăng ký"],
+            "ERROR-404"=>["error404","Lỗi"],
+            "lien-he" =>["contact","Liên hệ"],
+            "admin"=>["admin","Quản lý"],
         ];
         protected $controller = "Home";
         protected $action = "";
@@ -22,11 +21,11 @@
         {
             //Controller
             $url = $this->UrlProcess();
-            if(isset($url[0]) && file_exists("./App/Controllers/".$this->route[$url[0]][0].".php")){
+            if(isset($url[0]) && file_exists("./app/controllers/".$this->route[$url[0]][0].".php")){
                 $this->controller = $this->route[$url[0]][0];
                 unset($url[0]);
             }
-            require_once "./App/Controllers/".$this->controller.".php";
+            require_once "./app/controllers/".$this->controller.".php";
             $this->controller = new $this->controller;
             //Action
             if(isset($url[1]))

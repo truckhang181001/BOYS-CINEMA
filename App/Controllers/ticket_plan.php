@@ -1,5 +1,5 @@
 <?php
-    class TicketPlan extends Controller{
+    class ticket_plan extends Controller{
         function __construct()
         {
             // Lấy dữ liệu Schedule
@@ -24,7 +24,7 @@
             $dataLocation = $this->getModel("tbl_location")->GetLocation();
             $data["location"]= $dataLocation;
             // Khởi tạo view
-            $this->getView("TicketPlanPage",$data);
+            $this->getView("ticket-plan-page",$data);
         }
     }
 ?>

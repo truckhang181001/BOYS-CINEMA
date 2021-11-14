@@ -1,8 +1,8 @@
 <?php
-    class Error404 extends Controller{
+    class error404 extends Controller{
         function __construct()
         {
-            $this->getView("Error404");
+            $this->getView("error404");
         }
     }
 ?>

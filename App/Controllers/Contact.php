@@ -1,8 +1,8 @@
 <?php
-    class Contact extends Controller {
+    class contact extends Controller {
         function __construct(){
             //Views
-            $this->getView("ContactPage",[]);
+            $this->getView("contact_page",[]);
        }
     }
  ?>

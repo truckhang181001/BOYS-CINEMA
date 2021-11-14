@@ -1,5 +1,5 @@
 <?php
-class Info extends controller{
+class info extends controller{
     function __construct()
     {
         if(isset($_GET['film'])){
@@ -11,10 +11,10 @@ class Info extends controller{
                 $data = [
                     "film"=>$classFilm,
                 ];
-                $this->getView("InfoPage",$data);
+                $this->getView("info_page",$data);
             }
             else{
-                $this->getView("Error404");
+                $this->getView("error404");
             }
         }
     }

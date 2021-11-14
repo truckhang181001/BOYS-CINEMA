@@ -1,5 +1,5 @@
 <?php
-class Booking extends Controller
+class booking extends Controller
 {
     function __construct()
     {
@@ -7,18 +7,18 @@ class Booking extends Controller
             $dataSchedule = $this->getModel("tbl_schedule")->GetSchedule("id=".$_GET['schedule'])[0];
             if($dataSchedule != null){
                 if($dataSchedule->GetShowTime('AND id='.$_GET['showtime']) != null){
-                    $this->getView("BookingPage", []);
+                    $this->getView("booking_page", []);
                 }
                 else{
-                    $this->getView("Error404");
+                    $this->getView("error404");
                 }
             }
             else{
-                $this->getView("Error404");
+                $this->getView("error404");
             }
         }
         else{
-            $this->getView("Error404");
+            $this->getView("error404");
         }
     }
 }

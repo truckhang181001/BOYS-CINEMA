@@ -1,5 +1,5 @@
 <?php
-    class Search extends controller{
+    class search extends controller{
         function PhimDangChieu(){
             $dataFilm = $this->getModel("tbl_film");
             $dataCate = $this->getModel("tbl_category");
@@ -7,7 +7,7 @@
                 "film"=>$dataFilm->GetFilm(),
                 "category"=>$dataCate->InnerCate()
             ];
-            $this->getView("SearchPage",$data);
+            $this->getView("search_page",$data);
         }
         function PhimSapChieu(){
             echo "Phim sap chieu";
