@@ -1,11 +1,14 @@
 <?php
+$checkRand = rand(10,100000);
 $controller = new controller();
 $tbl_film = $controller->getModel("tbl_film");
-$tbl_image = $controller->getModel("tbl_image");
-if (isset($_POST['addItemFilm'])) {
+
+if (isset($_POST['addItemFilm']) && $_POST['addItemFilm']=="add") {
     insertFilm($tbl_film);
+    header("Location: ".CURLINK);
+    exit;
 }
-function insertFilm($table)
+function insertFilm($tbl_film)
 {
     $name = $_POST['name'];
     $desc = $_POST['desc'];
@@ -16,7 +19,7 @@ function insertFilm($table)
     $director = $_POST['director'];
     $studio = $_POST['studio'];
     $type = $_POST['type'];
-    $id_film = $table->insertFilm($name, $desc, $id_category, $release, $time, $actor, $director, $studio, $type);
+    $id_film = $tbl_film->insertFilm($name, $desc, $id_category, $release, $time, $actor, $director, $studio, $type);
     uploadImage($id_film, $name, "poster", "img");
     uploadImage($id_film, $name, "detail", "img");
     uploadImage($id_film, $name, "video", "img");
@@ -35,8 +38,9 @@ function insertVideo()
 }
 function uploadImage($itemID, $itemName = "untitle", $itemPOST, $itemType)
 {
+    $alert ="";
     $multi = count($_FILES[$itemPOST]['name']);
-    if ($multi > 0) {
+    if ($_FILES[$itemPOST]['name'][0] != "") {
         for ($i = 0; $i < $multi; $i++) {
             //Variable
             $fileType = strtolower(pathinfo(basename($_FILES[$itemPOST]["name"][$i]), PATHINFO_EXTENSION));
@@ -50,27 +54,27 @@ function uploadImage($itemID, $itemName = "untitle", $itemPOST, $itemType)
                 "img" => ["jpg", "jpeg", "png", "gif"]
             ];
             $allowSize = [
-                "video" => 300000 * 1000,
-                "img" => 5000 * 1000
+                "video" => 300 * 1000000,
+                "img" => 5 * 1000000
             ];
 
             if (!in_array($fileType, $allowType[$itemType])) {
-                echo "Không đúng định dạng";
+                $alert .= "Không đúng định dạng";
                 $allowUpload = false;
             }
 
             if ($_FILES[$itemPOST]["size"][$i] > $allowSize[$itemType]) {
-                echo "Sorry, your file is too large.";
+                $alert .= "File kích thước quá lớn";
                 $allowUpload = false;
             }
 
             if ($allowUpload == false) {
-                echo "Sorry, your file was not uploaded.";
+                $alert .= "File upload không thành công";
             } else {
                 if (move_uploaded_file($_FILES[$itemPOST]["tmp_name"][$i], $target_file)) {
-                    echo basename($_FILES[$itemPOST]["name"][$i]) . "was uploaded";
+                    //echo basename($_FILES[$itemPOST]["name"][$i]) . "was uploaded";
                 } else {
-                    echo "Sorry, there was an error uploading your file.";
+                    $alert .= "File upload không thành công";
                 }
             }
             insertImage($itemID, basename($target_file), $itemType);

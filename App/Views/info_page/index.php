@@ -18,14 +18,14 @@
             <?php
             include_once __DIR__."/tab-content.php"; 
         ?></div>
-        <div class="container info-carousel">
+        <!-- <div class="container info-carousel">
             <?php
-                include_once __DIR__."/../HomePage/carousel.php"; 
+                include_once __DIR__."/../home_page/carousel.php"; 
             ?>
-        </div>
+        </div> -->
     </div>
 
-    <script src="<?php echo PRONAME ?>/public/js/HomePage/script.js"></script>
-    <script type="text/javascript" src="<?php echo PRONAME ?>/public/js/InfoPage/script.js"></script>
+    <script src="<?php echo PRONAME ?>/public/js/app/home_page/script.js"></script>
+    <script type="text/javascript" src="<?php echo PRONAME ?>/public/js/app/info_page/script.js"></script>
 </body>
 </html>

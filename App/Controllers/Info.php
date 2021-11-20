@@ -4,7 +4,7 @@ class info extends controller{
     {
         if(isset($_GET['film'])){
             $dataFilm = $this->getModel("tbl_film");
-            if($dataFilm->IssetFilm($_GET['film'])){
+            if($dataFilm->GetFilm('id='.$_GET['film']) != null){
                 $classFilm = $dataFilm->GetFilm('id='.$_GET['film']);
                 $dataComment = $this->getModel('tbl_comment');
                 $dataRating = $this->getModel('tbl_rating');

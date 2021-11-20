@@ -9,7 +9,7 @@
                 <div class='card__content'>
                     <a href='".PRONAME."/thong-tin' class='card__content__title' style='color: white;'>".$item->name."</a>
                     <div class='card__content__btn-buy'>
-                        <a class='btn' href='".PRONAME."/lich-chieu'>MUA VÉ</a>
+                        <a class='btnf' href='".PRONAME."/lich-chieu'>MUA VÉ</a>
                     </div>
                 </div>
             </div>

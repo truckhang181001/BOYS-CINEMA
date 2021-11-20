@@ -5,7 +5,7 @@
             $dataCate = $this->getModel("tbl_category");
             $data= [
                 "film"=>$dataFilm->GetFilm(),
-                "category"=>$dataCate->InnerCate()
+                "category"=>$dataCate->getCategory()
             ];
             $this->getView("search_page",$data);
         }

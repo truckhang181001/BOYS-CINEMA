@@ -1,5 +1,6 @@
 <?php
     !defined('PRONAME') && define('PRONAME', "/".basename(getcwd()));
+    !defined('CURLINK') && define('CURLINK', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
     if (!defined("HOST")) define("HOST", "125.234.104.133");
     if (!defined("DB")) define("DB", "webgr08");
     if (!defined("USER")) define("USER", "webgr08");

@@ -25,7 +25,7 @@
             </div>
             <a href="#" class="login__option__forget">Quên mật khẩu</a>
         </div>
-        <a class="login__btn btn" href="#">ĐĂNG NHẬP</a>
+        <a class="login__btn btnf" href="#">ĐĂNG NHẬP</a>
         <div class="login__sign-up">
             <div class="login__sign-up__text">Bạn chưa có mật khẩu?</div>
             <a href="<?php echo PRONAME ?>/dang-ky" class="login__sign-up__btn">Đăng ký ngay</a>

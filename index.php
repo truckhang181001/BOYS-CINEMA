@@ -31,15 +31,15 @@ $url = $RouteUrl->UrlProcess();
         $ctrl = $RouteUrl->route[$url[0]];
     } else $ctrl = $RouteUrl->route["trang-chu"];
     //CSS Admin
-    if($url[0] == "admin"){
+    if (isset($url) && $url[0] == "admin") {
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/index.css'>";
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/nav_bar_admin.css'>";
-        if(isset($url[1])){
+        if (isset($url[1])) {
             echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/" . $url[1] . ".css'>";
         }
     }
     //CSS Customer
-    else{
+    else {
         //Base CSS
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/app/index.css'>";
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/app/navbar.css'>";
@@ -62,7 +62,7 @@ $url = $RouteUrl->UrlProcess();
     <?php
     session_start();
     // Hiện thị Nav
-    if ($url[0] != "admin") {
+    if (!isset($url) || $url[0] != "admin") {
         require_once __DIR__ . "/share/navBar.php";
     }
     // else require_once __DIR__ . "/share/navBarAdmin.php";
@@ -70,9 +70,10 @@ $url = $RouteUrl->UrlProcess();
     require_once __DIR__ . "/app/bridge.php";
     ?>
     <?php
-        if ($url[0] != "admin") {
-            require_once __DIR__ . "/share/footer.php";
-        }
+    if (!isset($url) || $url[0] != "admin") {
+        require_once __DIR__ . "/share/footer.php";
+    }
     ?>
 </body>
+
 </html>

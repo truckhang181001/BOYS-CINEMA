@@ -1,11 +1,9 @@
-<div class="row container-fluid" style="margin:0">
-    <div class="col-md-2">
-        <?php
-        require_once "./share/navBarAdmin.php";
-        ?>
-    </div>
-    <div class="col-12 col-md-10 container-right">
-        <h2 class="d-flex justify-content-center main-title">THÊM PHIM</h2>
+<div class="row film-detail" style="width:100%">
+    <?php
+    require_once "./share/navBarAdmin.php";
+    ?>
+    <div class="col-12 col-md-10 container-right p-5">
+        <h2 class="d-flex justify-content-center main-title">CHI TIẾT VÀ CHỈNH SỬA PHIM</h2>
         <form enctype="multipart/form-data" method="post">
             <div class="row mb-3">
                 <label for="recipient-name" class="col-form-label">Tên phim:</label>
@@ -69,10 +67,12 @@
             <div class="row mb-3">
                 <label for="poster" class="col-form-label">Poster:</label>
                 <?php
-                foreach ($data['img'] as $item) {
-                    if ($item->type == "poster") {
-                        echo "<img style='height: 250px; width: auto;' src='" . PRONAME . "/public/img/$item->name' alt=''>";
-                        break;
+                if ($data['img'] != null) {
+                    foreach ($data['img'] as $item) {
+                        if ($item->type == "poster") {
+                            echo "<img style='height: 250px; width: auto;' src='" . PRONAME . "/public/img/$item->name' alt=''>";
+                            break;
+                        }
                     }
                 }
                 ?>
@@ -84,9 +84,11 @@
             <div class="row mb-3">
                 <label for="detail[]" class="col-form-label">Hình ảnh:</label>
                 <?php
-                foreach ($data['img'] as $item) {
-                    if ($item->type == "detail") {
-                        echo "<img src='" . PRONAME . "/public/img/$item->name' alt=''>";
+                if ($data['img'] != null) {
+                    foreach ($data['img'] as $item) {
+                        if ($item->type == "detail") {
+                            echo "<img src='" . PRONAME . "/public/img/$item->name' alt=''>";
+                        }
                     }
                 }
                 ?>
@@ -97,7 +99,11 @@
             </div>
             <div class="row mb-3">
                 <label for="video" class="col-form-label">Trailer:</label>
-                <input class="form-control" name="video" type="file" />
+
+                <div class="input-group mb-3">
+                    <label for="video" class="input-group-text">Trailer:</label>
+                    <input class="form-control" name="video" type="file" />
+                </div>
             </div>
             <div class="row mb-3">
                 <button class="btn btn-primary col-3" type="submit" name="addItemFilm" value="add">SAVE</button>

@@ -11,4 +11,4 @@
             <?php include_once __DIR__ . "/event-ads.php" ?>
         </div>
     </div>
-    <script src="<?php echo PRONAME ?>/public/js/app/home-page/script.js"></script>
+    <script src="<?php echo PRONAME ?>/public/js/app/home_page/script.js"></script>

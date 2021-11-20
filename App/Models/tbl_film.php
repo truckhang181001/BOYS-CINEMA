@@ -55,10 +55,9 @@ class tbl_film
         createConnection($sql);
         $result = executeQuery($sql, $query);
         if ($result) {
-            $last_id = mysqli_insert_id($sql);
-            echo "New record created successfully. Last inserted ID is: " . $last_id;
+            $last_id = mysqli_insert_id($sql);        
+            return $last_id;
         }
         releaseMemory($sql);
-        return $last_id;
     }
 }

@@ -56,10 +56,6 @@ echo "<div class='nav-container'>
             <div class='" . $active["Ticket"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__promo nav-item__text' href='".PRONAME."'>Khuyến mãi</a>
-            <div class='" . $active["Promo"] . "'></div>
-        </div>
-        <div class='nav-item'>
             <a class='nav__contact nav-item__text' href='".PRONAME."/lien-he'>Liên hệ</a>
             <div class='" . $active["Contact"] . "'></div>
         </div>

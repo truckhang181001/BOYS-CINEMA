@@ -24,7 +24,7 @@
             $dataLocation = $this->getModel("tbl_location")->GetLocation();
             $data["location"]= $dataLocation;
             // Khởi tạo view
-            $this->getView("ticket-plan-page",$data);
+            $this->getView("ticket_plan_page",$data);
         }
     }
 ?>

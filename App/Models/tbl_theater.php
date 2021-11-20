@@ -19,11 +19,11 @@
         function GetLocation(){
             require_once __DIR__."/tbl_location.php";
             $data = new tbl_location();
-            return $data->GetLocation('id='.$this->id_location)[0];
+            return $data->GetLocation('id='.$this->id_location)[0]->name;
         }
     }
     class tbl_theater{
-        function GetTheater($cond='1'){
+        function getTheater($cond='1'){
             $class = null;
             $sql = null;
             $query = "SELECT * FROM tbl_theater WHERE ".$cond;

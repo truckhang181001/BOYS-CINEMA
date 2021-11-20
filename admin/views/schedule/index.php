@@ -1,7 +1,7 @@
-<div class="film row" style="width:100%">
+<div class="schedule row" style="width:100%">
   <?php require_once "./share/navBarAdmin.php"; ?>
   <div class="col-12 col-md-10 container-right p-5">
-    <h2 class="d-flex justify-content-center main-title">QUẢN LÝ PHIM</h2>
+    <h2 class="d-flex justify-content-center main-title">QUẢN LÝ LỊCH CHIẾU</h2>
 
     <div class="row search-and-button-gr">
       <div class="col-12 col-md-6">
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <a href="film/add" class="btn btn-primary">THÊM</a>
+        <a href="schedule/add" class="btn btn-primary">THÊM</a>
       </div>
     </div>
     <div class="table-sticky">
@@ -19,37 +19,37 @@
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col">ID Phim</th>
+            <th scope="col">ID</th>
             <th scope="col">Tên phim</th>
-            <th scope="col">Mô tả</th>
-            <th scope="col">Thể loại</th>
-            <th scope="col">Ngày phát hành</th>
-            <th scope="col">Thời lượng</th>
-            <th scope="col">Trải nghiệm</th>
+            <th scope="col">Tên rạp</th>
+            <th scope="col">Phòng</th>
+            <th scope="col">Ngày chiếu</th>
             <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-
           <?php
-          foreach ($data as $item) {
-            echo "
-                        <tr>
-                          <td>$item->id</td>
-                          <td class='namefilm'><p>$item->name</p></td>
-                          <td class='descript'><p>$item->desc</p></td>
-                          <td class='category'>" . $item->GetCate() . "</td>
-                          <td>$item->release</td>
-                          <td>$item->time</td>
-                          <td>$item->type</td>
-                          <td>
-                            <form method='get'>
-                              <a href='film/detail?id=$item->id' class='btn btn-warning editFilm'>Edit</a>
-                              <a href='?detail=true&id=$item->id' class='btn btn-danger editFilm'>Delete</a>
-                            </form>
-                          </td>
-                        </tr>
-                        ";
+          if(isset($data)){
+            foreach ($data as $item) {
+              echo "
+                          <tr>
+                            <td></td>
+                            <td>$item->id</td>
+                            <td><p>".$item->GetFilm()->name."</p></td>
+                            <td>".$item->GetTheater()->name."</td>
+                            <td>$item->id_room</td>
+                            <td>$item->date</td>
+                            <td>
+                              <form method='get'>
+                                <a href='schedule/detail?id=$item->id' class='btn btn-warning'>Chỉnh sửa</a>
+                              </form>
+                              <form method='post'>
+                                <button name='deleteItem' value='$item->id' class='btn btn-danger editFilm'>Xóa</button>
+                              </form>
+                            </td>
+                          </tr>
+                          ";
+            }
           }
           ?>
         </tbody>
