@@ -10,7 +10,7 @@ require_once "./public/php/admin/film_add/index.php";
         <form enctype="multipart/form-data" method="post" action="">
             <div class="row mb-3">
                 <label for="recipient-name" class="col-form-label">Tên phim:</label>
-                <input name="name" type="text" class="form-control" id="update_name" value="">
+                <input name="name" type="text" class="form-control" id="update_name" value="" required>
             </div>
             <div class="row mb-3">
                 <label for="message-text" class="col-form-label">Mô tả:</label>
@@ -29,7 +29,7 @@ require_once "./public/php/admin/film_add/index.php";
             </div>
             <div class="row mb-3">
                 <label for="release" class="col-form-label">Ngày công chiếu:</label>
-                <input name="release" type="date" class="form-control" id="release" value="">
+                <input name="release" type="date" class="form-control" id="release" value="" required>
             </div>
             <div class="row mb-3">
                 <label for="studio" class="col-form-label">Hãng sản xuất:</label>

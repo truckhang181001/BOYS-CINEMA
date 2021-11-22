@@ -5,6 +5,6 @@
             <?php require_once __DIR__ . "/seat.php" ?>
         </div>
         <div class="booking-page__checkout">
-            <a class="btn" href="<?php echo PRONAME ?>/thanh-toan">THANH TOÁN</a>
+            <a class="btnf" href="<?php echo PRONAME ?>/thanh-toan">THANH TOÁN</a>
         </div>
     </section>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,298 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css" />
     <title>Document</title>
     <style>
+        .seat-container{
+            display: flex;
+            width: 90vw;
+            overflow: scroll;
+        }
+        .seat-item{
+            display: flex;
+            flex-direction: column;
+            float: left;
+            margin: 10px;
+        }
+        /* Customize the label (the container) */
+        .seat {
+            display: inline-block;
+            position: relative;
+            height: 40px;
+            width: 40px;
+            font-size: 16px;
 
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            border: 2px solid rgb(37, 37, 37);
+            border-radius: 10%;
+        }
+
+        /* Hide the browser's default checkbox */
+        .seat input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        /* Create a custom checkbox */
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border-radius: 10%;
+        }
+        .seat-name{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        /* On mouse-over, add a grey background color */
+        .seat:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        /* When the checkbox is checked, add a blue background */
+        .seat input:checked~.checkmark {
+            background-color: #4b9b58;
+        }
     </style>
 </head>
+
 <body>
-    <div class="admin" style="width:100%">
-        <div class="row" style="width:100%">
-            <div class="col-md-2">
-                <div class="nav-ad__item">QUẢN LÝ PHIM</div>
-                <div class="nav-ad__item">QUẢN LÝ RẠP</div>
+    <div class="container">
+        <div class="seat-container">
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
             </div>
-            <div class="col-12 col-md-10">
-                LA
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
+            </div>
+            <div class="seat-item">
+                <label class="seat">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                    <span class="seat-name">A1</span>
+                </label>
+                <div>
+                    <label for="seat-type">VIP</label>
+                    <input class="seat-type" type="checkbox">
+                </div>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>

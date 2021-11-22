@@ -44,7 +44,7 @@
                           <td>$item->type</td>
                           <td>
                             <form method='get'>
-                              <a href='film/detail?id=$item->id' class='btn btn-warning editFilm'>Edit</a>
+                              <a href='film/edit?id=$item->id' class='btn btn-warning editFilm'>Edit</a>
                               <a href='?detail=true&id=$item->id' class='btn btn-danger editFilm'>Delete</a>
                             </form>
                           </td>

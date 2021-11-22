@@ -7,17 +7,17 @@ foreach($data['film'] as $key=>$item){
 
   echo "<div class='card mb-3'>
     <div class='row g-0'>
-      <a class='col-3 col-md-3 before-img' href='".PRONAME."/thong-tin'>
-        <img src='".PRONAME."/public/img/HaiPhuong.jpg' class='img-fluid rounded-start' alt='...'>
+      <a class='col-3 col-md-3 before-img' href='".PRONAME."/thong-tin?film=$item->id'>
+        <img src='".PRONAME."/public/img/".$item->getImage()."' class='img-fluid rounded-start' alt='...'>
       </a>
       <div class='col-9 col-md-9'>
         <div class='card-body'>
           <div>
-            <a class='card-title' href='".PRONAME."/thong-tin'>".$item->name."</a>
+            <a class='card-title' href='".PRONAME."/thong-tin?film=$item->id'>".$item->name."</a>
             <div class='card-time'>".$time."</div>
           </div>           
            <div>
-                <p class='card-category'>".$data['category'][$key]->name."</p>
+                <p class='card-category'>".$data['category'][$item->id_category]->name."</p>
                 <p class='card-date'><small>Ngày công chiếu: ".date_format($date,"d/m/Y")."</small></p>      
            </div>
            

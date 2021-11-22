@@ -23,7 +23,6 @@
             <th scope="col">Tỉnh</th>
             <th scope="col">Địa chỉ</th>
             <th scope="col">Số điện thoại</th>
-            <th scope="col">Tổng phòng chiếu</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -35,10 +34,9 @@
                           <tr>
                             <td></td>
                             <td>$item->id</td>
-                            <td class='namefilm'><p>".$item->GetLocation()."</p></td>
+                            <td class='namefilm'><p>".$item->GetLocation()->name."</p></td>
                             <td class='descript'><p>$item->address</p></td>
                             <td>$item->phone</td>
-                            <td>$item->room</td>
                             <td>
                               <form method='get'>
                                 <a href='theater/detail?id=$item->id' class='btn btn-warning'>Chỉnh sửa</a>

@@ -5,7 +5,7 @@ switch ($url) {
                 $dataFilm = $this->getModel("tbl_film")->GetFilm()[0];
                 $dataCategory = $this->getModel("tbl_category")->getCategory();
                 $dataIMG = $this->getModel("tbl_image")->getImage("id_film=" . $_GET['id']);
-                $this->getViewAd("film_detail", [
+                $this->getViewAd("film_edit", [
                     "category" => $dataCategory,
                     "film" => $dataFilm,
                     "img" => $dataIMG

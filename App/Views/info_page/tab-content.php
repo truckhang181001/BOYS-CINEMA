@@ -8,7 +8,7 @@
         </div>
     </div>
     <div id="info-page__tab-content--main" class="info-page__tab-content__tab--tabcontent">
-        <?php echo $data["film"][0]->desc;?>
+        <p><?php echo $data["film"][0]->desc;?></p>
     </div>
     <div id="info-page__tab-content--comment" class="info-page__tab-content__tab--tabcontent">
         <div class="info-page__tab-content__tab--tabcontent--tag ">
