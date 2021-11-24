@@ -12,6 +12,7 @@
       </div>
       <div class="col-12 col-md-6">
         <a href="film/add" class="btn btn-primary">THÊM</a>
+        <button class="btn btn-primary" id="capnhat" onclick="checkPost()">Text</button>
       </div>
     </div>
     <div class="table-sticky">
@@ -72,3 +73,16 @@
     </nav>
   </div>
 </div>
+<script>
+  $(document).ready(function(){
+  $("button").click(function(){
+    $.post("admin/film/capnhat.php",
+    {
+      callajax: "-",
+    },
+    function(data,status){
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
