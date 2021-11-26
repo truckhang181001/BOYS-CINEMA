@@ -1,3 +1,7 @@
+<?php
+  require "./public/php/admin/film/delete.php";
+?>
+
 <div class="film row" style="width:100%">
   <?php require_once "./share/navBarAdmin.php"; ?>
   <div class="col-12 col-md-10 container-right p-5">
@@ -44,9 +48,9 @@
                           <td>$item->time</td>
                           <td>$item->type</td>
                           <td>
-                            <form method='get'>
+                            <form method='post'>
                               <a href='film/edit?id=$item->id' class='btn btn-warning editFilm'>Edit</a>
-                              <a href='?detail=true&id=$item->id' class='btn btn-danger editFilm'>Delete</a>
+                              <button type='submit' name='deleteItem' value='$item->id' class='btn btn-danger editFilm'>Delete</button>
                             </form>
                           </td>
                         </tr>
@@ -74,15 +78,16 @@
   </div>
 </div>
 <script>
-  $(document).ready(function(){
-  $("button").click(function(){
-    $.post("admin/film/capnhat.php",
-    {
-      callajax: "-",
-    },
-    function(data,status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
-  });
-});
+//   $(document).ready(function(){
+//   $("button").click(function(){
+//     $.post("admin/film/capnhat.php",
+//     {
+//       callajax: "-",
+//     },
+//     function(data,status){
+//       alert("Data: " + data + "\nStatus: " + status);
+//     });
+//   });
+// });
 </script>
+

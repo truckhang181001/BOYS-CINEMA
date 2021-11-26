@@ -65,4 +65,11 @@ class tbl_film
         }
         releaseMemory($sql);
     }
+    function deleteFilm($id){
+        $sql = null;
+        $query = "DELETE FROM tbl_film WHERE id='$id'";
+        createConnection($sql);
+        $result = executeQuery($sql, $query);
+        releaseMemory($sql);
+    }
 }
