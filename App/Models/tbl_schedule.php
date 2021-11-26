@@ -44,5 +44,49 @@
             releaseMemory($sql,$result);
             return $scheClass;
         }
+
+        function insertSchedule($id_film, $id_theater, $id_room, $date) {
+            $sql = null;
+            $query = "INSERT INTO tbl_schedule VALUES(NULL,'$id_film', '$id_theater', '$id_room', '$date')";
+            createConnection($sql);
+            $result = executeQuery($sql, $query);
+            if ($result) {
+                    $last_id = mysqli_insert_id($sql);        
+                    return $last_id;
+            }
+            releaseMemory($sql);
+        }
+
+        function updateSchedule($id,$id_film, $id_theater, $id_room, $date)
+        {
+            $sql = null;
+            $query = "UPDATE tbl_schedule SET id_film='$id_film', id_theater='$id_theater', id_room=$id_room, date='$date'  WHERE id='$id'";
+            createConnection($sql);
+            $result=mysqli_query($sql,$query);
+            if(!$result)
+            {
+                die('Update error: ');
+            }
+            else
+            {
+                header("Location: ".CURLINK);
+            }
+            releaseMemory($sql);
+        
+        }
+        function deleteSchedule($id)
+        {
+            $sql = null;
+            $query = "DELETE FROM tbl_schedule WHERE id='$id'";
+            createConnection($sql);
+            $result=executeQuery($sql,$query); 
+            if(!$result)
+            {
+                die("Xóa thất bại");
+            }          
+            releaseMemory($sql);
+        
+        }
     }
+    
 ?>
