@@ -6,12 +6,12 @@ class room
     public $id_theater;
     public $name;
     public $seat;
-    function __construct($id, $id_theater, $name, $seat)
+    function __construct($id, $id_theater, $name)
     {
         $this->id = $id;
         $this->id_theater = $id_theater;
         $this->name = $name;
-        $this->seat = $seat;
+        
     }
 }
 class tbl_room
@@ -24,7 +24,7 @@ class tbl_room
         createConnection($sql);
         $result = executeQuery($sql, $query);
         while ($item = mysqli_fetch_assoc($result)) {
-            $class[] = new room($item['id'],$item['id_theater'],$item['name'],$item['seat']);
+            $class[] = new room($item['id'],$item['id_theater'],$item['name']);
         }
         releaseMemory($sql, $result);
         return $class;

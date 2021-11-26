@@ -2,22 +2,33 @@
 switch ($url) {
     case "edit": {
             if (isset($_GET['id'])) {
+                $dataSchedule = $this->getModel("tbl_schedule")->GetSchedule('id='.$_GET['id'])[0];
+                $dataFilm = $this->getModel("tbl_film")->getFilm();
+                $dataTheater = $this->getModel("tbl_theater")->getTheater();
+                $dataRoom = $this->getModel("tbl_room")->getRoom(); 
+                $this->getViewAd("schedule_edit", [
+                    "schedule" => $dataSchedule,
+                    "film" => $dataFilm,
+                    "theater" => $dataTheater,
+                    "room" => $dataRoom
+                ]);
             };
             break;
         }
     case "add": {
-            $dataFilm = $this->getModel("tbl_film")->GetFilm();
-            $dataTheater = $this->getModel("tbl_theater")->getTheater();
-            $dataRoom = $this->getModel("tbl_room")->getRoom();
-            $this->getViewAd("theater_add",[
-                "film"=> $dataFilm,
-                "theater"=>$dataTheater,
-                "room"=>$dataRoom
-            ]);
+        $dataFilm = $this->getModel("tbl_film")->getFilm();
+        $dataTheater = $this->getModel("tbl_theater")->getTheater();
+        $dataRoom = $this->getModel("tbl_room")->getRoom();
+        
+        $this->getViewAd("schedule_add", [            
+            "film" => $dataFilm,
+            "theater" => $dataTheater,
+            "room" => $dataRoom
+        ]);
             break;
         }
     default:
-        theaterDefault($this);
+        scheduleDefault($this);
 }
 
 function scheduleDefault($subClass)
