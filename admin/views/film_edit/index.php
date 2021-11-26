@@ -16,7 +16,7 @@
             <div class="row mb-3">
                 <div class="col-3">
                     <label for="id_category" class="col-form-label">Thể loại:</label>
-                    <select name="id_category" class="form-select" id="cid_ategory" aria-label="Default select example">
+                    <select name="id_category" class="form-select" id="id_category" aria-label="Default select example">
                         <?php
                         foreach ($data["category"] as $item) {
                             if ($item->id == $data["film"]->id_category)

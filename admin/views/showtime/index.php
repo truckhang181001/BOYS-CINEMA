@@ -1,12 +1,10 @@
-<?php
-require_once "./public/php/admin/theater/index.php";
-?>
-<div class="theater row" style="width:100%">
+<div class="showtime row" style="width:100%">
   <?php require_once "./share/navBarAdmin.php"; ?>
+  <?php require_once "./public/php/admin/showtime/index.php"; ?>
   <div class="col-12 col-md-10 container-right p-5">
-    <h2 class="d-flex justify-content-center main-title mb-5">QUẢN LÝ RẠP</h2>
+    <h2 class="d-flex justify-content-center main-title">QUẢN LÝ SUẤT CHIẾU</h2>
 
-    <div class="row search-and-button-gr mb-3">
+    <div class="row search-and-button-gr">
       <div class="col-12 col-md-6">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Nhập từ khóa tìm kiếm" aria-label="Username" aria-describedby="basic-addon1">
@@ -14,7 +12,7 @@ require_once "./public/php/admin/theater/index.php";
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <a href="theater/add" class="btn btn-primary" name="addItemTheater">THÊM</a>
+        <a href="showtime/add" class="btn btn-primary">THÊM</a>
       </div>
     </div>
     <div class="table-sticky">
@@ -23,9 +21,10 @@ require_once "./public/php/admin/theater/index.php";
           <tr>
             <th scope="col"></th>
             <th scope="col">ID</th>
-            <th scope="col">Tỉnh</th>
-            <th scope="col">Địa chỉ</th>
-            <th scope="col">Số điện thoại</th>
+            <th scope="col">ID Lịch chiếu</th>
+            <th scope="col">HÌnh thức</th>
+            <th scope="col">Giờ bắt đâu</th>
+            <th scope="col">Giờ kết thúc</th>
             <th scope="col"></th>
           </tr>
         </thead>
@@ -37,13 +36,16 @@ require_once "./public/php/admin/theater/index.php";
                           <tr>
                             <td></td>
                             <td>$item->id</td>
-                            <td class='nametheater'><p>".$item->GetLocation()->name."</p></td>
-                            <td class='descript'><p>$item->address</p></td>
-                            <td>$item->phone</td>
+                            <td><p>".$item->id_schedule."</p></td>
+                            <td>".$item->type."</td>
+                            <td>$item->start_time</td>
+                            <td>$item->end_time</td>
                             <td>
-                              <a href='theater/edit?id=$item->id' class='btn btn-warning editTheater'>Edit</a>
+                              <form method='get'>
+                                <a href='showtime/edit?id=$item->id' class='btn btn-warning'>Chỉnh sửa</a>
+                              </form>
                               <form method='post'>
-                                <button type='submit' name='deleteItemTheater' value='$item->id' class='btn btn-danger'>Delete</button>
+                                <button name='deleteItemShowtime' value='$item->id' class='btn btn-danger'>Xóa</button>
                               </form>
                             </td>
                           </tr>

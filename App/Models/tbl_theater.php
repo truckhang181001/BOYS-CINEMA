@@ -33,5 +33,49 @@
             releaseMemory($sql,$result);
             return $class;
         }
+
+        function insertTheater($id_location,$address,$phone)
+        {
+            $sql = null;
+            $query = "INSERT INTO tbl_theater VALUES(NULL,'$id_location','$address','$phone')";
+            createConnection($sql);
+            $result = executeQuery($sql, $query);
+            if ($result) {
+                $last_id = mysqli_insert_id($sql);        
+                return $last_id;
+            }
+            releaseMemory($sql);
+        
+        }
+        function updateTheater($id,$id_location,$address,$phone)
+        {
+            $sql = null;
+            $query = "UPDATE tbl_theater SET `id_location`='$id_location',`address`='$address',`phone`='$phone' WHERE id='$id'";
+            createConnection($sql);
+            $result=mysqli_query($sql,$query);
+            if(!$result)
+            {
+                die('Update error: ');
+            }
+            else
+            {
+                header("Location: ".CURLINK);
+            }
+            releaseMemory($sql);
+        
+        }
+        function deleteTheater($id)
+        {
+            $sql = null;
+            $query = "DELETE FROM tbl_theater WHERE id='$id'";
+            createConnection($sql);
+            $result=executeQuery($sql,$query); 
+            if(!$result)
+            {
+                die("Xóa thất bại");
+            }          
+            releaseMemory($sql);
+        
+        }
     }
 ?>

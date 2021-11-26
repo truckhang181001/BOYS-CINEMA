@@ -1,9 +1,12 @@
+<?php
+require_once "./public/php/admin/theater_add/index.php";
+?>
 <div class="theater-add row" style="width:100%">
     <?php
     require_once "./share/navBarAdmin.php";
     ?>
     <div class="col-12 col-md-10 container-right p-5">
-        <h2 class="d-flex justify-content-center main-title">THÊM PHIM</h2>
+        <h2 class="d-flex justify-content-center main-title">THÊM RẠP</h2>
         <form enctype="multipart/form-data" method="post" action="">
             <div class="row mb-3">
                 <label for="id_location" class="col-form-label">Tỉnh:</label>
@@ -28,5 +31,6 @@
                 <button class="btn btn-primary" type="submit" name="addItemTheater" value="add">THÊM</button>
             </div>
         </form>
+
     </div>
 </div>
