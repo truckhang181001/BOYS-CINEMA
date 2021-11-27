@@ -34,5 +34,19 @@
             $result = executeQuery($sql,$query);
             releaseMemory($sql);
         }
+        function deleteImage($cond='0'){
+            $sql = null;
+            $query = "DELETE FROM tbl_image WHERE ".$cond;
+            createConnection($sql);
+            $result = executeQuery($sql,$query);
+            releaseMemory($sql);
+        }
+        function updateImage($id,$name){
+            $sql = null;
+            $query = "UPDATE tbl_image SET name='$name' WHERE id='$id'";
+            createConnection($sql);
+            $result = executeQuery($sql,$query);
+            releaseMemory($sql);
+        }
     }
 ?>

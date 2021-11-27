@@ -30,7 +30,7 @@ class film
     {
         require_once __DIR__ . "/tbl_category.php";
         $cate = new tbl_category();
-        return $cate->GetCategory('id=' . $this->id_category)[0]->name;
+        return $cate->getCategory('id=' . $this->id_category)[0]->name;
     }
     public function getImage(){
         require_once __DIR__ . "/tbl_image.php";
@@ -63,6 +63,7 @@ class tbl_film
             $last_id = mysqli_insert_id($sql);        
             return $last_id;
         }
+        else return mysqli_error($sql);
         releaseMemory($sql);
     }
     function deleteFilm($id){
