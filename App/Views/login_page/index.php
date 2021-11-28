@@ -10,13 +10,13 @@
             <div class="login__input__title">
                 EMAIL<span>*</span>
             </div>
-            <input type="text" name="userEmail" class="login__input__email" placeholder="Nhập email">
+            <input type="email" name="userEmail" class="login__input__email" style="color:white" placeholder="Nhập email">
         </div>
         <div class="login__input" style="margin-bottom: 15px;">
             <div class="login__input__title">
                 MẬT KHẨU<span>*</span>
             </div>
-            <input type="text" name="userEmail" class="login__input__psw" placeholder="Nhập mật khẩu">
+            <input type="password" name="userEmail" class="login__input__psw" style="color:white" placeholder="Nhập mật khẩu">
         </div>
         <div class="login__option">
             <div class="login__option__save">

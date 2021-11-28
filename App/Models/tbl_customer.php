@@ -51,4 +51,11 @@ class tbl_customer
         releaseMemory($sql);
         return $last_id;
     }
+    function updateCustomer($id, $password, $name, $sex, $dob, $address, $phone){
+        $sql = null;
+        $query = "UPDATE tbl_customer SET `password`='$password', `name`='$name', `sex`='$sex', `dob`='$dob', `address`='$address', `phone`= '$phone' WHERE `id`= '$id'";
+        createConnection($sql);
+        executeQuery($sql, $query);
+        releaseMemory($sql);
+    }
 }

@@ -1,3 +1,4 @@
+
 <?php
     require "./public/php/app/sign_up/mail.php";
 ?>
@@ -66,5 +67,5 @@
             <div class="login__sign-up__text">Bạn đã có mật khẩu?</div>
             <a href="<?php echo PRONAME ?>/dang-nhap" class="login__sign-up__btn">Đăng nhập ngay</a>
         </div>
-    </div>
-</section>
+    </section>
+</form>

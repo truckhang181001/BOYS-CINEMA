@@ -12,6 +12,8 @@
             "ERROR-404"=>["error404","Lỗi"],
             "lien-he" =>["contact","Liên hệ"],
             "admin"=>["admin","Quản lý"],
+            "xac-thuc-email" =>["email_verification","Xác thực"],
+            "thong-tin-ca-nhan"=>["personal_information","Thông tin cá nhân"],
         ];
         protected $controller = "Home";
         protected $action = "";
