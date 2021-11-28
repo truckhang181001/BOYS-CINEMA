@@ -60,11 +60,30 @@
                         </div>
                         <input style="color: white" type="text" name="userAddress" class="personal-info__input__psw-confirm"  placeholder="Nhập địa chỉ">
                     </div>
-                    <button class="personal-info__btn btnf" type="submit" name="updatePersonalInfo" value="1">Cập nhật</button>
+                    <button type="button" class="personal-info__btn btnf" data-bs-toggle="modal" data-bs-target="#exampleModal">Cập nhật</button>
                 </div>   
             </div>
         </div>
     </section>
+
+    <!-- Modal Confirm-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cập nhật</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn cập nhật thông tin của mình?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Hủy</button>
+                    <button type="submit" class="btn btn-outline-success" name="updatePersonalInfo" value="1">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </form>
 
 <?php
