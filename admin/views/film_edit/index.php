@@ -36,8 +36,12 @@
             <!-- ============================= CHỈNH SỬA THÔNG TIN ========================= -->
             <form enctype="multipart/form-data" method="post">
                 <div class="row mb-3">
+                    <label for="id" class="col-form-label">ID phim:</label>
+                    <input readonly name="id_film" type="text" class="form-control" id="id" value="<?php echo $data["film"]->id ?>">
+                </div>
+                <div class="row mb-3">
                     <label for="recipient-name" class="col-form-label">Tên phim:</label>
-                    <input name="name" type="text" class="form-control" id="update_name" value="<?php echo $data["film"]->name ?>">
+                    <input name="name" type="text" class="form-control" id="name" value="<?php echo $data["film"]->name ?>">
                 </div>
                 <div class="row mb-3">
                     <label for="message-text" class="col-form-label">Mô tả:</label>
@@ -95,8 +99,8 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <button class="btn btn-primary col-3" type="submit" name="addItemFilm" value="add">SAVE</button>
-                    <a href="#" class="btn btn-secondary col-3">CANCEL</a>
+                    <button class="btn btn-primary col-3" type="submit" name="changeFilm" value="add">SAVE</button>
+                    <a href="<?php echo CURLINK;?>" class="btn btn-secondary col-3">CANCEL</a>
                 </div>
             </form>
             <!-- ================ ẢNH POSTER ===================== -->
@@ -118,8 +122,8 @@
                         <label class="input-group-text" for="poster">Thay đổi ảnh poster</label>
                         <input class="form-control" name="poster[]" type="file" />
                     </div>
-                    <input required type='hidden' name='nameFilm' value="<?php echo $data['film']->name?>"></input>
-                    <button class="btn btn-primary" type="sumbit" name='changePoster' value="<?php echo $data["film"]->id?>">THAY ĐỔI ẢNH</button>
+                    <input required type='hidden' name='nameFilm' value="<?php echo $data['film']->name ?>"></input>
+                    <button class="btn btn-primary" type="sumbit" name='changePoster' value="<?php echo $data["film"]->id ?>">THAY ĐỔI ẢNH</button>
                 </div>
             </form>
             <!-- ================ ẢNH BANNER ===================== -->
@@ -141,8 +145,8 @@
                         <label class="input-group-text" for="banner">Thay đổi ảnh banner</label>
                         <input class="form-control" name="banner[]" type="file" />
                     </div>
-                    <input required type='hidden' name='nameFilm' value="<?php echo $data['film']->name?>"></input>
-                    <button class="btn btn-primary" type="sumbit" name='changeBanner' value="<?php echo $data["film"]->id?>">THAY ĐỔI ẢNH</button>
+                    <input required type='hidden' name='nameFilm' value="<?php echo $data['film']->name ?>"></input>
+                    <button class="btn btn-primary" type="sumbit" name='changeBanner' value="<?php echo $data["film"]->id ?>">THAY ĐỔI ẢNH</button>
                 </div>
             </form>
             <!-- ================ ẢNH DETAIL ===================== -->
@@ -169,7 +173,7 @@
                         <label class="input-group-text" for="detail[]">Upload ảnh chi tiết</label>
                         <input required class="form-control" name="detail[]" type="file" multiple="multiple" />
                     </div>
-                    <input style="display: none;" name='nameDetail' value="<?php echo $data['film']->name?>"></input>
+                    <input style="display: none;" name='nameDetail' value="<?php echo $data['film']->name ?>"></input>
                     <button class="btn btn-primary" type="sumbit" name='addDetail' value="<?php echo $data["film"]->id ?>">THÊM ẢNH CHI TIẾT</button>
                 </div>
             </form>
@@ -186,7 +190,7 @@
                                     $name = $item->name;
                                     echo "<input class='form-control' name='video' type='url' value='$name' required/>";
                                     echo "</div><div>";
-                                    echo "<iframe height='240' width='380' src='https://www.youtube.com/embed/".substr($name,strpos($name,'=')+1)."' title='Video trailer'></iframe>";
+                                    echo "<iframe height='240' width='380' src='https://www.youtube.com/embed/" . substr($name, strpos($name, '=') + 1) . "' title='Video trailer'></iframe>";
                                     echo "<input type='hidden' name='idVideo' value='$item->id'></input>";
                                     break;
                                 }

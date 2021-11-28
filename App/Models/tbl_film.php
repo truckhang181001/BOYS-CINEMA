@@ -73,4 +73,16 @@ class tbl_film
         $result = executeQuery($sql, $query);
         releaseMemory($sql);
     }
+    function updateFilm($id, $name, $desc, $id_category, $release, $time, $actor, $director, $studio, $type){
+        $sql = null;
+        $query = "UPDATE `tbl_film` SET `name`='$name', `desc`='$desc', `id_category`=$id_category, `release`='$release', `time`=$time, `actor`='$actor', `director`='$director', `studio`='$studio', `type`='$type'  WHERE id=$id";
+        createConnection($sql);
+        $result = executeQuery($sql, $query);
+        if ($result) {
+            $last_id = mysqli_insert_id($sql);        
+            return $last_id;
+        }
+        else return mysqli_error($sql);
+        releaseMemory($sql);
+    }
 }
