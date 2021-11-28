@@ -14,7 +14,13 @@ class showtime
         $this->id_schedule = $id_schedule;
         $this->type = $type;
         $this->start_time = substr($start_time,0,5);
-        $this->end_time = substr($end_time,0,5);
+        $this->end_time = substr($end_time,0,5);      
+    }
+
+    public function GetSchedule(){
+        require_once __DIR__."/tbl_schedule.php";
+            $dataSchedule = new tbl_schedule();
+            return $dataSchedule->GetSchedule('id='.$this->id_schedule)[0];
     }
 }
 
@@ -31,5 +37,48 @@ class tbl_showtime{
         releaseMemory($sql,$result);
         return $class;
     }
+
+    function insertShowtime($id_schedule, $type, $start_time, $end_time) {
+        $sql = null;
+        $query = "INSERT INTO tbl_showtime VALUES(NULL,'$id_schedule', '$type', '$start_time', '$end_time')";
+        createConnection($sql);
+        $result = executeQuery($sql, $query);
+        if ($result) {
+                $last_id = mysqli_insert_id($sql);        
+                return $last_id;
+        }
+        releaseMemory($sql);
+    }
+
+    function updateShowtime($id,$id_schedule, $type, $start_time, $end_time)
+        {
+            $sql = null;
+            $query = "UPDATE tbl_showtime SET id_schedule=$id_schedule, `type`='$type', start_time='$start_time', end_time='$end_time'  WHERE id='$id'";
+            createConnection($sql);
+            $result=mysqli_query($sql,$query);
+            if(!$result)
+            {
+                die(mysqli_error( $sql));
+            }
+            else
+            {
+                header("Location: ".CURLINK);
+            }
+            releaseMemory($sql);
+        
+        }
+        function deleteShowtime($id)
+        {
+            $sql = null;
+            $query = "DELETE FROM tbl_showtime WHERE id='$id'";
+            createConnection($sql);
+            $result=executeQuery($sql,$query); 
+            if(!$result)
+            {
+                die("Xóa thất bại");
+            }          
+            releaseMemory($sql);
+        
+        }
 }
 ?>

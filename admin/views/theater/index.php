@@ -1,7 +1,10 @@
+<?php
+require_once "./public/php/admin/theater/index.php";
+?>
 <div class="theater row" style="width:100%">
   <?php require_once "./share/navBarAdmin.php"; ?>
   <div class="col-12 col-md-10 container-right p-5">
-    <h2 class="d-flex justify-content-center main-title mb-5">QUẢN LÝ LỊCH CHIẾU</h2>
+    <h2 class="d-flex justify-content-center main-title mb-5">QUẢN LÝ RẠP</h2>
 
     <div class="row search-and-button-gr mb-3">
       <div class="col-12 col-md-6">
@@ -11,7 +14,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <a href="schedule/add" class="btn btn-primary">THÊM</a>
+        <a href="theater/add" class="btn btn-primary" name="addItemTheater">THÊM</a>
       </div>
     </div>
     <div class="table-sticky">
@@ -34,15 +37,13 @@
                           <tr>
                             <td></td>
                             <td>$item->id</td>
-                            <td class='namefilm'><p>".$item->GetLocation()->name."</p></td>
+                            <td class='nametheater'><p>".$item->GetLocation()->name."</p></td>
                             <td class='descript'><p>$item->address</p></td>
                             <td>$item->phone</td>
                             <td>
-                              <form method='get'>
-                                <a href='theater/detail?id=$item->id' class='btn btn-warning'>Chỉnh sửa</a>
-                              </form>
+                              <a href='theater/edit?id=$item->id' class='btn btn-warning editTheater'>Edit</a>
                               <form method='post'>
-                                <button name='deleteItem' value='$item->id' class='btn btn-danger editFilm'>Xóa</button>
+                                <button type='submit' name='deleteItemTheater' value='$item->id' class='btn btn-danger'>Delete</button>
                               </form>
                             </td>
                           </tr>
