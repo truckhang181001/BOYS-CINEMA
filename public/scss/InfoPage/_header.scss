@@ -28,9 +28,13 @@
             z-index: 1;
             left: 20%;
             bottom: 30px;
+            @media screen and(min-width:1024px){
+                left: 25%;
+            }
             @media screen and(min-width: 1200px) {
                 left: 400px;
                 bottom: 100px;
+                
             }
             &--name {
                 font-family: Roboto;
@@ -93,15 +97,29 @@
         &--img {
             border-radius: 5px;
             position: inherit;
-            display: block;
+            display: none;
             position: absolute;
             bottom: -3.5vh;
-            left: 3%;
+            left: 5%;
             height: 450px;
             object-fit: cover;
             border-radius: 5px;
-            @media screen and(max-width: 1200px) {
-                display: none;
+            @media screen and(min-width: 1024px) {
+                display: block;
+            }
+            .info-page--effect {
+                width: 140px;
+                height: 200px;
+                object-fit: cover;
+
+                @media screen and(min-width: 1024px) {
+                    width: 180px;
+                    height: 270px;                   
+                }
+                @media screen and(min-width: 1200px){
+                    width: 245px;
+                    height: 420px; 
+                }
             }
         }
         .info-page--fas-style {

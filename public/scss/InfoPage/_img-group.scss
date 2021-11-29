@@ -1,5 +1,4 @@
 .info-page__img-group {
-    height: 35vh;
     width: 90%;
     padding: 0;
     margin-top: 6vh;
@@ -36,13 +35,11 @@
         }
     }
     &__group {
-        height: 25vh;
         display: flex;
         overflow: hidden;
         flex-wrap: wrap;
-        justify-content: space-between;
         &--item {
-            margin: 2vh 0;
+            margin-top:20px;
             object-fit: cover;
         }
     }

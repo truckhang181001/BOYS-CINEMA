@@ -19,7 +19,7 @@
     @media (min-width: 1200px) {
       .login {
         padding: 60px 0;
-        width: 30%; } }
+        width: 60%; } }
     .login__sub-title {
       color: #1BCBB7;
       font-weight: 300;
@@ -130,4 +130,16 @@
       @media (min-width: 768px) {
         .login__sign-up {
           font-size: 18px; } }
-  
+ 
+.form-select {
+  background-color: transparent;
+  color:white;
+  border: 1px solid #16305D;
+}
+.form-select:focus {
+  outline: none;
+  }
+.form-select option {
+  color:black
+  }
+       

@@ -25,6 +25,9 @@
       z-index: 1;
       left: 20%;
       bottom: 30px; }
+      @media screen and (min-width: 1024px) {
+        .info-page__header__banner .info-page__header__poster-info {
+          left: 25%; } }
       @media screen and (min-width: 1200px) {
         .info-page__header__banner .info-page__header__poster-info {
           left: 400px;
@@ -84,16 +87,28 @@
     .info-page__header__btn-group--img {
       border-radius: 5px;
       position: inherit;
-      display: block;
+      display: none;
       position: absolute;
       bottom: -3.5vh;
-      left: 3%;
+      left: 5%;
       height: 450px;
       object-fit: cover;
       border-radius: 5px; }
-      @media screen and (max-width: 1200px) {
+      @media screen and (min-width: 1024px) {
         .info-page__header__btn-group--img {
-          display: none; } }
+          display: block; } }
+      .info-page__header__btn-group--img .info-page--effect {
+        width: 140px;
+        height: 200px;
+        object-fit: cover; }
+        @media screen and (min-width: 1024px) {
+          .info-page__header__btn-group--img .info-page--effect {
+            width: 180px;
+            height: 270px; } }
+        @media screen and (min-width: 1200px) {
+          .info-page__header__btn-group--img .info-page--effect {
+            width: 245px;
+            height: 420px; } }
     .info-page__header__btn-group .info-page--fas-style {
       position: absolute;
       left: 50%;
@@ -170,7 +185,6 @@
         color: #f1481f; }
 
 .info-page__img-group {
-  height: 35vh;
   width: 90%;
   padding: 0;
   margin-top: 6vh;
@@ -205,13 +219,11 @@
       .info-page__img-group__text {
         border-bottom: 1px solid #16305D; } }
   .info-page__img-group__group {
-    height: 25vh;
     display: flex;
     overflow: hidden;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    flex-wrap: wrap; }
     .info-page__img-group__group--item {
-      margin: 2vh 0;
+      margin-top: 20px;
       object-fit: cover; }
 
 /*TAB-CONTENT*/
