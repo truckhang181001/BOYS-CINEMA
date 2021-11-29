@@ -1,58 +1,154 @@
 @import "../../common/variable.scss";
 
-//-------------SEAT-LAYOUT-------------//
+// //-------------SEAT-LAYOUT-------------//
+// .booking-page__seat{
+//     margin-top: 40px;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     &__row{
+//         display: flex;
+//         justify-content: center;
+//         margin-bottom: 10px;
+//     }
+
+// }
+// //-------------SEAT-BASE-------------//
+// .seat + .seat{
+//     margin-left: 5px;
+// }
+// .seat{
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     position: relative;
+//     height: 20px;
+//     width: 20px;
+//     border-radius: 5px;
+//     border: 2px solid $blue-light;
+//     font-size: 8px;
+//     @media (min-width: 576px) {
+//         height: 40px;
+//         width: 40px;
+//         border: 3px solid $blue-light;
+//         font-size: 14px;
+//     }
+//     &__name{
+//         height: 100%;
+//         width: 100%;
+//         border: none !important;
+//         text-align: center;
+//         padding: 25% 0;
+//     }
+// }
+// .seat-select{
+//     background-color: $blue-light !important;
+//     div{
+//         background-color: $blue-light !important;
+//     }
+// }
+// .seat-invalid{
+//     border-color: grey;
+//     background-color: grey !important;
+//     div{
+//         background-color: grey !important;
+//         border-color: grey;
+//     }
+// }
 .booking-page__seat{
     margin-top: 40px;
     display: flex;
+    justify-content: center;
+}
+.seat-container{
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    &__row{
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
+    align-content: center;
+    width: 85vw;
+    overflow: auto;
 }
-//-------------SEAT-BASE-------------//
-.seat + .seat{
-    margin-left: 5px;
+.booking-screen{
+    width: 100%;
 }
-.seat{
+.seat-row {
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: center;
+    flex-wrap: nowrap;
+}
 
+.seat-item {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin: 3px;
+}
+
+/* Customize the label (the container) */
+.seat {
+    display: inline-block;
     position: relative;
-    height: 20px;
-    width: 20px;
-    border-radius: 5px;
-    border: 2px solid $blue-light;
-    font-size: 8px;
-    @media (min-width: 576px) {
-        height: 40px;
-        width: 40px;
-        border: 3px solid $blue-light;
-        font-size: 14px;
-    }
-    &__name{
-        height: 100%;
-        width: 100%;
-        border: none !important;
-        text-align: center;
-        padding: 25% 0;
-    }
+    height: 27px;
+    width: 27px;
+    font-size: 14px;
+
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    border: 2px solid rgb(37, 37, 37);
+    border-radius: 10%;
+
+    transition: 0.1s all;
 }
-.seat-select{
-    background-color: $blue-light !important;
-    div{
-        background-color: $blue-light !important;
-    }
+
+/* Hide the browser's default checkbox */
+.seat input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
-.seat-invalid{
-    border-color: grey;
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 10%;
+}
+.--seat-vip{
+    background-color: red;
+}
+.check-disabled{
     background-color: grey !important;
-    div{
-        background-color: grey !important;
-        border-color: grey;
-    }
+}
+.seat-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* On mouse-over, add a grey background color */
+// .seat:hover input~.checkmark {
+//     transform: translateY(2px);
+// }
+.seat:hover{
+    transform: scale(1.1);
+}
+.seat-disabled:hover{
+    transform: scale(1);
+}
+/* When the checkbox is checked, add a blue background */
+.seat input:checked~.checkmark {
+    background-color: green;
 }

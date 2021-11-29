@@ -10,7 +10,7 @@
                                 " . $showTime->start_time . "
                             </div>
                             <div class='showtime-item__seat'>
-                                57 ghế trống
+                                ".$showTime->getAvailableSeat()." ghế trống
                             </div>
                             " . typeShow($showTime->type) . "
                         </a>
