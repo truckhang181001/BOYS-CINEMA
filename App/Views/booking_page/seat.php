@@ -1,9 +1,27 @@
 <?php
-$alphabet = range("A", "Z");
-for ($i = 0; $i < 10; $i++) {
-    echo "<div class='booking-page__seat__row'>";
-    for ($j = 1; $j <= 10; $j++) {
-        echo "<div class='seat'>" . $alphabet[$i], $j . "</div>";
+for($i=0; $i < $data["room"]->seat_row; $i++){
+    echo "<div class='seat-row'>";
+    for($j=0; $j < $data["room"]->seat_col; $j++){
+        $type ='';
+        $status ='';
+        $index =$i*$data["room"]->seat_col+$j;
+        //Check type của ghế
+        if($data['seat'][$index]->type){
+            $type = '--seat-vip';
+        }
+        //Check available
+        if(in_array($data['seat'][$index]->id,$data['receipt'])){
+            $status='disabled';
+        }
+        // In ghế
+        echo "
+        <div class='seat-item'>
+            <label class='seat seat-$status'>
+                <input $status type='checkbox' name='seatType[]' value='".$data['seat'][$index]->id."'>
+                <span class='checkmark $type check-$status'></span>
+                <span class='seat-name'>".$data['seat'][$index]->name."</span>
+            </label>
+        </div>";
     }
     echo "</div>";
 }

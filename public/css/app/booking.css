@@ -1,50 +1,87 @@
 .booking-page__seat {
   margin-top: 40px;
   display: flex;
-  flex-direction: column;
   justify-content: center; }
-  .booking-page__seat__row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px; }
 
-.seat + .seat {
-  margin-left: 5px; }
-
-.seat {
+.seat-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-content: center;
+  width: 85vw;
+  overflow: auto; }
+
+.booking-screen {
+  width: 100%; }
+
+.seat-row {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: nowrap; }
+
+.seat-item {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  margin: 3px; }
+
+/* Customize the label (the container) */
+.seat {
+  display: inline-block;
   position: relative;
-  height: 20px;
-  width: 20px;
-  border-radius: 5px;
-  border: 2px solid #16305D;
-  font-size: 8px; }
-  @media (min-width: 576px) {
-    .seat {
-      height: 40px;
-      width: 40px;
-      border: 3px solid #16305D;
-      font-size: 14px; } }
-  .seat__name {
-    height: 100%;
-    width: 100%;
-    border: none !important;
-    text-align: center;
-    padding: 25% 0; }
+  height: 27px;
+  width: 27px;
+  font-size: 14px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid #252525;
+  border-radius: 10%;
+  transition: 0.1s all; }
 
-.seat-select {
-  background-color: #16305D !important; }
-  .seat-select div {
-    background-color: #16305D !important; }
+/* Hide the browser's default checkbox */
+.seat input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
 
-.seat-invalid {
-  border-color: grey;
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 10%; }
+
+.--seat-vip {
+  background-color: red; }
+
+.check-disabled {
   background-color: grey !important; }
-  .seat-invalid div {
-    background-color: grey !important;
-    border-color: grey; }
+
+.seat-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+/* On mouse-over, add a grey background color */
+.seat:hover {
+  transform: scale(1.1); }
+
+.seat-disabled:hover {
+  transform: scale(1); }
+
+/* When the checkbox is checked, add a blue background */
+.seat input:checked ~ .checkmark {
+  background-color: green; }
 
 .booking-page__form {
   display: flex;

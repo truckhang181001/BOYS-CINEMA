@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/db_module.php";
-class showtime
+class showtime extends controller
 {
     public $id;
     public $id_schedule;
@@ -21,6 +21,12 @@ class showtime
         require_once __DIR__."/tbl_schedule.php";
             $dataSchedule = new tbl_schedule();
             return $dataSchedule->GetSchedule('id='.$this->id_schedule)[0];
+    }
+    public function getAvailableSeat(){
+        $dataRoom = $this->getModel("tbl_room")->getRoom('id='.$this->GetSchedule()->id_room)[0];
+        $dataReceipt = $this->getModel("tbl_receipt")->getSeat('id_showtime='.$this->id);
+        return $dataRoom->seat_col * $dataRoom->seat_row - count($dataReceipt);
+
     }
 }
 

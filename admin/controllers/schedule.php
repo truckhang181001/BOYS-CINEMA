@@ -3,14 +3,18 @@ switch ($url) {
     case "edit": {
             if (isset($_GET['id'])) {
                 $dataSchedule = $this->getModel("tbl_schedule")->GetSchedule('id='.$_GET['id'])[0];
+                $itemFilm = $this->getModel("tbl_film")->getFilm('id='.$dataSchedule->id_film)[0];
                 $dataFilm = $this->getModel("tbl_film")->getFilm();
                 $dataTheater = $this->getModel("tbl_theater")->getTheater();
                 $dataRoom = $this->getModel("tbl_room")->getRoom(); 
+                $dataShowtime = $this->getModel("tbl_showtime")->getShowtime('id_schedule='.$_GET['id']);
                 $this->getViewAd("schedule_edit", [
                     "schedule" => $dataSchedule,
                     "film" => $dataFilm,
                     "theater" => $dataTheater,
-                    "room" => $dataRoom
+                    "room" => $dataRoom,
+                    "showtime"=>$dataShowtime,
+                    "item_film" =>$itemFilm,
                 ]);
             };
             break;

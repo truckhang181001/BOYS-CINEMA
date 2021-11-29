@@ -3,22 +3,26 @@ class booking extends Controller
 {
     function __construct()
     {
-        if (isset($_GET['schedule']) && isset($_GET['showtime'])) {
-            $dataSchedule = $this->getModel("tbl_schedule")->GetSchedule("id=".$_GET['schedule'])[0];
-            if($dataSchedule != null){
-                if($dataSchedule->GetShowTime('AND id='.$_GET['showtime']) != null){
-                    $this->getView("booking_page", []);
-                }
-                else{
-                    $this->getView("error404");
-                }
-            }
-            else{
-                $this->getView("error404");
+        $isErr = false;
+        if (isset($_GET['showtime'])) {
+            $itemShowtime = $this->getModel("tbl_showtime")->getShowtime("id=" . $_GET['showtime']);
+            if ($itemShowtime != null) {
+                $dataSchedule = $this->getModel("tbl_schedule")->GetSchedule("id=" . $itemShowtime[0]->id_schedule)[0];
+                $dataShowtime = $this->getModel("tbl_showtime")->getShowtime("id_schedule=" . $dataSchedule->id);
+                $dataRoom = $this->getModel("tbl_room")->getRoom('id=' . $dataSchedule->id_room)[0];
+                $dataSeat = $this->getModel("tbl_seat")->getSeat('id_room=' . $dataRoom->id);
+                $dataReceipt = $this->getModel("tbl_receipt")->getSeat($_GET['showtime']);
+                $this->getView("booking_page", [
+                    "room" => $dataRoom,
+                    "seat" => $dataSeat,
+                    "schedule" => $dataSchedule,
+                    "showtime"=>$dataShowtime,
+                    "itemShowtime"=>$itemShowtime[0],
+                    "receipt"=>$dataReceipt
+                ]);
+                $isErr = true;
             }
         }
-        else{
-            $this->getView("error404");
-        }
+        $isErr==false?$this->getView("error404"):null;
     }
 }
