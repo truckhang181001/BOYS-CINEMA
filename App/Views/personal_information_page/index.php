@@ -13,7 +13,7 @@
                         <div class="personal-info__input__title">
                             HỌ VÀ TÊN<span>*</span>
                         </div>
-                        <input type="text" name="userName" class="personal-info__input__username" style="color:white" required>
+                        <input required type="text" name="userName" class="personal-info__input__username" style="color:white">
                     </div>
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
@@ -26,15 +26,14 @@
                         <div class="personal-info__input__title">
                             MẬT KHẨU<span>*</span>
                         </div>
-                        <input type="password" name="userPsw" class="personal-info__input__psw" style="color:white">
+                        <input required type="password" name="userPsw" class="personal-info__input__psw" style="color:white">
                     </div>
         
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             GIỚI TÍNH<span>*</span>
                         </div>
-                        <select  name="userSex" class="form-select" aria-label="Default select example">
-     
+                        <select required name="userSex" class="form-select" aria-label="Default select example">
                             <option value="Nam">Nam</option>
                             <option value="Nữ">Nữ</option>
                             <option value="Khác">Khác</option>
@@ -46,26 +45,26 @@
                         <div class="personal-info__input__title">
                             NGÀY SINH<span>*</span>
                         </div>
-                        <input style="color: white" type="date" name="userYear" class="personal-info__input__psw-confirm">
+                        <input required style="color: white" type="date" name="userYear" class="personal-info__input__psw-confirm">
                     </div>
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             SỐ ĐIỆN THOẠI<span>*</span>
                         </div>
-                        <input style="color: white" type="text" name="userPhone" class="personal-info__input__psw-confirm"  placeholder="Nhập số điện thoại">
+                        <input required style="color: white" type="text" name="userPhone" class="personal-info__input__psw-confirm"  placeholder="Nhập số điện thoại">
                     </div>
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             ĐỊA CHỈ<span>*</span>
                         </div>
-                        <input style="color: white" type="text" name="userAddress" class="personal-info__input__psw-confirm"  placeholder="Nhập địa chỉ">
+                        <input required style="color: white" type="text" name="userAddress" class="personal-info__input__psw-confirm"  placeholder="Nhập địa chỉ">
                     </div>
+                    <br>
                     <button type="button" class="personal-info__btn btnf" data-bs-toggle="modal" data-bs-target="#exampleModal">Cập nhật</button>
                 </div>   
             </div>
         </div>
     </section>
-
     <!-- Modal Confirm-->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -85,7 +84,7 @@
         </div>
     </div>
 </form>
-
+    
 <?php
     $controller = new controller();
     $tbl_customer = $controller->getModel("tbl_customer");
