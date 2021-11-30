@@ -40,21 +40,6 @@ require_once "./public/php/admin/showtime/index.php";
                 </select>
             </div>
             <div class="row mb-3">
-                <label for="id_room" class="col-form-label">Phòng:</label>
-                <select name="id_room" class="form-select" id="id_room" aria-label="Default select example">
-                    <?php
-                    foreach ($data["room"] as $item) {
-                        if ($data['schedule']->id_room == $item->id) {
-                            echo "
-                            <option selected value='$item->id'>$item->name</option>";
-                        } else {
-                            echo "<option value='$item->id'>$item->name</option>";
-                        }
-                    }
-                    ?>
-                </select>
-            </div>
-            <div class="row mb-3">
                 <label for="date" class="col-form-label">Ngày chiếu:</label>
                 <input name="date" type="date" class="form-control" id="date" value="<?php echo $data['schedule']->date ?>">
             </div>
@@ -66,14 +51,24 @@ require_once "./public/php/admin/showtime/index.php";
         <!-- =======================THÊM SUẤT CHIẾU ====================== -->
         <h2 class="d-flex justify-content-center main-title">SUẤT CHIẾU</h2>
         <form class="row mb-3" method="post">
+            <div class="row mb-3">
+                <label for="id_room" class="col-form-label">Phòng:</label>
+                <select name="id_room" class="form-select" id="id_room" aria-label="Default select example">
+                    <?php
+                    foreach ($data["room"] as $item) {
+                        echo "<option value='$item->id'>$item->name</option>";
+                    }
+                    ?>
+                </select>
+            </div>
             <label for="start_time" class="col-form-label">Giờ bắt đầu:</label>
             <input name="start_time" type="time" class="form-control mb-3" id="start_time" required>
             <label for="type" class="col-form-label">Hình thức:</label>
             <select name="type" class="form-select mb-3" id="type" aria-label="Default select example">
                 <option value="2D">2D</option>
-                <?php 
-                    // Kiểm tra Film có hình thức 3D hay không
-                    if($data['item_film']->type == '3D')
+                <?php
+                // Kiểm tra Film có hình thức 3D hay không
+                if ($data['item_film']->type == '3D')
                     echo "<option value=3D'>3D</option>";
                 ?>
             </select>
@@ -87,6 +82,7 @@ require_once "./public/php/admin/showtime/index.php";
                         <th scope="col"></th>
                         <th scope="col">ID</th>
                         <th scope="col">ID Lịch chiếu</th>
+                        <th scope="col">ID Phòng chiếu</th>
                         <th scope="col">HÌnh thức</th>
                         <th scope="col">Giờ bắt đâu</th>
                         <th scope="col">Giờ kết thúc</th>
@@ -102,6 +98,7 @@ require_once "./public/php/admin/showtime/index.php";
                             <td></td>
                             <td>$item->id</td>
                             <td><p>" . $item->id_schedule . "</p></td>
+                            <td><p>" . $item->id_room . "</p></td>
                             <td>" . $item->type . "</td>
                             <td>$item->start_time</td>
                             <td>$item->end_time</td>

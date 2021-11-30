@@ -4,15 +4,13 @@
         public $id;
         public $id_film;
         public $id_theater;
-        public $id_room;
         public $date;
 
-        function __construct($id,$id_film,$id_theater,$id_room,$date)
+        function __construct($id,$id_film,$id_theater,$date)
         {
             $this->id=$id;
             $this->id_film=$id_film;
             $this->id_theater=$id_theater;
-            $this->id_room=$id_room;
             $this->date=$date;
         }
         function GetFilm(){
@@ -39,15 +37,15 @@
             createConnection($sql);
             $result = executeQuery($sql,$query);
             while($sche = mysqli_fetch_assoc($result)){
-                $scheClass[] = new schedule($sche['id'],$sche['id_film'],$sche['id_theater'],$sche['id_room'],$sche['date']);
+                $scheClass[] = new schedule($sche['id'],$sche['id_film'],$sche['id_theater'],$sche['date']);
             }
             releaseMemory($sql,$result);
             return $scheClass;
         }
 
-        function insertSchedule($id_film, $id_theater, $id_room, $date) {
+        function insertSchedule($id_film, $id_theater, $date) {
             $sql = null;
-            $query = "INSERT INTO tbl_schedule VALUES(NULL,'$id_film', '$id_theater', '$id_room', '$date')";
+            $query = "INSERT INTO tbl_schedule VALUES(NULL,'$id_film', '$id_theater', '$date')";
             createConnection($sql);
             $result = executeQuery($sql, $query);
             if ($result) {
@@ -57,10 +55,10 @@
             releaseMemory($sql);
         }
 
-        function updateSchedule($id,$id_film, $id_theater, $id_room, $date)
+        function updateSchedule($id,$id_film, $id_theater, $date)
         {
             $sql = null;
-            $query = "UPDATE tbl_schedule SET id_film='$id_film', id_theater='$id_theater', id_room=$id_room, date='$date'  WHERE id='$id'";
+            $query = "UPDATE tbl_schedule SET id_film='$id_film', id_theater='$id_theater', date='$date'  WHERE id='$id'";
             createConnection($sql);
             $result=mysqli_query($sql,$query);
             if(!$result)

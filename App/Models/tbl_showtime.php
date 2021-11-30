@@ -4,14 +4,16 @@ class showtime extends controller
 {
     public $id;
     public $id_schedule;
+    public $id_room;
     public $type;
     public $start_time;
     public $end_time;
 
-    function __construct($id, $id_schedule, $type, $start_time, $end_time)
+    function __construct($id, $id_schedule, $id_room, $type, $start_time, $end_time)
     {
         $this->id = $id;
         $this->id_schedule = $id_schedule;
+        $this->id_room = $id_room;
         $this->type = $type;
         $this->start_time = substr($start_time,0,5);
         $this->end_time = substr($end_time,0,5);      
@@ -23,10 +25,9 @@ class showtime extends controller
             return $dataSchedule->GetSchedule('id='.$this->id_schedule)[0];
     }
     public function getAvailableSeat(){
-        $dataRoom = $this->getModel("tbl_room")->getRoom('id='.$this->GetSchedule()->id_room)[0];
-        $dataReceipt = $this->getModel("tbl_receipt")->getSeat('id_showtime='.$this->id);
+        $dataRoom = $this->getModel("tbl_room")->getRoom('id='.$this->id_room)[0];
+        $dataReceipt = $this->getModel("tbl_receipt")->getSeat($this->id);
         return $dataRoom->seat_col * $dataRoom->seat_row - count($dataReceipt);
-
     }
 }
 
@@ -38,15 +39,15 @@ class tbl_showtime{
         createConnection($sql);
         $result = executeQuery($sql,$query);
         while($item = mysqli_fetch_assoc($result)){
-            $class[] = new showtime($item['id'],$item['id_schedule'],$item['type'],$item['start_time'],$item['end_time']);
+            $class[] = new showtime($item['id'],$item['id_schedule'],$item['id_room'],$item['type'],$item['start_time'],$item['end_time']);
         }
         releaseMemory($sql,$result);
         return $class;
     }
 
-    function insertShowtime($id_schedule, $type, $start_time, $end_time) {
+    function insertShowtime($id_schedule, $id_room, $type, $start_time, $end_time) {
         $sql = null;
-        $query = "INSERT INTO tbl_showtime VALUES(NULL,'$id_schedule', '$type', '$start_time', '$end_time')";
+        $query = "INSERT INTO tbl_showtime VALUES(NULL,'$id_schedule', '$id_room', '$type', '$start_time', '$end_time')";
         createConnection($sql);
         $result = executeQuery($sql, $query);
         if ($result) {
@@ -55,7 +56,7 @@ class tbl_showtime{
         }
         releaseMemory($sql);
     }
-
+    //Chỉnh sửa phần update
     function updateShowtime($id,$id_schedule, $type, $start_time, $end_time)
         {
             $sql = null;

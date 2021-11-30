@@ -23,7 +23,6 @@
             <th scope="col">ID</th>
             <th scope="col">Tên phim</th>
             <th scope="col">Địa chỉ rạp</th>
-            <th scope="col">Phòng</th>
             <th scope="col">Ngày chiếu</th>
             <th scope="col"></th>
           </tr>
@@ -38,7 +37,6 @@
                             <td>$item->id</td>
                             <td><p>".$item->GetFilm()->name."</p></td>
                             <td>".$item->GetTheater()->address."</td>
-                            <td>$item->id_room</td>
                             <td>$item->date</td>
                             <td>
                               <form method='get'>

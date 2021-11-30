@@ -6,7 +6,7 @@ switch ($url) {
                 $itemFilm = $this->getModel("tbl_film")->getFilm('id='.$dataSchedule->id_film)[0];
                 $dataFilm = $this->getModel("tbl_film")->getFilm();
                 $dataTheater = $this->getModel("tbl_theater")->getTheater();
-                $dataRoom = $this->getModel("tbl_room")->getRoom(); 
+                $dataRoom = $this->getModel("tbl_room")->getRoom("id_theater=$dataSchedule->id_theater"); 
                 $dataShowtime = $this->getModel("tbl_showtime")->getShowtime('id_schedule='.$_GET['id']);
                 $this->getViewAd("schedule_edit", [
                     "schedule" => $dataSchedule,

@@ -31,17 +31,6 @@ require_once "./public/php/admin/schedule_add/index.php";
                 </select>
             </div>
             <div class="row mb-3">
-                <label for="id_room" class="col-form-label">Phòng:</label>
-                <select name="id_room" class="form-select" id="id_room" aria-label="Default select example">
-                    <?php
-                    foreach ($data["room"] as $item) {
-                        echo "
-                            <option value='$item->id'>$item->name</option>";
-                    }
-                    ?>
-                </select>
-            </div>
-            <div class="row mb-3">
                 <label for="date" class="col-form-label">Ngày chiếu:</label>
                 <input name="date" type="date" class="form-control" id="date" value="" required>
             </div>
