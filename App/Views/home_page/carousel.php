@@ -1,10 +1,11 @@
 <?php
 function owlCarousel($data)
 {
-    echo "<div class='owl-carousel owl-theme owl-custom'>
+    if ($data != null) {
+        echo "<div class='owl-carousel owl-theme owl-custom'>
         ";
-    foreach ($data as $item) {
-        echo "<div class='card-container'>
+        foreach ($data as $item) {
+            echo "<div class='card-container'>
             <div class='card item'>
                 <a href='" . PRONAME . "/thong-tin?film=" . $item->id . "' class='card__img'>
                     <img src='" . PRONAME . "/public/img/" . $item->getImage("type='poster'")[0]->name . "' type='button' alt='Thumb'>
@@ -17,6 +18,7 @@ function owlCarousel($data)
                 </div>
             </div>
         </div>";
+        }
+        echo "</div>";
     }
-    echo "</div>";
 }

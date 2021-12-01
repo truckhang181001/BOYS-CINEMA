@@ -1,6 +1,6 @@
 <!-- HEADER -->
 <div class="info-page__header__banner">
-    <img src="<?php echo PRONAME ?>/public/img/info-page-banner.png" alt="Banner">
+    <img src="<?php echo PRONAME."./public/img/".$data['film'][0]->getImage("type='banner'")[0]->name?>" alt="Banner">
     <div class="info-page__header__poster-info">
         <p class="info-page__header__poster-info--name info-page--effect">
             <!------------ BINDING FILM NAME  ------------>
@@ -41,7 +41,7 @@
     <div class="info-page__header__btn-group--img">
         <img class="info-page--effect" src="<?php 
         if(isset($data['poster']))
-            echo PRONAME."/public/img/".$data['poster']->name;?>">
+            echo PRONAME."/public/img/".$data['film'][0]->getImage("type='poster'")[0]->name;?>">
         <div class="info-page--fas-style">
             <i class="fas fa-pause info-page--fas-style__poster-icon"></i>
         </div>
