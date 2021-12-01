@@ -39,7 +39,9 @@
 
 <div class="info-page__header__btn-group">
     <div class="info-page__header__btn-group--img">
-        <img class="info-page--effect" src="<?php echo PRONAME ?>/public/img/NGUYỄN TRÚC KHANG_1637341466.png">
+        <img class="info-page--effect" src="<?php 
+        if(isset($data['poster']))
+            echo PRONAME."/public/img/".$data['poster']->name;?>">
         <div class="info-page--fas-style">
             <i class="fas fa-pause info-page--fas-style__poster-icon"></i>
         </div>

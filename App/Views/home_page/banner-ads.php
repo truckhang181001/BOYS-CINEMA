@@ -1,11 +1,10 @@
 <div class="owl-carousel banner-ads owl-theme owl-banner">
-    <div class="banner-item">
-        <img src="<?php echo PRONAME?>/public/img/home-page-banner1.jpg" alt="Thumb" class="banner__img">
-    </div>
-    <div class="banner-item">
-        <img src="<?php echo PRONAME?>/public/img/home-page-banner2.jpg" alt="Thumb" class="banner__img">
-    </div>
-    <div class="banner-item">
-        <img src="<?php echo PRONAME?>/public/img/home-page-banner3.jpg" alt="Thumb" class="banner__img">
-    </div>
+    <?php
+        foreach($data as $item){
+            echo "
+            <div class='banner-item'>
+                <img src='".PRONAME."/public/img/".$item->getImage("type='banner'")[0]->name."' alt='Thumb' class='banner__img'>
+            </div>";
+        }
+    ?>
 </div>

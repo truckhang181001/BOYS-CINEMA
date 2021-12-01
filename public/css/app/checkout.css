@@ -90,20 +90,20 @@
     align-items: center;
     border-top: 1px solid #ffffff30;
     padding: 10px 0; }
-    .information-detail .row .col-4 {
+    .information-detail .row .col-4, .information-detail .row .col-3 {
       text-align: center;
       color: #fff;
       font-size: 12px; }
       @media (min-width: 576px) {
-        .information-detail .row .col-4 {
+        .information-detail .row .col-4, .information-detail .row .col-3 {
           font-size: 15px; } }
       @media (min-width: 992px) {
-        .information-detail .row .col-4 {
+        .information-detail .row .col-4, .information-detail .row .col-3 {
           font-size: 18px; } }
       @media (min-width: 1200px) {
-        .information-detail .row .col-4 {
+        .information-detail .row .col-4, .information-detail .row .col-3 {
           font-size: 21px; } }
-      .information-detail .row .col-4 .type-chair, .information-detail .row .col-4 .effect, .information-detail .row .col-4 .quantity, .information-detail .row .col-4 .position {
+      .information-detail .row .col-4 .item-rep, .information-detail .row .col-3 .item-rep {
         margin: 0; }
   .information-detail .total-amount--text {
     font-weight: 500;

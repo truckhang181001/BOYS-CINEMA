@@ -3,24 +3,41 @@
         <div class="title--text">THÔNG TIN ĐƠN HÀNG</div>      
     </div>
     <div class="row">
-            <div class="col-4 name-film">NỮ THẦN CHIẾN BINH</div>
-            <div class="col-4 address">BOYS SƯ VẠN HẠNH</div>
-            <div class="col-4 time">23/9/2021 - 8:30PM</div>
+            <div class="col-3 name-film"><?php echo $data['schedule']->getFilm()->name?></div>
+            <div class="col-3 address">BOYS <?php echo $data['schedule']->getTheater()->address?></div>
+            <div class="col-3 address"><?php echo $data['showtime']->getRoom()->name?></div>
+            <div class="col-3 time"><?php echo $data['schedule']->date." - ".$data['showtime']->start_time?></div>
     </div>
     <div class="row">
-        <div class="col-4">
-            <p class="type-chair">GHẾ THƯỜNG</p>
-            <p class="effect">Hình thức 2D</p>
-        </div>
-        <div class="col-4">
-            <p class="quantity">2 VÉ</p>
-            <p class="position">A1,A2</p>
-        </div>
-        <div class="col-4"> 150.000 VNĐ</div> 
+        <?php
+            foreach($data['seat'] as $item){
+                if(!$item->type){
+                    $seatNormal[] = $item->name;
+                }
+                else $seatVip[]=$item->name;
+            }
+            echo "
+            <div class='col-4'>
+                <p class='item-rep' style='font-weight: bold;'>GHẾ THƯỜNG</p>
+            </div>
+            <div class='col-4'>
+                <p class='item-rep' style='font-weight: bold;'>2 VÉ</p>
+                <p class='item-rep' style='font-weight:lighter'>".printSeat($seatNormal)."</p>
+            </div>
+            <div class='col-4'>
+                <p class='item-rep' style='font-weight: bold;'>ĐƠN GIÁ</p>
+                <P class='item-rep' style='font-weight:lighter'>150.000 VNĐ</P>
+            </div>";
+            function printSeat($seat){
+                $str="";
+                foreach($seat as $item) $str .= $item.", ";
+                return substr($str,0,-2);
+            }
+        ?> 
     </div>
     <div class="row">
         <div class="tolal-amount">
-            <div class="total-amount--text">THÀNH TIỀN: 300.000 VNĐ</div>
+            <div class="total-amount--text">THÀNH TIỀN:  <span style="color: aqua;">300.000 VNĐ</span></div>
         </div>
     </div>
     

@@ -32,10 +32,10 @@ class film
         $cate = new tbl_category();
         return $cate->getCategory('id=' . $this->id_category)[0]->name;
     }
-    public function getImage(){
+    public function getImage($cond=""){
         require_once __DIR__ . "/tbl_image.php";
         $cate = new tbl_image();
-        return $cate->getImage('id_film=' . $this->id)[0]->name;
+        return $cate->getImage("id_film=$this->id AND " . $cond );
     }
 }
 class tbl_film

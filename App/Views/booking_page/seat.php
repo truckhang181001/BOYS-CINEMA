@@ -17,7 +17,7 @@ for($i=0; $i < $data["room"]->seat_row; $i++){
         echo "
         <div class='seat-item'>
             <label class='seat seat-$status'>
-                <input $status type='checkbox' name='seatType[]' value='".$data['seat'][$index]->id."'>
+                <input $status type='checkbox' name='seat[]' value='".$data['seat'][$index]->id."'>
                 <span class='checkmark $type check-$status'></span>
                 <span class='seat-name'>".$data['seat'][$index]->name."</span>
             </label>

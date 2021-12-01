@@ -24,6 +24,9 @@ class showtime extends controller
             $dataSchedule = new tbl_schedule();
             return $dataSchedule->GetSchedule('id='.$this->id_schedule)[0];
     }
+    public function getRoom(){
+        return $this->getModel("tbl_room")->getRoom('id='.$this->id_room)[0];
+    }
     public function getAvailableSeat(){
         $dataRoom = $this->getModel("tbl_room")->getRoom('id='.$this->id_room)[0];
         $dataReceipt = $this->getModel("tbl_receipt")->getSeat($this->id);

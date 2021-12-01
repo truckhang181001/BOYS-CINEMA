@@ -1,60 +1,30 @@
 <div class="effect-and-categogy">
 
-    <div class="effect">
+    <form class="effect" method="get">
         <h4 class="effect__text">HÌNH THỨC</h4>
         <div class="effect__items" >
-            <input class="effect__items--checkbox" type="checkbox" id="2d">
+            <input name='type[]' class="effect__items--checkbox" type="checkbox" value="2D">
             <label for="2d">2D</label>
         </div>
         <div class="effect__items">
-            <input class="effect__items--checkbox" type="checkbox" id="3d">
+            <input name='type[]' class="effect__items--checkbox" type="checkbox" value="3D">
             <label for="3d">3D</label>
         </div>
-    </div>
+        <button class='btnf'>Lọc</button>
+    </form>
     
-    <div class="categogy">
+    <form class="categogy" method="get">
         <h4 class="categogy__text">THỂ LOẠI</h4>
-        <div class="categogy__items" >
-            <input class="categogy__items--checkbox" type="checkbox" id="chinhkich">
-            <label for="chinhkich">Chính kịch</label>
-            
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="giatuong">
-            <label for="giatuong">Giả tưởng</label>
-        </div>
-        <div class="categogy__items" >
-            <input class="categogy__items--checkbox" type="checkbox" id="hanhdong">
-            <label for="hanhdong">Hành động</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="haihuoc">
-            <label for="haihuoc">Hài hước</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="kinhdi">
-            <label for="kinhdi">Kinh dị</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="langman">
-            <label for="langman">Lãng mạn</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="phieuluu">
-            <label for="phieuluu">Phiêu lưu</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="thanbi">
-            <label for="thanbi">Thần bí</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="tuongtuong">
-            <label for="tuongtuong">Tưởng tượng</label>
-        </div>
-        <div class="categogy__items">
-            <input class="categogy__items--checkbox" type="checkbox" id="trinhtham">
-            <label for="trinhtham">Trinh thám</label>
-        </div>
-    </div>
+        <?php
+            foreach($data['category'] as $item){
+                echo "
+                <div class='categogy__items' >
+                    <input class='categogy__items--checkbox' type='checkbox' name='category[]' value='$item->id'>
+                    <label for='chinhkich'>$item->name</label>
+                </div>";
+            }
+        ?>
+        <button class='btnf'>Lọc</button>
+    </form>
 
 </div>
