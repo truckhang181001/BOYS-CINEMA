@@ -7,6 +7,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
     if ($user != null || $admin != null) {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $pass;
+        if($admin != null) $_SESSION['admin']='admin';
         header("Location:".DOMAIN.PRONAME."/");
         exit;
     }

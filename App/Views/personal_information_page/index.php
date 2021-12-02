@@ -70,7 +70,11 @@
                         <input required style="color: white" type="text" name="userAddress" class="personal-info__input__psw-confirm"  placeholder="Nhập địa chỉ" value="<?php echo $data->address?>">
                     </div>
                     <br>
-                    <button type="button" class="personal-info__btn btnf" data-bs-toggle="modal" data-bs-target="#exampleModal">Cập nhật</button>
+                    <?php
+                        //Tắt chức năng cập nhật khi là admin
+                        if(!isset($_SESSION['admin']))
+                        echo "<button type='button' class='personal-info__btn btnf' data-bs-toggle='modal' data-bs-target='#exampleModal'>Cập nhật</button>";
+                    ?>
                     <button type="submit" class="personal-info__btn btnf" data-bs-toggle="modal" name='sign_out'>Đăng xuất</button>
                 </div>   
             </div>

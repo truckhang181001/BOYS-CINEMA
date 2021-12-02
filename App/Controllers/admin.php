@@ -1,9 +1,5 @@
 <?php
     class admin extends Controller{
-        function __construct($url="default")
-        {
-            require_once "./admin/controllers/film.php";
-        }
         function film($url="default"){
             require_once "./admin/controllers/film.php";
         }

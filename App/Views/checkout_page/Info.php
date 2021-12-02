@@ -10,27 +10,37 @@
     </div>
     <div class="row">
         <?php
-            foreach($data['seat'] as $item){
-                if(!$item->type){
-                    $seatNormal[] = $item->name;
-                }
-                else $seatVip[]=$item->name;
-            }
+
+            if($data['seat_normal'] != null)
             echo "
             <div class='col-4'>
                 <p class='item-rep' style='font-weight: bold;'>GHẾ THƯỜNG</p>
             </div>
             <div class='col-4'>
-                <p class='item-rep' style='font-weight: bold;'>2 VÉ</p>
-                <p class='item-rep' style='font-weight:lighter'>".printSeat($seatNormal)."</p>
+                <p class='item-rep' style='font-weight: bold;'>".count($data['seat_normal'])." VÉ</p>
+                <p class='item-rep' style='font-weight:lighter'>".printSeat($data['seat_normal'])."</p>
+            </div>
+            <div class='col-4'>
+                <p class='item-rep' style='font-weight: bold;'>ĐƠN GIÁ</p>
+                <P class='item-rep' style='font-weight:lighter'>90.000 VNĐ</P>
+            </div>";
+            if($data['seat_vip'] != null)
+            echo "
+            <div class='col-4'>
+                <p class='item-rep' style='font-weight: bold;'>GHẾ VIP</p>
+            </div>
+            <div class='col-4'>
+                <p class='item-rep' style='font-weight: bold;'>".count($data['seat_vip'])." VÉ</p>
+                <p class='item-rep' style='font-weight:lighter'>".printSeat($data['seat_vip'])."</p>
             </div>
             <div class='col-4'>
                 <p class='item-rep' style='font-weight: bold;'>ĐƠN GIÁ</p>
                 <P class='item-rep' style='font-weight:lighter'>150.000 VNĐ</P>
             </div>";
+
             function printSeat($seat){
                 $str="";
-                foreach($seat as $item) $str .= $item.", ";
+                foreach($seat as $item) $str .= $item->name.", ";
                 return substr($str,0,-2);
             }
         ?> 
