@@ -1,4 +1,19 @@
-<section class="login-section">
+<?php
+if (isset($_POST['user']) && isset($_POST['password'])) {
+    $email = $_POST['user'];
+    $pass = $_POST['password'];
+    $user = $this->getModel('tbl_customer')->getCustomer("email ='$email' AND password='$pass'");
+    $admin = $this->getModel('tbl_admin')->getAdmin("email ='$email' AND password='$pass'");
+    if ($user != null || $admin != null) {
+        $_SESSION['email'] = $email;
+        $_SESSION['password'] = $pass;
+        header("Location:".DOMAIN.PRONAME."/");
+        exit;
+    }
+    else echo "<script>alert('Tài khoản hoặc mật khẩu sai!');</script>";
+}
+?>
+<form method="post" class="login-section">
     <div class="login">
         <div class="login__sub-title">
             HELLO
@@ -10,25 +25,25 @@
             <div class="login__input__title">
                 EMAIL<span>*</span>
             </div>
-            <input type="email" name="userEmail" class="login__input__email" style="color:white" placeholder="Nhập email">
+            <input required type="email" name="user" class="login__input__email" style="color:white" placeholder="Nhập email">
         </div>
         <div class="login__input" style="margin-bottom: 15px;">
             <div class="login__input__title">
                 MẬT KHẨU<span>*</span>
             </div>
-            <input type="password" name="userEmail" class="login__input__psw" style="color:white" placeholder="Nhập mật khẩu">
+            <input required type="password" name="password" class="login__input__psw" style="color:white" placeholder="Nhập mật khẩu">
         </div>
         <div class="login__option">
             <div class="login__option__save">
-                <input type="checkbox" name="savePsw" class="login__option__save-psw">
+                <input type="checkbox" name="extendSession" class="login__option__save-psw">
                 <div>Nhớ mật khẩu</div>
             </div>
             <a href="#" class="login__option__forget">Quên mật khẩu</a>
         </div>
-        <a class="login__btn btnf" href="#">ĐĂNG NHẬP</a>
+        <button class="login__btn btnf" href="#">ĐĂNG NHẬP</button>
         <div class="login__sign-up">
             <div class="login__sign-up__text">Bạn chưa có tài khoản?</div>
             <a href="<?php echo PRONAME ?>/dang-ky" class="login__sign-up__btn">Đăng ký ngay</a>
         </div>
     </div>
-</section>
+</form>

@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__."/db_module.php";
-    class user{
+    class admin_acc{
         public $id;
         public $name;
         public $sex;
@@ -20,15 +20,15 @@
             $this->password = $password;
         }
     }
-    class tbl_user{
-        function GetUser($cond='1'){
+    class tbl_admin_acc{
+        function getAdmin($cond='1'){
             $class = null;
             $sql = null;
-            $query = "SELECT * FROM tbl_user WHERE ".$cond;
+            $query = "SELECT * FROM tbl_admin WHERE ".$cond;
             createConnection($sql);
             $result = executeQuery($sql,$query);
             while($item = mysqli_fetch_assoc($result)){
-                $class[] = new user($item['id'],$item['name'],$item['sex'],$item['dob'],$item['phone'],$item['email'],$item['password']);
+                $class[] = new admin_acc($item['id'],$item['name'],$item['sex'],$item['dob'],$item['phone'],$item['email'],$item['password']);
             }
             releaseMemory($sql,$result);
             return $class;

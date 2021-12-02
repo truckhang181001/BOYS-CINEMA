@@ -41,6 +41,10 @@ if (isset($url[0])) {
     $active["Home"] = "nav-item__active";
 }
 
+//Kiểm tra Đăng nhập
+if(isset($_SESSION['email']) && isset($_SESSION['email'])) $btn = ['TÀI KHOẢN',"/thong-tin-ca-nhan"];
+    else $btn = ['ĐĂNG NHẬP',"/dang-nhap"];
+
 echo "<div class='nav-container'>
     <div class='nav' id='nav-main'> 
         <div class='nav-item'>
@@ -59,7 +63,7 @@ echo "<div class='nav-container'>
             <a class='nav__contact nav-item__text' href='".PRONAME."/lien-he'>Liên hệ</a>
             <div class='" . $active["Contact"] . "'></div>
         </div>
-        <a class='nav__sign-in' href='".PRONAME."/dang-nhap'>Đăng nhập</a>
+        <a class='nav__sign-in' href='".PRONAME."$btn[1]'>$btn[0]</a>
     </div>
     <i class='fas fa-bars nav-icon' id='nav-click'></i>
 </div>";

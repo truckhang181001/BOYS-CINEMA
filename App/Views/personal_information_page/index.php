@@ -1,3 +1,8 @@
+<?php
+    require_once "./public/php/app/personal_information/update_customer.php";
+    require_once "./public/php/app/personal_information/signout.php";
+
+?>
 <form method="post">
     <section class="personal-info-section">
         <div class="personal-info">
@@ -13,20 +18,20 @@
                         <div class="personal-info__input__title">
                             HỌ VÀ TÊN<span>*</span>
                         </div>
-                        <input required type="text" name="userName" class="personal-info__input__username" style="color:white">
+                        <input required type="text" name="userName" class="personal-info__input__username" style="color:white" value="<?php echo $data->name?>">
                     </div>
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             EMAIL<span>*</span>
                         </div>
-                        <input type="email" name="userEmail" class="personal-info__input__email" value="" style="color:white" readonly>
+                        <input type="email" name="userEmail" class="personal-info__input__email" style="color:white" readonly value="<?php echo $data->email?>">
                     </div>
         
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             MẬT KHẨU<span>*</span>
                         </div>
-                        <input required type="password" name="userPsw" class="personal-info__input__psw" style="color:white">
+                        <input required type="password" name="userPsw" class="personal-info__input__psw" style="color:white" value="<?php echo $data->password?>">
                     </div>
         
                     <div class="personal-info__input mb-3">
@@ -34,9 +39,14 @@
                             GIỚI TÍNH<span>*</span>
                         </div>
                         <select required name="userSex" class="form-select" aria-label="Default select example">
-                            <option value="Nam">Nam</option>
-                            <option value="Nữ">Nữ</option>
-                            <option value="Khác">Khác</option>
+                            <?php
+                                $sex=['Nam','Nữ','Khác'];
+                                foreach ($sex as $item){
+                                    if($item == $data->sex)
+                                        echo "<option value='$item' selected>$item</option>";
+                                    else echo "<option value='$item'>$item</option>";
+                                }
+                            ?>
                         </select>
                     </div>
                 </div>
@@ -45,22 +55,23 @@
                         <div class="personal-info__input__title">
                             NGÀY SINH<span>*</span>
                         </div>
-                        <input required style="color: white" type="date" name="userYear" class="personal-info__input__psw-confirm">
+                        <input required style="color: white" type="date" name="userYear" class="personal-info__input__psw-confirm" value="<?php echo $data->dob?>">
                     </div>
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             SỐ ĐIỆN THOẠI<span>*</span>
                         </div>
-                        <input required style="color: white" type="text" name="userPhone" class="personal-info__input__psw-confirm"  placeholder="Nhập số điện thoại">
+                        <input required style="color: white" type="text" name="userPhone" class="personal-info__input__psw-confirm"  placeholder="Nhập số điện thoại" value="<?php echo "0".$data->phone?>">
                     </div>
                     <div class="personal-info__input mb-3">
                         <div class="personal-info__input__title">
                             ĐỊA CHỈ<span>*</span>
                         </div>
-                        <input required style="color: white" type="text" name="userAddress" class="personal-info__input__psw-confirm"  placeholder="Nhập địa chỉ">
+                        <input required style="color: white" type="text" name="userAddress" class="personal-info__input__psw-confirm"  placeholder="Nhập địa chỉ" value="<?php echo $data->address?>">
                     </div>
                     <br>
                     <button type="button" class="personal-info__btn btnf" data-bs-toggle="modal" data-bs-target="#exampleModal">Cập nhật</button>
+                    <button type="submit" class="personal-info__btn btnf" data-bs-toggle="modal" name='sign_out'>Đăng xuất</button>
                 </div>   
             </div>
         </div>
@@ -85,23 +96,3 @@
     </div>
 </form>
     
-<?php
-    $controller = new controller();
-    $tbl_customer = $controller->getModel("tbl_customer");
-    
-    if (isset($_POST['updatePersonalInfo'])) {
-        updateCustomer($tbl_customer);
-        header("Location: ".CURLINK);
-        exit;
-    }
-    function updateCustomer($tbl_customer)
-    {
-        $password =$_POST['userPsw'];
-        $name = $_POST['userName'];
-        $sex = $_POST['userSex'];
-        $dob = $_POST['userYear'];
-        $address =$_POST['userAddress'];
-        $phone = $_POST['userPhone'];
-        $tbl_customer->updateCustomer($_POST['updatePersonalInfo'], $password, $name, $sex, $dob, $address, $phone);
-    }
-?>
