@@ -3,7 +3,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
     $email = $_POST['user'];
     $pass = $_POST['password'];
     $user = $this->getModel('tbl_customer')->getCustomer("email ='$email' AND password='$pass'");
-    $admin = $this->getModel('tbl_admin')->getAdmin("email ='$email' AND password='$pass'");
+    $admin = $this->getModel('tbl_admin_acc')->getAdmin("email ='$email' AND password='$pass'");
     if ($user != null || $admin != null) {
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $pass;
