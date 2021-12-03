@@ -14,7 +14,8 @@
             "admin-boys"=>["admin","Quản lý"],
             "xac-thuc-email" =>["email_verification","Xác thực"],
             "thong-tin-ca-nhan"=>["personal_information","Thông tin cá nhân"],
-            "thanh-toan-thanh-cong"=>["checkout_succ","Thanh toán"]
+            "thanh-toan-thanh-cong"=>["checkout_succ","Thanh toán"],
+            "hoan-tat-thanh-toan" =>["payment_success","Hoàn tất thanh toán"]
         ];
         protected $req = [
             "checkout",
