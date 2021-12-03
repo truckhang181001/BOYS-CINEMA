@@ -2,8 +2,8 @@
     function showTime($item)
     {
         $a = "";
-        if($item->GetShowTime() != null){
-            foreach ($item->GetShowTime() as $showTime) {
+        if($item->GetShowTime("AND start_time >= '".date("H:i:s")."'") != null){
+            foreach ($item->GetShowTime("AND start_time >= '".date("H:i:s")."'") as $showTime) {
                 $a .= "
                         <a href='".PRONAME."/dat-ve?schedule=".$showTime->id_schedule."&showtime=".$showTime->id."' class='showtime-item'>
                             <div class='showtime-item__time'>

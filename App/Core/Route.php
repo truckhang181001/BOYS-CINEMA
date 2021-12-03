@@ -1,5 +1,5 @@
 <?php
-    class Route{
+    class Route extends controller{
         public $route = [
             "trang-chu"=>["home","Trang chủ"],
             "thong-tin"=>["info","Thông tin"],
@@ -11,9 +11,17 @@
             "dang-ky"=>["signup","Đăng ký"],
             "ERROR-404"=>["error404","Lỗi"],
             "lien-he" =>["contact","Liên hệ"],
-            "admin"=>["admin","Quản lý"],
+            "admin-boys"=>["admin","Quản lý"],
             "xac-thuc-email" =>["email_verification","Xác thực"],
             "thong-tin-ca-nhan"=>["personal_information","Thông tin cá nhân"],
+            "thanh-toan-thanh-cong"=>["checkout_succ","Thanh toán"]
+        ];
+        protected $req = [
+            "checkout",
+            "booking",
+            "admin",
+            "personal_information",
+            "checkout_succ"
         ];
         protected $controller = "Home";
         protected $action = "";
@@ -23,10 +31,13 @@
         {
             //Controller
             $url = $this->UrlProcess();
-            if(isset($url[0]) && file_exists("./app/controllers/".$this->route[$url[0]][0].".php")){
+
+            if(isset($url[0]) && isset($this->route[$url[0]]) && file_exists("./app/controllers/".$this->route[$url[0]][0].".php")){
                 $this->controller = $this->route[$url[0]][0];
                 unset($url[0]);
-            }
+            }            
+            //Phân quyền
+            require_once "./app/core/decentral.php";
             require_once "./app/controllers/".$this->controller.".php";
             $this->controller = new $this->controller;
             //Action

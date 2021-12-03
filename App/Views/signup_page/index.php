@@ -1,6 +1,6 @@
 
 <?php
-    require "./public/php/app/sign_up/mail.php";
+    require "./public/php/app/sign_up/signup.php";
 ?>
 <form action="" method="post">
     <section class="login-section">
@@ -17,7 +17,7 @@
                             <div class="login__input__title">
                                 HỌ VÀ TÊN<span>*</span>
                             </div>
-                            <input required style="color:white" type="text" name="userPswConf" class="login__input__psw-confirm" placeholder="Nhập họ và tên">
+                            <input required style="color:white" type="text" name="userName" class="login__input__psw-confirm" placeholder="Nhập họ và tên">
                         </div>
                         <div class="login__input" style="margin-bottom: 30px;">
                             <div class="login__input__title">
@@ -98,24 +98,3 @@
         </div>
 </form>
 
-<?php
-    $controller = new controller();
-    $tbl_customer = $controller->getModel("tbl_customer");
-    
-    if (isset($_POST['signUpAccount'])) {
-        updateCustomer($tbl_customer);
-        header("Location: ".CURLINK);
-        exit;
-    }
-    function updateCustomer($tbl_customer)
-    {
-        $password =$_POST['userPsw'];
-        $name = $_POST['userName'];
-        $email= $_POST['email'];
-        $sex = $_POST['userSex'];
-        $dob = $_POST['userYear'];
-        $address =$_POST['userAddress'];
-        $phone = $_POST['userPhone'];
-        // chưa xong chỗ này nhe
-    }
-?>

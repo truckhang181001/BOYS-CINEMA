@@ -1,4 +1,5 @@
 <?php
+require_once "./app/core/controller.php";
 require_once "./config.php";
 require_once "./App/Core/Route.php";
 $RouteUrl = new route();
@@ -28,11 +29,11 @@ $url = $RouteUrl->UrlProcess();
     <?php
     // Xử lý  css và title của trang
     $ctrl = [];
-    if (isset($url[0])) {
+    if (isset($url[0]) && isset($RouteUrl->route[$url[0]])) {
         $ctrl = $RouteUrl->route[$url[0]];
     } else $ctrl = $RouteUrl->route["trang-chu"];
     //CSS Admin
-    if (isset($url) && $url[0] == "admin") {
+    if (isset($url) && $url[0] == "admin-boys") {
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/index.css'>";
         echo "<link rel='stylesheet' href='" . PRONAME . "/public/css/admin/nav_bar_admin.css'>";
         if (isset($url[1])) {
@@ -62,8 +63,9 @@ $url = $RouteUrl->UrlProcess();
     <!-- PHP CODE -->
     <?php
     session_start();
+    date_default_timezone_set('Asia/Saigon');
     // Hiện thị Nav
-    if (!isset($url) || $url[0] != "admin") {
+    if (!isset($url) || $url[0] != "admin-boys") {
         require_once __DIR__ . "/share/navBar.php";
     }
     // else require_once __DIR__ . "/share/navBarAdmin.php";
@@ -71,7 +73,7 @@ $url = $RouteUrl->UrlProcess();
     require_once __DIR__ . "/app/bridge.php";
     ?>
     <?php
-    if (!isset($url) || $url[0] != "admin") {
+    if (!isset($url) || $url[0] != "admin-boys") {
         require_once __DIR__ . "/share/footer.php";
     }
     ?>
