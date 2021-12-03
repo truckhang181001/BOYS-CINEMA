@@ -19,7 +19,7 @@ class tbl_price{
         createConnection($sql);
         $result = executeQuery($sql,$query);
         while($item = mysqli_fetch_assoc($result)){
-            $class[] = new price($item['id'],$item['type'],$item['price']);
+            $class[] = new price($item['id'],$item['typeseat'],$item['price']);
         }
         releaseMemory($sql,$result);
         return $class;

@@ -5,6 +5,9 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
     $user = $this->getModel('tbl_customer')->getCustomer("email ='$email' AND password='$pass'");
     $admin = $this->getModel('tbl_admin_acc')->getAdmin("email ='$email' AND password='$pass'");
     if ($user != null || $admin != null) {
+        session_unset();
+        session_destroy();
+        session_start();
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $pass;
         if($admin != null) $_SESSION['admin']='admin';

@@ -48,4 +48,15 @@ class tbl_receipt
         releaseMemory($sql, $result);
         return $class;
     }
+    function insertReceipt($id_customer, $id_showtime, $id_seat, $status, $date, $id_transaction){
+        $sql = null;
+        $query = "INSERT INTO tbl_receipt VALUES(NULL,$id_customer,$id_showtime,$id_seat,$status,'$date',$id_transaction)";
+        createConnection($sql);
+        $result = executeQuery($sql, $query);
+        if ($result) {
+            $last_id = mysqli_insert_id($sql);        
+            return $last_id;
+        }
+        releaseMemory($sql);
+    }
 }

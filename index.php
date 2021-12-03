@@ -62,6 +62,7 @@ $url = $RouteUrl->UrlProcess();
     <!-- PHP CODE -->
     <?php
     session_start();
+    date_default_timezone_set('Asia/Saigon');
     // Hiện thị Nav
     if (!isset($url) || $url[0] != "admin-boys") {
         require_once __DIR__ . "/share/navBar.php";

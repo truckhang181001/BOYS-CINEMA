@@ -1,3 +1,9 @@
+<?php
+    if(isset($_POST['checkoutTicket'])){
+        require_once "./public/php/app/checkout/index.php";
+    }
+?>
+
 <div class="information-detail">
     <div class="title d-flex justify-content-center align-items-center">
         <div class="title--text">THÔNG TIN ĐƠN HÀNG</div>      
@@ -47,8 +53,11 @@
     </div>
     <div class="row">
         <div class="tolal-amount">
-            <div class="total-amount--text">THÀNH TIỀN:  <span style="color: aqua;">300.000 VNĐ</span></div>
+            <div class="total-amount--text">THÀNH TIỀN:  <span style="color: aqua;"><?php echo number_format($data["total"],0,',','.')?> VNĐ</span></div>
         </div>
+        <form action="" method='post'>
+            <button name="checkoutTicket" class="btnf" type="submit">THANH TOÁN</button>
+        </form>
     </div>
     
 </div>

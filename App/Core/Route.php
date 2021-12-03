@@ -14,12 +14,14 @@
             "admin-boys"=>["admin","Quản lý"],
             "xac-thuc-email" =>["email_verification","Xác thực"],
             "thong-tin-ca-nhan"=>["personal_information","Thông tin cá nhân"],
+            "thanh-toan-thanh-cong"=>["checkout_succ","Thanh toán"]
         ];
         protected $req = [
             "checkout",
             "booking",
             "admin",
-            "personal_information"
+            "personal_information",
+            "checkout_succ"
         ];
         protected $controller = "Home";
         protected $action = "";
