@@ -115,4 +115,16 @@
         }
     }
     
+    .btn-filter {
+        font-size: 14px;
+        width: 100%;
+        border: none;
+        margin-top: 20px;
+        padding: 3px;
+
+        @media (min-width:1200px){
+            font-size: 18px;
+            padding:5px
+        }
+    }
 }

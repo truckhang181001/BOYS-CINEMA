@@ -26,5 +26,5 @@
             }
         ?>
     </div>
-    <button class='btnf'>Lọc</button>
+    <button class='btnf btn-filter'>Lọc</button>
 </form>
