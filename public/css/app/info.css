@@ -144,6 +144,7 @@
         .info-page__header__btn-group__statistic {
           flex-direction: column; } }
       .info-page__header__btn-group__statistic--btnbook {
+        padding: 5px 20px;
         height: 35px;
         border-radius: 40px;
         font-size: 15px;
@@ -261,16 +262,13 @@
     .info-page__tab-content__tab--tabcontent {
       font-family: Roboto;
       font-style: normal;
-      font-size: 1rem;
+      font-size: 14px;
       color: #FFFFFF;
       margin-top: 20px;
       padding: 0; }
-      @media screen and (max-width: 1023px) {
+      @media screen and (min-width: 1200px) {
         .info-page__tab-content__tab--tabcontent {
-          font-size: 10px; } }
-      @media screen and (max-width: 400px) {
-        .info-page__tab-content__tab--tabcontent {
-          font-size: 8px; } }
+          font-size: 16px; } }
       .info-page__tab-content__tab--tabcontent--tag {
         max-height: 20vh;
         overflow: hidden;
