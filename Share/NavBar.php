@@ -52,7 +52,7 @@ echo "<div class='nav-container'>
             <div class='" . $active["Home"] . "'></div>
         </div>
         <div class='nav-item'>
-            <a class='nav__film nav-item__text' href='".PRONAME."/tim-kiem/PhimDangChieu'>Phim</a>
+            <a class='nav__film nav-item__text' href='".PRONAME."/tim-kiem/PhimDangChieu?page=1'>Phim</a>
             <div class='" . $active["Search"] . "'></div>
         </div>
         <div class='nav-item'>

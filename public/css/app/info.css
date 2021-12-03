@@ -416,7 +416,7 @@
   cursor: pointer;
   transition: all 0.4s ease; }
 
-.info-page--effect:hover {
+.info-page--effec:hover {
   opacity: 0.5;
   transform: translateY(-5px); }
 

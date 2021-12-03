@@ -38,16 +38,13 @@
 </div>
 
 <div class="info-page__header__btn-group">
-    <div class="info-page__header__btn-group--img">
+    <div class="info-page__header__btn-group--img" >
         <img class="info-page--effect" src="<?php 
         if(isset($data['poster']))
             echo PRONAME."/public/img/".$data['film'][0]->getImage("type='poster'")[0]->name;?>">
-        <div class="info-page--fas-style">
-            <i class="fas fa-pause info-page--fas-style__poster-icon"></i>
-        </div>
-        <div class="info-page--fas-style">
-        <i class="fas fa-play info-page--fas-style__poster-icon"></i>
-        </div>
+        <a class="info-page--fas-style" href="<?php echo $data['film'][0]->getImage("type='video'")[0]->name?>">
+            <i class="fas fa-play info-page--fas-style__poster-icon"></i>
+        </a>
     </div>                                     
     <div class="col-xl-8 col-12 info-page__header__btn-group__statistic">
         <div class="info-page__header__btn-group__statistic__ticket-number">

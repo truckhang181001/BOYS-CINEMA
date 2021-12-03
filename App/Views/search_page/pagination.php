@@ -1,14 +1,15 @@
-<nav aria-label="Page navigation example">
+<form method="get" aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
       <li class="page-item">
-        <a class="page-link"><i class="fad fa-angle-double-left"></i></a>
+        <button class='page-link' name='page' value='1'><i class="fad fa-angle-double-right"></i></button>
       </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <?php
+          $page = ceil($data['total']/10);
+          for($i=1; $i <= $page; $i++) echo "<li class='page-item'><button class='page-link' name='page' value='$i'>$i</button></li>";
+        ?>
       <li class="page-item">
-        <a class="page-link" href="#"><i class="fad fa-angle-double-right"></i></a>
+        <button class='page-link' name='page' value='<?php echo $page?>'><i class="fad fa-angle-double-right"></i></button>
       </li>
     </ul>
-</nav>
+</form method="get">
     

@@ -30,14 +30,14 @@ if ($data['film'] != null) {
                     </div>
                     <div><h4>Yêu thích</h4></div>
                 </div>
-               <div class='card-footer__items d-flex align-items-center'>
+               <a class='card-footer__items d-flex align-items-center' href='".$item->getImage("type='video'")[0]->name."'>
                    <div class='card-footer__items--circle d-flex justify-content-center align-items-center'>
-                       <i class='fas fa-play'></i>
+                       <i class='fas fa-play' style='color: white;'></i>
                     </div>
-                    <div><h4>Xem trailer</h4></div>
-               </div>
+                    <div><h4 style='color: white;'>Xem trailer</h4></div>
+               </a>
                <div class='card-footer__items d-flex align-items-center'>
-                    <button class='card-footer__items--button'>MUA VÉ</button>
+                    <a class='card-footer__items--button' href='".PRONAME."/lich-chieu'>MUA VÉ</a>
                 </div>
            </div>
         </div>

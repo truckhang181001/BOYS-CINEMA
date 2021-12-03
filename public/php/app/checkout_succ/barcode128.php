@@ -30,6 +30,6 @@ function bar128($text) { // Part 1, make list of widths
     $html="<table cellpadding=0 cellspacing=0><tr>"; 
     for($x=0;$x<strlen($w);$x+=2) // code 128 widths: black border, then white space
     $html .= "<td><div class=\"b128\" style=\"box-sizing: initial; border-left-width: {$w[$x]}px;width: {$w[$x+1]}px\"></div></td>"; 
-    return "$html</table>"; 
+    return "$html</tr></table>"; 
    }
 ?>

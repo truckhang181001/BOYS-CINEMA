@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Saigon');
 require_once "./app/core/controller.php";
 require_once "./config.php";
 require_once "./App/Core/Route.php";
@@ -62,8 +63,13 @@ $url = $RouteUrl->UrlProcess();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- PHP CODE -->
     <?php
+    // Kiểm tra session
     session_start();
-    date_default_timezone_set('Asia/Saigon');
+    if(isset($_SESSION['endTime']) && $_SESSION['endTime'] < date("YmdHis")){
+        session_unset();
+        session_destroy();
+        session_start();
+    }
     // Hiện thị Nav
     if (!isset($url) || $url[0] != "admin-boys") {
         require_once __DIR__ . "/share/navBar.php";

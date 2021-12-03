@@ -5,17 +5,35 @@ class search extends controller
     function PhimDangChieu()
     {
         //Lấy danh sách phim đang chiếu
+        $dataCate = $this->getModel("tbl_category");
         $tblSche = $this->GetModel("tbl_schedule");
         $dataSche = $tblSche->GetSchedule("date='" . date("Y/m/d") . "'");
         $dataFilm = [];
-        foreach ($dataSche as $item) {
-            $dataFilm[] = $item->GetFilm();
+        $dataFilmF = [];
+
+        if (isset($_GET['search']) && $_GET['search'] != "") {
+            $key = $_GET['search'];
+            foreach($dataSche as $item){
+                $itemsFilm = $this->getModel("tbl_film")->GetFilm("id=$item->id_film AND name LIKE '%$key%'");
+                if($itemsFilm != null) $dataFilm[] = $itemsFilm[0];
+            }
+        } else {
+            foreach ($dataSche as $item) {
+                $dataFilm[] = $item->GetFilm();
+            }
         }
+
         filterFilm($dataFilm);
-        
-        $dataCate = $this->getModel("tbl_category");
+
+        for($i=$_GET['page']*10-10; $i < $_GET['page']*10; $i++){
+            if(isset($dataFilm[$i])){
+                $dataFilmF[] = $dataFilm[$i];
+            }
+        }
+
         $data = [
-            "film" => $dataFilm,
+            "total" => count($dataFilm),
+            "film" => $dataFilmF,
             "category" => $dataCate->getCategory(),
             "status" => 0
         ];
@@ -24,32 +42,51 @@ class search extends controller
     function PhimSapChieu()
     {
         //Lấy danh sách phim đang chiếu
+        $dataCate = $this->getModel("tbl_category");
         $tblSche = $this->GetModel("tbl_schedule");
         $dataSche = $tblSche->GetSchedule("date > '" . date("Y/m/d") . "'");
         $dataFilm = [];
-        foreach ($dataSche as $item) {
-            $dataFilm[] = $item->GetFilm();
+        $dataFilmF = [];
+        
+        if (isset($_GET['search']) && $_GET['search'] != "") {
+            $key = $_GET['search'];
+            foreach($dataSche as $item){
+                $itemsFilm = $this->getModel("tbl_film")->GetFilm("id=$item->id_film AND name LIKE '%$key%'");
+                if($itemsFilm != null) $dataFilm[] = $itemsFilm[0];
+            }
+        } else {
+            foreach ($dataSche as $item) {
+                $dataFilm[] = $item->GetFilm();
+            }
         }
+
         filterFilm($dataFilm);
-        $dataCate = $this->getModel("tbl_category");
+
+        for($i=$_GET['page']*10-10; $i < $_GET['page']*10; $i++){
+            if(isset($dataFilm[$i])){
+                $dataFilmF[] = $dataFilm[$i];
+            }
+        }
+
         $data = [
-            "film" => $dataFilm,
+            "total" => count($dataFilm),
+            "film" => $dataFilmF,
             "category" => $dataCate->getCategory(),
-            "status" => 1
+            "status" => 0
         ];
         $this->getView("search_page", $data);
     }
-
 }
-function filterFilm(&$dataFilm){
+function filterFilm(&$dataFilm)
+{
     if (isset($_GET['category']) && $_GET['category'] != null) {
-        foreach ($dataFilm as $key=>$item) {
-            if(!in_array($item->id_category,$_GET['category'])) unset($dataFilm[$key]);
+        foreach ($dataFilm as $key => $item) {
+            if (!in_array($item->id_category, $_GET['category'])) unset($dataFilm[$key]);
         }
     }
     if (isset($_GET['type']) && $_GET['type'] != null) {
-        foreach ($dataFilm as $key=>$item) {
-            if(!in_array($item->type,$_GET['type'])) unset($dataFilm[$key]);
+        foreach ($dataFilm as $key => $item) {
+            if (!in_array($item->type, $_GET['type'])) unset($dataFilm[$key]);
         }
     }
 }
