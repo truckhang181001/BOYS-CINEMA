@@ -25,7 +25,10 @@ class search extends controller
 
         filterFilm($dataFilm);
 
-        for($i=$_GET['page']*10-10; $i < $_GET['page']*10; $i++){
+        if(isset($_GET['page'])) $totalPage=$_GET['page'];
+        else $totalPage = 1;
+
+        for($i=$totalPage*10-10; $i < $totalPage*10; $i++){
             if(isset($dataFilm[$i])){
                 $dataFilmF[] = $dataFilm[$i];
             }
@@ -62,7 +65,10 @@ class search extends controller
 
         filterFilm($dataFilm);
 
-        for($i=$_GET['page']*10-10; $i < $_GET['page']*10; $i++){
+        if(isset($_GET['page'])) $totalPage=$_GET['page'];
+        else $totalPage = 1;
+
+        for($i=$totalPage*10-10; $i < $totalPage*10; $i++){
             if(isset($dataFilm[$i])){
                 $dataFilmF[] = $dataFilm[$i];
             }
@@ -72,7 +78,7 @@ class search extends controller
             "total" => count($dataFilm),
             "film" => $dataFilmF,
             "category" => $dataCate->getCategory(),
-            "status" => 0
+            "status" => 1
         ];
         $this->getView("search_page", $data);
     }
