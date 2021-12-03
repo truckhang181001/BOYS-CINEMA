@@ -10,7 +10,7 @@
             <input name='type[]' class="effect__items--checkbox" type="checkbox" value="3D">
             <label for="3d">3D</label>
         </div>
-        <button class='btnf'>Lọc</button>
+        <button class='btnf btn-filter'>Lọc</button>
     </form>
     
     <form class="categogy" method="get">
@@ -24,7 +24,7 @@
                 </div>";
             }
         ?>
-        <button class='btnf'>Lọc</button>
+        <button class='btnf btn-filter'>Lọc</button>
     </form>
 
 </div>

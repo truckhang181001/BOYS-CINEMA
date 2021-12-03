@@ -25,8 +25,8 @@ if ($data['film'] != null) {
            
            <div class='card-footer d-flex justify-content-between align-items-center'>
                 <div class='card-footer__items d-flex align-items-center'>
-                    <div onclick='ClickHeart(" . $i . ")' class='card-footer__items--circle d-flex justify-content-center align-items-center'>
-                        <i class='far fa-heart'></i>
+                    <div onclick='ClickHeart(".$i.")' class='card-footer__items--circle d-flex justify-content-center align-items-center'>
+                        <i class='fas fa-heart'></i>
                     </div>
                     <div><h4>Yêu thích</h4></div>
                 </div>
