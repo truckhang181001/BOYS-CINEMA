@@ -8,7 +8,6 @@
 </form>
 
 <script>
-   
     function ClearSearchBox(){
         document.querySelector(".searchbox__input").value="";
     }

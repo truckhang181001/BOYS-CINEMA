@@ -44,23 +44,17 @@ class search extends controller
     }
     function PhimSapChieu()
     {
-        //Lấy danh sách phim đang chiếu
+        //Lấy danh sách phim sắp chiếu
         $dataCate = $this->getModel("tbl_category");
-        $tblSche = $this->GetModel("tbl_schedule");
-        $dataSche = $tblSche->GetSchedule("date > '" . date("Y/m/d") . "'");
+        $tblFilm = $this->GetModel("tbl_film");
         $dataFilm = [];
         $dataFilmF = [];
         
         if (isset($_GET['search']) && $_GET['search'] != "") {
             $key = $_GET['search'];
-            foreach($dataSche as $item){
-                $itemsFilm = $this->getModel("tbl_film")->GetFilm("id=$item->id_film AND name LIKE '%$key%'");
-                if($itemsFilm != null) $dataFilm[] = $itemsFilm[0];
-            }
+            $dataFilm = $tblFilm->GetFilm("release_time > '" . date("Y/m/d") . "' AND name LIKE '%$key%'");
         } else {
-            foreach ($dataSche as $item) {
-                $dataFilm[] = $item->GetFilm();
-            }
+            $dataFilm = $tblFilm->GetFilm("release_time > '" . date("Y/m/d") . "'");
         }
 
         filterFilm($dataFilm);

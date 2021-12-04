@@ -1,10 +1,7 @@
     <div class="container" style="background-color:#000C20; padding: 100px 0;">
         <div class="row searchbox-and-sub-searchbox">
-            <div class="col-12">
+            <div class="col-12 mb-5">
                 <?php include_once __DIR__ . "/searchbox.php" ?>
-            </div>
-            <div class="col-12">
-                <?php include_once __DIR__ . "/sub-searchbox.php" ?>
             </div>
         </div>
 

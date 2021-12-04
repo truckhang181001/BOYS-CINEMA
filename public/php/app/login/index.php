@@ -8,7 +8,7 @@ if (isset($_POST['user']) && isset($_POST['password'])) {
         session_unset();
         session_destroy();
         session_start();
-        if($_POST['extendSession']) $_SESSION['endTime'] = date('YmdHis',strtotime('+60 minutes',strtotime(date('YmdHis'))));
+        if(!isset($_POST['extendSession'])) $_SESSION['endTime'] = date('YmdHis',strtotime('+1 minutes',strtotime(date('YmdHis'))));
         $_SESSION['email'] = $email;
         $_SESSION['password'] = $pass;
         if($admin != null) $_SESSION['admin']='admin';

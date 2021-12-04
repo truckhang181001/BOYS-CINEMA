@@ -19,7 +19,7 @@ if ($data['film'] != null) {
             <div class='card-time'>" . $time . "</div>
           </div>           
            <div>
-                <p class='card-category'>" . $data['category'][$item->id_category]->name . "</p>
+                <p class='card-category'>" . $item->getCate(). "</p>
                 <p class='card-date'><small>Ngày công chiếu: " . date_format($date, "d/m/Y") . "</small></p>      
            </div>
            

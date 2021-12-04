@@ -48,7 +48,7 @@ class tbl_film
         createConnection($sql);
         $result = executeQuery($sql, $query);
         while ($item = mysqli_fetch_assoc($result)) {
-            $class[] = new film($item['id'], $item['name'], $item['desc'], $item['id_category'], $item['release'], $item["time"], $item['actor'],$item['director'],$item['studio'], $item["type"]);
+            $class[] = new film($item['id'], $item['name'], $item['desc'], $item['id_category'], $item['release_time'], $item["time"], $item['actor'],$item['director'],$item['studio'], $item["type"]);
         }
         releaseMemory($sql, $result);
         return $class;
@@ -75,7 +75,7 @@ class tbl_film
     }
     function updateFilm($id, $name, $desc, $id_category, $release, $time, $actor, $director, $studio, $type){
         $sql = null;
-        $query = "UPDATE `tbl_film` SET `name`='$name', `desc`='$desc', `id_category`=$id_category, `release`='$release', `time`=$time, `actor`='$actor', `director`='$director', `studio`='$studio', `type`='$type'  WHERE id=$id";
+        $query = "UPDATE `tbl_film` SET `name`='$name', `desc`='$desc', `id_category`=$id_category, `release_time`='$release', `time`=$time, `actor`='$actor', `director`='$director', `studio`='$studio', `type`='$type'  WHERE id=$id";
         createConnection($sql);
         $result = executeQuery($sql, $query);
         if ($result) {

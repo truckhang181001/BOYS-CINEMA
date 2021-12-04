@@ -69,7 +69,7 @@ require_once "./public/php/admin/showtime/index.php";
                 <?php
                 // Kiểm tra Film có hình thức 3D hay không
                 if ($data['item_film']->type == '3D')
-                    echo "<option value=3D'>3D</option>";
+                    echo "<option value='3D'>3D</option>";
                 ?>
             </select>
             <button class="btn btn-primary col-3" type="submit" name="addShowtime" value="<?php echo $data['schedule']->id ?>">THÊM SUẤT CHIẾU</button>
